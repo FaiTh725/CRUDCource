@@ -1,0 +1,12 @@
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\bin\Debug\net8.0\Authorize.Domain.deps.json
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\bin\Debug\net8.0\Authorize.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\bin\Debug\net8.0\Authorize.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.csproj.AssemblyReference.cache
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.AssemblyInfoInputs.cache
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.AssemblyInfo.cs
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.csproj.CoreCompileInputs.cache
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\refint\Authorize.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\Authorize.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Authorize.Domain\obj\Debug\net8.0\ref\Authorize.Domain.dll

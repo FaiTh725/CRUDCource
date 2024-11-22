@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Notification.Controllers.EmailSendlerController",
+    "Method": "SendEmail",
+    "RelativePath": "api/EmailSendler/SendEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Notification.Domain.Contacrs.Email.SendEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

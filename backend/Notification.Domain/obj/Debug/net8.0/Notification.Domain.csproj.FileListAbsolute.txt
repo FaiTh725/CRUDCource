@@ -1,0 +1,11 @@
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\bin\Debug\net8.0\Notification.Domain.deps.json
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\bin\Debug\net8.0\Notification.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\bin\Debug\net8.0\Notification.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\Notification.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\Notification.Domain.AssemblyInfoInputs.cache
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\Notification.Domain.AssemblyInfo.cs
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\Notification.Domain.csproj.CoreCompileInputs.cache
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\Notification.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\refint\Notification.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\Notification.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Notification.Domain\obj\Debug\net8.0\ref\Notification.Domain.dll

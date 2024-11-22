@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  message-broker:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=faith
+      - RABBITMQ_DEFAULT_PASS=goblinusik111
+    networks:
+      - rabbitmq_network
+
+  auth-database:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ms-sql-database
+    ports:
+      - "1333:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=goblinusik111W
+    volumes:
+      - sqlvolume:/var/opt/mssql
+    # networks:
+    #   - rabbitmq_network
+
+  cach-redis:
+    image: redis:latest
+    container_name: cach-redis
+    ports:
+      - "6379:6379"
+    
+
+volumes:
+  sqlvolume:
+    driver: local
+
+networks:
+  app_network:
+    driver: bridge
+  rabbitmq_network:
+    driver: bridge

@@ -1,0 +1,71 @@
+[
+  {
+    "ContainingType": "Authorize.Controllers.AuthorizeController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Authorize/Confirm",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "key",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Authorize.Controllers.AuthorizeController",
+    "Method": "Login",
+    "RelativePath": "api/Authorize/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Authorize.Contracts.User.CreateUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Authorize.Controllers.AuthorizeController",
+    "Method": "Register",
+    "RelativePath": "api/Authorize/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Authorize.Contracts.User.CreateUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Authorize.Controllers.AuthorizeController",
+    "Method": "VerifyEmail",
+    "RelativePath": "api/Authorize/Verify",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
