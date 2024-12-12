@@ -1,0 +1,14 @@
+.HeaderButton__Button {
+  background-color: transparent;
+  padding: 5px 7px 3px;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+.HeaderButton__Button:hover {
+  background-color: #a11d16;
+}
+
+.HeaderNews__Popular {
+  display: flex;
+}

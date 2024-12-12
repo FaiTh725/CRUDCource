@@ -1,0 +1,29 @@
+# Stage 1: build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
+
+# like mkdir inside the container
+WORKDIR /src
+
+# Copy all .csproj files for restore dependency
+COPY ["Notification/Notification.csproj", "Notification/"]
+COPY ["Notification.Domain/Notification.Domain.csproj", "Notification.Domain/"]
+
+#restore - its mean that include all dependencies
+RUN dotnet restore 'Notification/Notification.csproj'
+
+COPY . .
+#build
+WORKDIR /src/Notification
+RUN dotnet build -c Release -o /app/build
+
+# Stage 2: publish stage
+FROM build as publish
+RUN dotnet publish -c Release -o /app/publish
+
+# Stage 3: run stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 
+ENV ASPNETCORE_HTTP_PORTS=5001
+EXPOSE 5001
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT [ "dotnet", "Notification.dll" ]

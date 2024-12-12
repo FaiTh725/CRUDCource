@@ -1,0 +1,51 @@
+.AuthRegister__Main {
+  font-family: var(--font-family-default);
+  font-size: 16px;
+  color: var(--color-default);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.AuthRegister__Wrapper {
+  margin: 0 auto;
+}
+
+.AuthRegister__Header{
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.AuthRegister__InputSection {
+  margin: 20px 0;
+  font-size: 14px;
+} 
+
+.AuthLogin__RestopePassword {
+  text-decoration: underline;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.AuthRegister__Action {
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--color-default);
+}
+
+.AuthRegister__NavigateRegister {
+  margin: 25px 0;
+
+}
+
+.AuthRegister__NavigateRegister a {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.AuthRegister__ErrorSection {
+  font-size: 14px;
+  color: #505050;
+}

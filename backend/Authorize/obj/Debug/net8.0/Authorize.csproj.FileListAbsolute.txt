@@ -189,3 +189,4 @@ C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Pipelines.Sockets.Un
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\StackExchange.Redis.dll
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Notification.Domain.dll
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Notification.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\Authorize.sourcelink.json

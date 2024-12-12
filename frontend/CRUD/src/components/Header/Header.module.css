@@ -1,0 +1,30 @@
+.Header__Main {
+  position: relative;
+}
+
+.Header__StickyHeader {
+  position: sticky;
+}
+
+.Header__Body {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.Header__Logo {
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
+}
+
+.Header__UserNavigation {
+  margin-left: auto;
+  display: flex;
+}
+
+.Header__UserNavigation * + * {
+  margin-left: 15px;
+}

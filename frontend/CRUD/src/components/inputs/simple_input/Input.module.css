@@ -1,0 +1,26 @@
+.SimpleInput__Main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  font-family: var(--font-family-default);
+  color: var(--color-default);
+}
+
+.SimpleInput__Label {
+  font-size: 12px;
+}
+
+.SimpleInput__Input {
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 7px;
+  margin-top: 10px;
+  width: 100%;
+  transition: all .2s;
+}
+
+.SimpleInput__Input:focus {
+  border: 1px solid var(--color-default);
+}

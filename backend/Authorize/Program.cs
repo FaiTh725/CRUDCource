@@ -5,9 +5,6 @@ using Authorize.Domain.Repositories;
 using Authorize.Helpers.Extentions;
 using Authorize.Services.Implementations;
 using Authorize.Services.Interfaces;
-using Authorize.Validators;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +19,7 @@ builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddJwtService(builder.Configuration);
 builder.Services.AddMessageBroker(builder.Configuration);
 builder.Services.AddCaching(builder.Configuration);
+builder.Services.AddCorses();
 builder.Services.AddValidators();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -43,6 +41,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("Frontend");
 
 app.UseAuthentication();
 app.UseAuthorization();

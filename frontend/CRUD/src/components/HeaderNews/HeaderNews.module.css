@@ -1,0 +1,29 @@
+.HeaderNews__Main {
+  background-color: #be2119;
+  padding: 5px 30px;
+  font-family: var(--font-family-default);
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 30px;
+  min-height: 30px;
+  font-weight: 400;
+}
+
+.HeaderNews__Popular {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.HeaderNews__Popular_Btn {
+  transition: all .3s;
+  margin-left: 10px;
+}
+
+.HeaderNews__Popular:hover .HeaderNews__Popular_Btn{
+  transform: translate(5px, 0px);
+}

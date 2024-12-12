@@ -35,7 +35,9 @@ namespace Authorize.Dal.Implementation
         {
             try
             {
-                var user = await dbContext.Users.FirstOrDefaultAsync(x => x.Email == email);
+                var user = await dbContext.Users
+                    .Include(x => x.Role)
+                    .FirstOrDefaultAsync(x => x.Email == email);
 
                 return user == null ? Result.Failure<User>($"User with {email} not found") : Result.Success<User>(user);
             }

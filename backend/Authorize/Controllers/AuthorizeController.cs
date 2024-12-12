@@ -22,7 +22,7 @@ namespace Authorize.Controllers
 
             if(response.Data != string.Empty)
             {
-                Response.Headers.Append("Authorization", "Bearer " + response.Data);
+                Response.Cookies.Append("token", response.Data);
             }
 
             return new JsonResult(response);
@@ -35,7 +35,7 @@ namespace Authorize.Controllers
 
             if (response.Data != string.Empty)
             {
-                Response.Headers.Append("Authorization", "Bearer " + response.Data);
+                Response.Cookies.Append("token", response.Data);
             }
 
             return new JsonResult(response);

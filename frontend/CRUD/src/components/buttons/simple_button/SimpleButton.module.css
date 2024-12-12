@@ -1,0 +1,13 @@
+.SimpleButton__Button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: var(--color-default);
+  color: #fff;
+  transition: color .2s ;
+}
+
+.SimpleButton__Button:hover {
+  background-color: #fff;
+  color: var(--color-default);
+}

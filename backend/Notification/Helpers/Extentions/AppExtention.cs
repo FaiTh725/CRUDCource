@@ -10,11 +10,21 @@ namespace Notification.Helpers.Extentions
 {
     public static class AppExtention
     {
-        public static void AddMessageBroker(this IServiceCollection services, IConfiguration configuration)
+        public static void AddMessageBroker(this WebApplicationBuilder builder)
         {
-            var messageBrokerSetting = configuration.GetSection("RabbitMqSetting").Get<MessageBrokerSetting>();
+            string rabbitMqSection = "";
+            if (builder.Environment.IsDevelopment())
+            {
+                rabbitMqSection = "RabbitMqSetting";
+            }
+            else
+            {
+                rabbitMqSection = "RabbitMqSettingRelease";
+            }
 
-            services.AddMassTransit(conf =>
+            var messageBrokerSetting = builder.Configuration.GetSection(rabbitMqSection).Get<MessageBrokerSetting>();
+
+            builder.Services.AddMassTransit(conf =>
             {
                 conf.AddConsumer<SentEmailConsumer>();
 

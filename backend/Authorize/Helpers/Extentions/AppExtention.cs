@@ -96,5 +96,19 @@ namespace Authorize.Helpers.Extentions
             services.AddFluentValidationAutoValidation();
             services.AddScoped<IValidator<CreateUser>, UserValidator>();
         }
+
+        public static void AddCorses(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Frontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                    .AllowCredentials()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+        }
     }
 }

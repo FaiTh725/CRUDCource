@@ -1,6 +1,14 @@
 version: "3.8"
 
 services:
+  # notification_api:
+  #   image: notification_crud
+  #   container_name: notification_api_application
+  #   ports:
+  #     - "5001:5001"
+  #   depends_on:
+  #     - rabbitmq
+
   message-broker:
     image: rabbitmq:management
     container_name: rabbitmq

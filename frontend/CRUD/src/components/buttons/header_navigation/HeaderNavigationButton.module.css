@@ -1,0 +1,11 @@
+.HeaderNavigation__Button {
+  font-family: var(--font-family-default);
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  transition: all .3s;
+}
+
+.HeaderNavigation__Button:hover {
+  color: #eeb426;
+}
