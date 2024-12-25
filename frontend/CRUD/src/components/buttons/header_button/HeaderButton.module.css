@@ -6,7 +6,7 @@
 }
 
 .HeaderButton__Button:hover {
-  background-color: #a11d16;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .HeaderNews__Popular {

@@ -1,0 +1,27 @@
+.AccountDetails__Main {
+  font-family: var(--font-family-default);
+  font-weight: 400;
+  font-size: 16px;
+  color: #222;
+}
+
+.AccountDetails__AccountName {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.AccountDetails__Header {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.AccountDetails__Action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AccountDetails__Action * + * {
+  margin-top: 20px;
+}

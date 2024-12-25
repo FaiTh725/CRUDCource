@@ -22,12 +22,6 @@
 .AuthLogin__InputSection {
   margin: 20px 0;
   font-size: 14px;
-} 
-
-.AuthLogin__RestopePassword {
-  text-decoration: underline;
-  font-weight: 400;
-  cursor: pointer;
 }
 
 .AuthLogin__Action {

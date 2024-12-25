@@ -17,6 +17,33 @@ namespace Authorize.Services.Implementations
             this.configuration = configuration;
         }
 
+        public string GenerateToken(string userName, User user)
+        {
+            var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtSetting>();
+
+            var signingCredentials = new SigningCredentials(
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting!.SecretKey)),
+                SecurityAlgorithms.HmacSha256);
+
+            var claims = new Claim[]
+            {
+                new Claim(ClaimTypes.Name, userName),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role.Role)
+            };
+
+            var token = new JwtSecurityToken
+            (
+                claims: claims,
+                signingCredentials: signingCredentials,
+                expires: DateTime.UtcNow.AddHours(3),
+                audience: jwtSetting.Audience,
+                issuer: jwtSetting.Issuer
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
         public string GenerateToken(User user)
         {
             var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtSetting>();

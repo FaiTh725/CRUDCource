@@ -16,7 +16,7 @@ namespace Authorize.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Login(CreateUser request)
+        public async Task<IActionResult> Login(UserLogin request)
         {
             var response = await authenticationService.Login(request);
 
@@ -29,7 +29,7 @@ namespace Authorize.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Register(CreateUser request)
+        public async Task<IActionResult> Register(UserRegister request)
         {
             var response = await authenticationService.Register(request);
 

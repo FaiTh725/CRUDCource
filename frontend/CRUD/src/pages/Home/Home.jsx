@@ -1,13 +1,13 @@
-import Header from "../../components/Header/Header"
 import HomeHeader from "../../components/HomeHeader/HomeHeader";
-import styles from "./Home.module.css"
+import ProductList from "../../components/ProductList/ProductList";
 
 const Home = () => {
   return (
   <>
-    <Header/>
     <HomeHeader/>
-  </>)
+    <ProductList/>
+  </>
+  )
 }
 
 export default Home;

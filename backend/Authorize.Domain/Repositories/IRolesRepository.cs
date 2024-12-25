@@ -10,6 +10,7 @@ namespace Authorize.Domain.Repositories
 {
     public interface IRolesRepository
     {
-        public Task<Result<Roles>> GetRole(string nameRole);
+        Task<Result<Roles>> GetRole(string nameRole);
+
     }
 }

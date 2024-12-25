@@ -5,9 +5,9 @@ namespace Authorize.Services.Interfaces
 {
     public interface IAuthenticationService
     {
-        public Task<DataResponse<string>> Login(CreateUser request);
+        public Task<DataResponse<string>> Login(UserLogin request);
 
-        public Task<DataResponse<string>> Register(CreateUser request);
+        public Task<DataResponse<string>> Register(UserRegister request);
 
         public Task<BaseResponse> VerifyEmail(string email);
 

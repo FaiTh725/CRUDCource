@@ -1,0 +1,44 @@
+.BigImageSlider__Main {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-family-default);
+  color: var(--color-default);
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.BigImageSlider__ImageContainer {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 35px;
+  outline: none;
+}
+
+.BigImageSlider__Image {
+  min-width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.BigImageSlider__Btn {
+  position: absolute;
+  top: 50%;
+}
+
+.BigImageSlider__RightBtn {
+  left: auto;
+  right: 0;
+}
+
+.BigImageSlider__IndexImage {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  font-size: 14px;
+}

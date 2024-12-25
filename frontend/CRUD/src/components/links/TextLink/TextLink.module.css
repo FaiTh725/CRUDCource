@@ -1,0 +1,14 @@
+.TextLink__Link {
+  font-family: var(--font-family-default);
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: underline;
+  transition: all .3s;
+  cursor: pointer;
+  text-underline-offset: 8px;
+  color: #222;
+}
+
+.TextLink__Link:hover {
+  text-decoration: none;
+}

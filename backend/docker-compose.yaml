@@ -9,6 +9,16 @@ services:
   #   depends_on:
   #     - rabbitmq
 
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:latest
+    container_name: files-storages
+    volumes:
+      - ./.containers/blob_storage/data:/data
+    ports:
+      - '10000:10000'
+    environment:
+      - AZURITE_ACCOUNTS=faith725:ZGV2c3RvcmVhY2NvdW50Mw==
+
   message-broker:
     image: rabbitmq:management
     container_name: rabbitmq

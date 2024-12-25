@@ -7,11 +7,11 @@ namespace Authorize.Dal.Implementation
 {
     public class UserRepository : IUserRepository
     {
-        private readonly AppDbContext dbContext;
+        private readonly AppDbContext context;
 
         public UserRepository(AppDbContext dbContext)
         {
-            this.dbContext = dbContext;
+            this.context = dbContext;
         }
 
         public async Task<Result<User>> AddUser(User user)
@@ -19,9 +19,9 @@ namespace Authorize.Dal.Implementation
             try
             {
 
-                var newUser = await dbContext.Users.AddAsync(user);
+                var newUser = await context.Users.AddAsync(user);
 
-                await dbContext.SaveChangesAsync();
+                await context.SaveChangesAsync();
 
                 return Result.Success<User>(newUser.Entity);
             }
@@ -35,7 +35,7 @@ namespace Authorize.Dal.Implementation
         {
             try
             {
-                var user = await dbContext.Users
+                var user = await context.Users
                     .Include(x => x.Role)
                     .FirstOrDefaultAsync(x => x.Email == email);
 
@@ -44,6 +44,23 @@ namespace Authorize.Dal.Implementation
             catch
             {
                 return Result.Failure<User>("Error get user");
+            }
+        }
+
+        public async Task<Result> UpdateUser(User userToUpdate, Roles newRole, string password)
+        {
+            try
+            {
+                userToUpdate.Role = newRole;
+                userToUpdate.Password = password;
+
+                await context.SaveChangesAsync();
+
+                return Result.Success();
+            }
+            catch
+            {
+                return Result.Failure("Error update user");
             }
         }
     }

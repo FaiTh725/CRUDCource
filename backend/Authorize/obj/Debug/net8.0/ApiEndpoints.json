@@ -30,7 +30,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Authorize.Contracts.User.CreateUser",
+        "Type": "Authorize.Contracts.User.UserLogin",
         "IsRequired": true
       }
     ],
@@ -46,7 +46,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Authorize.Contracts.User.CreateUser",
+        "Type": "Authorize.Contracts.User.UserRegister",
         "IsRequired": true
       }
     ],
@@ -64,6 +64,22 @@
         "Name": "email",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Authorize.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/UpdateUser",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Product.Domain.Contracts.Models.Request.ChangeRoleAccount",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

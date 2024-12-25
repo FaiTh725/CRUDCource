@@ -1,0 +1,45 @@
+.MiniMessages__Main {
+  font-family: var(--font-family-default);
+  font-weight: 400;
+  font-size: 14px;
+  color: #222; 
+  position: static;
+}
+
+.Inactive {
+  display: none;
+}
+
+@keyframes show {
+  from {
+    opacity: .5;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.MiniMessages__Wrapper {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 7px;
+  border: 1px solid #222;
+  min-width: 100px;
+  animation: 1s show;
+}
+
+.MiniMessages__Header {
+  background-color: #222;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: flex;
+  justify-content: end;
+}
+
+.MiniMessages__Body {
+  padding: 10px 20px;
+  text-align: center;
+}

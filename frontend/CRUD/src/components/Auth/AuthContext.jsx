@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 import { createContext, useContext } from "react";
 
@@ -13,6 +14,7 @@ export const AuthProvider = ({children}) => {
   
   const logout = () => {
     setUser(null);
+    Cookies.set("token", "");
   }
 
   return (

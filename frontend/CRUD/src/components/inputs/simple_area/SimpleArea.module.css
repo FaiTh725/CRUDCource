@@ -1,0 +1,29 @@
+.SimpleArea__Main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  font-family: var(--font-family-default);
+  color: var(--color-default);
+}
+
+.SimpleArea__Label {
+  font-size: 12px;
+}
+
+.SimpleArea__Input {
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 7px;
+  margin-top: 10px;
+  width: 100%;
+  transition: border .2s;
+  height: 150px;
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.SimpleArea__Input:focus {
+  border: 1px solid var(--color-default);
+}

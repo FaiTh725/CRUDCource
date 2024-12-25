@@ -7,18 +7,20 @@ namespace Authorize.Dal.Implementation
 {
     public class RolesRepository : IRolesRepository
     {
-        private readonly AppDbContext dbContext;
+        private readonly AppDbContext context;
 
         public RolesRepository(AppDbContext dbContext)
         {
-            this.dbContext = dbContext;
+            this.context = dbContext;
         }
 
         public async Task<Result<Roles>> GetRole(string nameRole)
         {
             try
             {
-                var role = await dbContext.Roles.FirstOrDefaultAsync(x => x.Role == nameRole);
+                var role = await context.Roles
+                    .Include(x => x.Users)
+                    .FirstOrDefaultAsync(x => x.Role == nameRole);
 
                 if(role == null)
                 {
@@ -32,5 +34,6 @@ namespace Authorize.Dal.Implementation
                 return Result.Failure<Roles>("Get role error");
             }
         }
+
     }
 }

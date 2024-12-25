@@ -1,0 +1,184 @@
+.ImageSlider__Main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ImageSlider__ImageContainer {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.ImageSlider__PrevImage
+{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  filter: blur(10px);
+  left: -50px;
+  scale: .7;
+  top: 0;
+  z-index: -1000;
+  animation: show .3s ease-in;
+  will-change: top, filter, scale;
+}
+
+.ImageSlider__NextImage {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  filter: blur(10px);
+  left: 50px;
+  scale: .7;
+  top: 0;
+  z-index: -1000;
+  animation: show .3s ease-in;
+  will-change: top, filter, scale, opacity;
+}
+
+.ImageSlider__ImageSwitcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.ImageSlider__Button + .ImageSlider__Button {
+  margin-left: 10px;
+}
+
+.ImageSlider__Button {
+  border-radius: 50%;
+  border: 1px solid #222;
+  width: 13px;
+  height: 13px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.ImageSlider__CenterButton {
+  background-color: #be2119;
+  border: none;
+}
+
+.ImageSlider__Button:hover {
+  border: 1px solid #be2119;
+}
+
+.ImageSlider__DisableButton {
+  border: 1px solid #8d8d8d;
+  cursor: not-allowed;
+}
+
+.ImageSlider__SwithLeft {
+  animation: swith_left_main .6s ease-in;
+  z-index: -1000;
+}
+
+.ImageSlider__SwithRight {
+  animation: swith_right_main .6s ease-in;
+  z-index: -1000;
+}
+
+.ImageSlider__NextAnim {
+  animation: next_anim .6s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+
+.ImageSlider__PrevAnim {
+  animation: prev_anim .6s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes next_anim {
+  0% {
+    left: 50px;
+    filter: blur(10px);
+    scale: .7;
+  }
+  50% {
+    left: 70px;
+    filter: blur(2px);
+    scale: 0.9;
+  }
+  100% {
+    left: 0px;
+    filter: blur(0px);
+    scale: 1;
+  }
+}
+
+@keyframes prev_anim {
+  0% {
+    left: -50px;
+    filter: blur(10px);
+    scale: .7;
+  }
+  50% {
+    left: -70px;
+    filter: blur(2px);
+    scale: 0.9;
+  }
+  100% {
+    left: 0px;
+    filter: blur(0px);
+    scale: 1;
+  }
+}
+
+@keyframes swith_left_main {
+  0% {
+    transform: translateX(0);
+    filter: blur(0);
+    scale: 1;
+  }
+  50% {
+    transform: translateX(-70px);
+    filter: blur(2px);
+    scale: 0.9;
+  }
+  100% {
+    transform: translateX(-50px);
+    filter: blur(10px);
+    scale: .7;
+  }
+}
+
+@keyframes swith_right_main {
+  0% {
+    transform: translateX(0);
+    filter: blur(0);
+    scale: 1;
+  }
+  50% {
+    transform: translateX(70px);
+    filter: blur(2px);
+    scale: 0.9;
+  }
+  100% {
+    transform: translateX(50px);
+    filter: blur(10px);
+    scale: .7;
+  }
+} 

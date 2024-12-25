@@ -5,25 +5,38 @@ import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
 import SimpleInput from "../../components/inputs/simple_input/Input";
 
 import styles from "./AuthLogin.module.css"
-import api from "../../api/axiosConf";
 import decodeJWT from "../../services/JWTService";
+import TextLink from "../../components/links/TextLink/TextLink";
+import axios from "axios";
 
 const AuthLogin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: ""
+  });
 
   const [errorMessage, setErrorMessage] = useState("");
 
   const auth = useAuth();
   const navigate = useNavigate();
 
+  const handleChangeForm = (e) => {
+    const key = e.target.name;
+    const newValue = e.target.value;
+
+    setLoginForm(prev => ({
+      ...prev,
+      [key]: newValue
+    }));
+  }
+
   const handleLogin = async () => {
     try
     {
-      const response = await api.post("Authorize/Login", 
+      const response = await axios.post("https://localhost:7004/api/Authorize/Login", 
         {
-          password: password,
-          email: email
+          password: loginForm.password,
+          email: loginForm.email
         }
       );
 
@@ -48,6 +61,7 @@ const AuthLogin = () => {
     }
     catch(error)
     {
+      console.log(error);
       console.log(error.message);
     }
 
@@ -60,13 +74,18 @@ const AuthLogin = () => {
           <p>ACCOUNT LOGIN</p>
         </div>
         <div className={styles.AuthLogin__InputSection}>
-          <SimpleInput labelName="EMAIL ADDRESS" action={setEmail}/>
+          <SimpleInput labelName="EMAIL ADDRESS" 
+            name="email" 
+            action={handleChangeForm}/>
         </div>
         <div className={styles.AuthLogin__InputSection}>
-          <SimpleInput labelName="PASSWORD" typeInput="password" action={setPassword}/>
+          <SimpleInput labelName="PASSWORD" 
+          typeInput="password" 
+          name="password" 
+          action={handleChangeForm}/>
         </div>
-        <div className={styles.AuthLogin__RestopePassword}>
-          <p>Forgot your password?</p>
+        <div>
+          <TextLink url="#" text="Forgot your password?"/>
         </div>
         <div className={styles.AuthLogin__ErrorSection}>
           <p>{errorMessage}</p>
@@ -76,7 +95,7 @@ const AuthLogin = () => {
         </div>
         <div className={styles.AuthLogin__NavigateRegister}>
           <p>
-            Don't have an account yet? <a href="/account/register">Create Account</a>
+            Don't have an account yet? <TextLink url="/account/register" text="Create Account"/>
           </p>
         </div>
       </div>

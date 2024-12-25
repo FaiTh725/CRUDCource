@@ -7,6 +7,7 @@ import api from "../../api/axiosConf";
 import decodeJWT from "../../services/JWTService";
 import { useAuth } from "../../components/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
+import TextLink from "../../components/links/TextLink/TextLink";
 
 
 const AuthRegister = () => {
@@ -60,6 +61,7 @@ const AuthRegister = () => {
     {
       const response = await api.post("/Authorize/Register", 
       {
+        userName: firstName,
         password: password,
         email: email
       })
@@ -115,7 +117,7 @@ const AuthRegister = () => {
         </div>
         <div className={styles.AuthRegister__NavigateRegister}>
           <p>
-            Already have an account ? <a href="/account/login">Sign in</a>
+            Already have an account ? <TextLink url="/account/login" text="Sign in"/>
           </p>
         </div>
       </div>

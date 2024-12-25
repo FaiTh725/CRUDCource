@@ -3,11 +3,16 @@ using Authorize.Contracts.User;
 using Authorize.Dal.Implementation;
 using Authorize.Domain.Entities;
 using Authorize.Domain.Repositories;
+using Authorize.Helpers.Settings;
 using Authorize.Services.Interfaces;
 using CSharpFunctionalExtensions;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Notification.Domain.Contacrs.Email;
+using Product.Domain.Contracts.Models.Account;
+using Product.Domain.Contracts.Models.Request;
+using System.Net.Http.Headers;
+using System.Text.Json;
 
 namespace Authorize.Services.Implementations
 {
@@ -18,19 +23,25 @@ namespace Authorize.Services.Implementations
         private readonly IJwtService jwtService;
         private readonly ICacheService cacheService;
         private readonly IPublishEndpoint publishEndpoint;
+        private readonly HttpClient httpClient;
+        private readonly IConfiguration configuration;
 
         public AuthenticationService(
             IUserRepository userRepository,
             IJwtService jwtService,
             IRolesRepository rolesRepository,
             ICacheService cacheService,
-            IPublishEndpoint publishEndpoint)
+            IPublishEndpoint publishEndpoint,
+            HttpClient httpClient,
+            IConfiguration configuration)
         {
             this.userRepository = userRepository;
             this.jwtService = jwtService;
             this.rolesRepository = rolesRepository;
             this.cacheService = cacheService;
             this.publishEndpoint = publishEndpoint;
+            this.httpClient = httpClient;
+            this.configuration = configuration;
         }
 
         public async Task<BaseResponse> ConfirmEmail(string email, int key)
@@ -64,7 +75,7 @@ namespace Authorize.Services.Implementations
             };
         }
 
-        public async Task<DataResponse<string>> Login(CreateUser request)
+        public async Task<DataResponse<string>> Login(UserLogin request)
         {
             var userResult = await userRepository.GetUser(request.Email);
 
@@ -88,7 +99,45 @@ namespace Authorize.Services.Implementations
                 };
             }
 
-            var token = jwtService.GenerateToken(userResult.Value);
+            var tokenToAnotherApi = jwtService.GenerateToken(userResult.Value);
+            var apiList = configuration.GetSection("APIList").Get<APIList>()
+                ?? throw new NullReferenceException("Configuration api list is empty");
+
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenToAnotherApi);
+            var responseGetAccountInfo = await httpClient.GetAsync(
+                    $@"{apiList.ProductAPI}/Account/AccountInfo?email={request.Email}");
+
+            if(!responseGetAccountInfo.IsSuccessStatusCode)
+            {
+                return new DataResponse<string>
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Error with communication to endpoint",
+                    Data = string.Empty
+                };
+            }
+
+            var responseJson = await responseGetAccountInfo.Content.ReadAsStringAsync();
+
+            var jsonDesiarializeOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
+
+            var responseData = JsonSerializer.Deserialize<DataResponse<AccountResponseDetail>>(
+                responseJson, jsonDesiarializeOptions);
+
+            if(responseData is null || responseData.StatusCode != StatusCode.Ok)
+            {
+                return new DataResponse<string>
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Error with communication to endpoint",
+                    Data = string.Empty
+                };
+            }
+
+            var token = jwtService.GenerateToken(responseData.Data.Name, userResult.Value);
 
             return new DataResponse<string>
             {
@@ -98,7 +147,7 @@ namespace Authorize.Services.Implementations
             };
         }
 
-        public async Task<DataResponse<string>> Register(CreateUser request)
+        public async Task<DataResponse<string>> Register(UserRegister request)
         {
             var userResult = await userRepository.GetUser(request.Email);
 
@@ -148,7 +197,13 @@ namespace Authorize.Services.Implementations
                 };
             }
 
-            var token = jwtService.GenerateToken(registeredResult.Value);
+            await publishEndpoint.Publish(new CreateAccount
+            {
+                Name = request.UserName, 
+                Email = request.Email,
+            });
+
+            var token = jwtService.GenerateToken(request.UserName, registeredResult.Value);
 
             return new DataResponse<string>
             {

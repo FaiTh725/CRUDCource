@@ -1,0 +1,13 @@
+C:\VSProjects\CourceCRUD\backend\Product.Domain\bin\Debug\net8.0\Product.Domain.deps.json
+C:\VSProjects\CourceCRUD\backend\Product.Domain\bin\Debug\net8.0\Product.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Product.Domain\bin\Debug\net8.0\Product.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.csproj.AssemblyReference.cache
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.AssemblyInfoInputs.cache
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.AssemblyInfo.cs
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.csproj.CoreCompileInputs.cache
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.sourcelink.json
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\refint\Product.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\Product.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Product.Domain\obj\Debug\net8.0\ref\Product.Domain.dll

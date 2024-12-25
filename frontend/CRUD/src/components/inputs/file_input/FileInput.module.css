@@ -1,0 +1,62 @@
+.FileInput__Main {
+  font-family: var(--font-family-default);
+  color: var(--color-default);
+  font-weight: 300;
+  border-radius: 7px;
+  border: 1px solid var(--color-default);
+  background-color: transparent;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  transition: all .3s;
+  width: 150px;
+  margin-top: 30px;
+}
+
+.FileInput__Main:hover {
+  background-color: var(--color-default);
+  color: #fff;
+}
+
+.FileInput__BtnUpload {
+  margin-top: 15px;
+  padding: 5px;
+  border-radius: 7px;
+  border-radius: 7px;
+  color: var(--color-default);
+  border: 1px solid var(--color-default);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.FileInput__Main:hover .FileInput__BtnUpload {
+  background-color: var(--color-default);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.FileInput__InputFile {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.FileInput__DragEnter {
+  animation: drag 1s infinite;  
+}
+
+
+@keyframes drag {
+  0% {
+    box-shadow: 0 0 0px transparent;
+  }
+  66% {
+    box-shadow: 0 0 10px #5a5a5a;
+  }
+  100% {
+    box-shadow: 0 0 0px transparent;
+  }
+}

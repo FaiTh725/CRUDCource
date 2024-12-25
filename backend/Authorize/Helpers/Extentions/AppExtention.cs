@@ -94,7 +94,8 @@ namespace Authorize.Helpers.Extentions
         public static void AddValidators(this IServiceCollection services)
         {
             services.AddFluentValidationAutoValidation();
-            services.AddScoped<IValidator<CreateUser>, UserValidator>();
+            services.AddScoped<IValidator<UserLogin>, UserValidator>();
+            services.AddScoped<IValidator<UserRegister>, UserValidatorRegister>();
         }
 
         public static void AddCorses(this IServiceCollection services)

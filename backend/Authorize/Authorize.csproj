@@ -32,6 +32,9 @@
     <Reference Include="Notification.Domain">
       <HintPath>..\Notification.Domain\bin\Debug\net8.0\Notification.Domain.dll</HintPath>
     </Reference>
+    <Reference Include="Product.Domain">
+      <HintPath>..\Product.Domain\bin\Debug\net8.0\Product.Domain.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

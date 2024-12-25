@@ -9,3 +9,4 @@ C:\VSProjects\CourceCRUD\backend\Application.Contracts\obj\Debug\net8.0\Applicat
 C:\VSProjects\CourceCRUD\backend\Application.Contracts\obj\Debug\net8.0\refint\Application.Contracts.dll
 C:\VSProjects\CourceCRUD\backend\Application.Contracts\obj\Debug\net8.0\Application.Contracts.pdb
 C:\VSProjects\CourceCRUD\backend\Application.Contracts\obj\Debug\net8.0\ref\Application.Contracts.dll
+C:\VSProjects\CourceCRUD\backend\Application.Contracts\obj\Debug\net8.0\Application.Contracts.sourcelink.json

@@ -9,7 +9,9 @@ const decodeJWT = (token) => {
     
         const role = data["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
         const email = data["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"];
+        const name = data["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
         return {
+          name: name,
           role: role,
           email: email
         };

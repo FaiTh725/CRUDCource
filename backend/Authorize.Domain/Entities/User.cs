@@ -32,9 +32,9 @@ namespace Authorize.Domain.Entities
          
         public string Email { get; private set; } = string.Empty;
 
-        public string Password { get; private set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
 
-        public Roles Role { get; private set; }
+        public Roles Role { get; set; }
 
         public static Result<User> Initialize(string email, string password)
         {

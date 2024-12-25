@@ -1,0 +1,13 @@
+.Counter__Main {
+  font-family: var(--font-family-default);
+  color: var(--color-default);
+  display: flex;
+  align-items: center;
+}
+
+.counter__Value {
+  background-color: #fff;
+  padding: 7px;
+  border-radius: 7px;
+  margin: 0 5px;
+}

@@ -13,5 +13,7 @@ namespace Authorize.Domain.Repositories
         public Task<Result<User>> AddUser(User user);
 
         public Task<Result<User>> GetUser(string email);
+
+        public Task<Result> UpdateUser(User userToUpdate, Roles newRole, string password);
     }
 }

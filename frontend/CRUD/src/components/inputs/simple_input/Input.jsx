@@ -1,6 +1,6 @@
 import styles from "./Input.module.css"
 
-const SimpleInput = ({labelName, action, typeInput  = "text"}) => {
+const SimpleInput = ({labelName, value, action, name = "", typeInput  = "text"}) => {
 
   return (
     <div className={styles.SimpleInput__Main}>
@@ -11,7 +11,9 @@ const SimpleInput = ({labelName, action, typeInput  = "text"}) => {
       <input className={styles.SimpleInput__Input} 
         type={typeInput} 
         id="field" 
-        onChange={(e) => action(e.target.value)}/>
+        value={value}
+        name={name}
+        onChange={action}/>
     </div>
   )
 }

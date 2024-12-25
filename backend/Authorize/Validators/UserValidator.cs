@@ -4,7 +4,7 @@ using FluentValidation;
 
 namespace Authorize.Validators
 {
-    public class UserValidator : AbstractValidator<CreateUser>
+    public class UserValidator : AbstractValidator<UserLogin>
     {
         public UserValidator() 
         {
