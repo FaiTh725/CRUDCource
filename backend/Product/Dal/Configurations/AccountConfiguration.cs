@@ -28,6 +28,10 @@ namespace Product.Dal.Configurations
             builder.HasMany(x => x.ShopingCart)
                 .WithOne()
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(x => x.ShopingHistory)
+                .WithOne()
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

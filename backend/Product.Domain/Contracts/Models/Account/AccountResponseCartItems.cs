@@ -9,6 +9,6 @@ namespace Product.Domain.Contracts.Models.Account
 {
     public class AccountResponseCartItems : AccountResponseDetail
     {
-        public List<ProductResponse> CartProducts { get; set; } = new List<ProductResponse>();
+        public List<ProductCartResponse> CartProducts { get; set; } = new List<ProductCartResponse>();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using Azure.Storage.Sas;
 using Product.Domain.Contracts.Models;
 using Product.Services.Interfaces;
 
@@ -41,10 +42,18 @@ namespace Product.Services.Implementations
             await blobContainerClient.SetAccessPolicyAsync(PublicAccessType.Blob);
             
             var blobClient = blobContainerClient.GetBlobClient(name);
-            
-            var uriFile = blobClient.Uri.ToString();
 
-            return uriFile;
+            var sasBuilder = new BlobSasBuilder
+            {
+                BlobContainerName = blobContainerClient.Name,
+                BlobName = blobClient.Name,
+                Resource = "b",
+                ExpiresOn = DateTimeOffset.UtcNow.AddMonths(1)
+            };
+
+            var uriFile = blobClient.GenerateSasUri(sasBuilder);
+
+            return uriFile.ToString();
         }
 
         public async Task<List<string>> DownLoadBlobFolder(string folderName, CancellationToken cancellationToken = default)
@@ -61,7 +70,16 @@ namespace Product.Services.Implementations
             {
                 var blobClient = blobContainerClient.GetBlobClient(blobItem.Name);
 
-                urls.Add(blobClient.Uri.ToString());
+                var sasBuilder = new BlobSasBuilder
+                {
+                    BlobContainerName = blobContainerClient.Name,
+                    BlobName = blobItem.Name,
+                    Resource = "b",
+                    ExpiresOn = DateTimeOffset.UtcNow.AddMonths(1)
+                };
+                sasBuilder.SetPermissions(BlobSasPermissions.Read);
+
+                urls.Add(blobClient.GenerateSasUri(sasBuilder).ToString());
             }
 
             return urls;

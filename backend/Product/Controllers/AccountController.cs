@@ -80,5 +80,14 @@ namespace Product.Controllers
 
             return new JsonResult(response);
         }
+
+        [HttpPost("[action]")]
+        [Authorize]
+        public async Task<IActionResult> BuyProducts(AccountBuyProductRequest request)
+        {
+            var response = await accountService.BuyProducts(request);
+
+            return new JsonResult(response);
+        }
     }
 }

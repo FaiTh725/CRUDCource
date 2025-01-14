@@ -20,11 +20,6 @@ namespace Authorize.Controllers
         {
             var response = await authenticationService.Login(request);
 
-            if(response.Data != string.Empty)
-            {
-                Response.Cookies.Append("token", response.Data);
-            }
-
             return new JsonResult(response);
         }
 
@@ -32,11 +27,6 @@ namespace Authorize.Controllers
         public async Task<IActionResult> Register(UserRegister request)
         {
             var response = await authenticationService.Register(request);
-
-            if (response.Data != string.Empty)
-            {
-                Response.Cookies.Append("token", response.Data);
-            }
 
             return new JsonResult(response);
         }

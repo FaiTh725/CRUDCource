@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Message.Controllers.MessageController",
+    "Method": "GetChatHistory",
+    "RelativePath": "api/Message/GetChatHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -16,6 +16,8 @@ namespace Product.Domain.Contracts.Repositories
 
         Task<Result<Account>> GetAccountWithCart(string email);
 
-        Task<Result> AddProductToCart(Account account, CartItem product);
+        Task<Result> AddProductsToCart(Account account, List<CartItem> products);
+
+        Task<Result> AddProductToOrderHistory(Account account, List<CartItem> products);
     }
 }

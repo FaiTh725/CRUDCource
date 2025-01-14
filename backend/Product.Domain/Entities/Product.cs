@@ -34,8 +34,6 @@ namespace Product.Domain.Models
 
         public Account Sealer { get; private set; }
 
-        public List<Account> AccountInShopingCart { get; private set; } = new List<Account>();
-
         public Product()
         {
 
@@ -47,6 +45,17 @@ namespace Product.Domain.Models
             Sealer = sealer;
             Price = price;
             Count = count;
+        }
+
+        public bool BuyProduct(int count)
+        {
+            if(Count < count)
+            {
+                return false;
+            }
+
+            Count -= count;
+            return true;
         }
 
         public static Result<Product> Initialize(

@@ -1,6 +1,9 @@
 ﻿using Authorize.Domain.Entities;
+using Authorize.Domain.Modals.Auth;
 using Authorize.Helpers.Jwt;
 using Authorize.Services.Interfaces;
+using CSharpFunctionalExtensions;
+using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,6 +19,34 @@ namespace Authorize.Services.Implementations
         {
             this.configuration = configuration;
         }
+
+        public Result<TokenData> DecodeToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = tokenHandler.ReadJwtToken(token);
+
+            var name = jwtSecurityToken.Claims
+                .FirstOrDefault(claim => claim.Type == ClaimTypes.Name)?.Value;
+            var email = jwtSecurityToken.Claims
+                .FirstOrDefault(claim => claim.Type == ClaimTypes.Email)?.Value;
+            var role = jwtSecurityToken.Claims
+                .FirstOrDefault(claim => claim.Type == ClaimTypes.Role)?.Value;
+
+            if (name == null || 
+                email == null || 
+                role == null)
+            {
+                return Result.Failure<TokenData>("Invalid Token");
+            }
+
+            return Result.Success(new TokenData
+            {
+                Name = name,
+                Email = email,
+                Role = role
+            });
+        }
+
 
         public string GenerateToken(string userName, User user)
         {

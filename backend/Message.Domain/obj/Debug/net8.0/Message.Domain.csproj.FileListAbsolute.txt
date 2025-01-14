@@ -1,0 +1,13 @@
+C:\VSProjects\CourceCRUD\backend\Message.Domain\bin\Debug\net8.0\Message.Domain.deps.json
+C:\VSProjects\CourceCRUD\backend\Message.Domain\bin\Debug\net8.0\Message.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Message.Domain\bin\Debug\net8.0\Message.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.AssemblyInfoInputs.cache
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.AssemblyInfo.cs
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.csproj.CoreCompileInputs.cache
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.sourcelink.json
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\refint\Message.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\ref\Message.Domain.dll
+C:\VSProjects\CourceCRUD\backend\Message.Domain\obj\Debug\net8.0\Message.Domain.csproj.AssemblyReference.cache

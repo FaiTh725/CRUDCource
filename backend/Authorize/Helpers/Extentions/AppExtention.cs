@@ -10,6 +10,7 @@ using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Net.Security;
 using System.Text;
 
 namespace Authorize.Helpers.Extentions
@@ -33,6 +34,20 @@ namespace Authorize.Helpers.Extentions
                         ValidIssuer = jwtSetting!.Issuer,
                         ValidAudience = jwtSetting!.Audience,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SecretKey))
+                    };
+
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = ctx =>
+                        {
+                            var token = ctx.Request.Cookies["token"];
+                            if (!string.IsNullOrEmpty(token))
+                            {
+                                ctx.Token = token;
+                            }
+
+                            return Task.CompletedTask;
+                        }
                     };
                 });
 
@@ -58,7 +73,8 @@ namespace Authorize.Helpers.Extentions
                 });
             });
         }
-
+        
+        // TODO there are error when start in docker
         public static void InitializeDatabase(this WebApplication app)
         {
             using var scope = app.Services.CreateScope();
@@ -66,19 +82,10 @@ namespace Authorize.Helpers.Extentions
             var services = scope.ServiceProvider;
             var dbContext = services.GetRequiredService<AppDbContext>();
 
-            var lastMigration = string.Empty;
-            var lastApplyMigration = string.Empty;
-
-            if (!dbContext.Database.CanConnect())
+            if(dbContext.Database.GetPendingMigrations().Any())
             {
                 dbContext.Database.Migrate();
-                
-                lastMigration = dbContext.Database.GetMigrations().ToList()[^1];
-                lastApplyMigration = dbContext.Database.GetAppliedMigrations().ToList()[^1];
-            }
-            else if (lastApplyMigration != lastMigration)
-            {
-                dbContext.Database.Migrate(lastApplyMigration);                
+
             }
         }
 
@@ -98,18 +105,30 @@ namespace Authorize.Helpers.Extentions
             services.AddScoped<IValidator<UserRegister>, UserValidatorRegister>();
         }
 
-        public static void AddCorses(this IServiceCollection services)
+        public static void AddCorses(this IServiceCollection services, IConfiguration configuration)
         {
+            var frontendBaseUrl = configuration.GetValue<string>("APIList:Frontend");
+
             services.AddCors(options =>
             {
                 options.AddPolicy("Frontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173")
+                    policy.WithOrigins(frontendBaseUrl!)
                     .AllowCredentials()
                     .AllowAnyHeader()
                     .AllowAnyMethod();
                 });
             });
+        }
+
+        public static void AddCustomHttpClient(this IServiceCollection services)
+        {
+            services.AddHttpClient("ProductHttp")
+                .ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = 
+                    (sender, cert, chain, sllPolicy) => { return true; }
+                });
         }
     }
 }

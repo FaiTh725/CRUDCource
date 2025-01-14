@@ -1,4 +1,5 @@
 ﻿using Application.Contracts.Response;
+using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Product;
 
 namespace Product.Services.Interfaces
@@ -14,5 +15,7 @@ namespace Product.Services.Interfaces
         Task<DataResponse<List<ProductResponse>>> GetProductPagination(int page, int count);
 
         Task<DataResponse<List<ProductResponse>>> GetProducts();
+
+        Task<DataResponse<ProductSeller>> GetProductSeller(long productId);
     }
 }

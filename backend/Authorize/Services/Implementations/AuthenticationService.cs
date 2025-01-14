@@ -2,6 +2,7 @@
 using Authorize.Contracts.User;
 using Authorize.Dal.Implementation;
 using Authorize.Domain.Entities;
+using Authorize.Domain.Modals.Auth;
 using Authorize.Domain.Repositories;
 using Authorize.Helpers.Settings;
 using Authorize.Services.Interfaces;
@@ -23,8 +24,9 @@ namespace Authorize.Services.Implementations
         private readonly IJwtService jwtService;
         private readonly ICacheService cacheService;
         private readonly IPublishEndpoint publishEndpoint;
-        private readonly HttpClient httpClient;
+        private readonly IHttpClientFactory httpClientFactory;
         private readonly IConfiguration configuration;
+        private readonly ICookieService cookieService;
 
         public AuthenticationService(
             IUserRepository userRepository,
@@ -32,16 +34,18 @@ namespace Authorize.Services.Implementations
             IRolesRepository rolesRepository,
             ICacheService cacheService,
             IPublishEndpoint publishEndpoint,
-            HttpClient httpClient,
-            IConfiguration configuration)
+            IHttpClientFactory httpClientFactory,
+            IConfiguration configuration,
+            ICookieService cookieService)
         {
             this.userRepository = userRepository;
             this.jwtService = jwtService;
             this.rolesRepository = rolesRepository;
             this.cacheService = cacheService;
             this.publishEndpoint = publishEndpoint;
-            this.httpClient = httpClient;
+            this.httpClientFactory = httpClientFactory;
             this.configuration = configuration;
+            this.cookieService = cookieService;
         }
 
         public async Task<BaseResponse> ConfirmEmail(string email, int key)
@@ -57,7 +61,7 @@ namespace Authorize.Services.Implementations
                 };
             }
 
-            var resultRemoveKey = await cacheService.DeleteData(dataResult.Value.ToString());
+            var resultRemoveKey = await cacheService.DeleteData(email);
 
             if(!resultRemoveKey)
             {
@@ -75,15 +79,15 @@ namespace Authorize.Services.Implementations
             };
         }
 
-        public async Task<DataResponse<string>> Login(UserLogin request)
+        public async Task<DataResponse<TokenData>> Login(UserLogin request)
         {
             var userResult = await userRepository.GetUser(request.Email);
 
             if(!userResult.IsSuccess)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
-                    Data = string.Empty,
+                    Data = new(),
                     Description = $"User with email {request.Email} not exist",
                     StatusCode = StatusCode.NotFound
                 };
@@ -91,9 +95,9 @@ namespace Authorize.Services.Implementations
 
             if(request.Password != userResult.Value.Password)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
-                    Data = string.Empty,
+                    Data = new(),
                     Description = $"Invalid email or password",
                     StatusCode = StatusCode.NotFound
                 };
@@ -103,17 +107,19 @@ namespace Authorize.Services.Implementations
             var apiList = configuration.GetSection("APIList").Get<APIList>()
                 ?? throw new NullReferenceException("Configuration api list is empty");
 
+            var httpClient = httpClientFactory.CreateClient("ProductHttp");
+
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenToAnotherApi);
             var responseGetAccountInfo = await httpClient.GetAsync(
                     $@"{apiList.ProductAPI}/Account/AccountInfo?email={request.Email}");
 
             if(!responseGetAccountInfo.IsSuccessStatusCode)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
                     StatusCode = StatusCode.InternalServerError,
                     Description = "Error with communication to endpoint",
-                    Data = string.Empty
+                    Data = new()
                 };
             }
 
@@ -129,33 +135,46 @@ namespace Authorize.Services.Implementations
 
             if(responseData is null || responseData.StatusCode != StatusCode.Ok)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
                     StatusCode = StatusCode.InternalServerError,
                     Description = "Error with communication to endpoint",
-                    Data = string.Empty
+                    Data = new()
                 };
             }
 
             var token = jwtService.GenerateToken(responseData.Data.Name, userResult.Value);
 
-            return new DataResponse<string>
+            var decodeToken = jwtService.DecodeToken(token);
+
+            if(decodeToken.IsFailure)
             {
-                Data = token,
+                return new DataResponse<TokenData>
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Error generate token on server",
+                    Data = new()
+                };
+            }
+            cookieService.SetCookie("token", token);
+
+            return new DataResponse<TokenData>
+            {
+                Data = decodeToken.Value,
                 Description = "Successfull login",
                 StatusCode = StatusCode.Ok
             };
         }
 
-        public async Task<DataResponse<string>> Register(UserRegister request)
+        public async Task<DataResponse<TokenData>> Register(UserRegister request)
         {
             var userResult = await userRepository.GetUser(request.Email);
 
             if(userResult.IsSuccess)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
-                    Data = string.Empty,
+                    Data = new(),
                     Description = "Current email alredy registered",
                     StatusCode = StatusCode.BadRequest
                 };
@@ -165,9 +184,9 @@ namespace Authorize.Services.Implementations
 
             if(roleUserResult.IsFailure)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
-                    Data = string.Empty,
+                    Data = new(),
                     Description = "Internal server error",
                     StatusCode = StatusCode.InternalServerError
                 };
@@ -177,9 +196,9 @@ namespace Authorize.Services.Implementations
 
             if(newUserResult.IsFailure)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
-                    Data = string.Empty,
+                    Data = new(),
                     Description = newUserResult.Error,
                     StatusCode = StatusCode.BadRequest
                 };
@@ -189,9 +208,9 @@ namespace Authorize.Services.Implementations
 
             if(!registeredResult.IsSuccess)
             {
-                return new DataResponse<string>
+                return new DataResponse<TokenData>
                 {
-                    Data = string.Empty,
+                    Data = new(),
                     Description = "Internal server",
                     StatusCode = StatusCode.InternalServerError
                 };
@@ -205,9 +224,23 @@ namespace Authorize.Services.Implementations
 
             var token = jwtService.GenerateToken(request.UserName, registeredResult.Value);
 
-            return new DataResponse<string>
+            var decodeToken = jwtService.DecodeToken(token);
+
+            if (decodeToken.IsFailure)
             {
-                Data = token,
+                return new DataResponse<TokenData>
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Error generate token on server",
+                    Data = new()
+                };
+            }
+
+            cookieService.SetCookie("token", token);
+
+            return new DataResponse<TokenData>
+            {
+                Data = decodeToken.Value,
                 Description = "Successfull registered user",
                 StatusCode= StatusCode.Ok
             };

@@ -7,5 +7,7 @@
         public string Key { get; set; } = string.Empty;
 
         public int Port { get; set; }
+
+        public string BaseUrl { get; set; } = string.Empty;
     }
 }

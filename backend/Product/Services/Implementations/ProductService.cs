@@ -1,6 +1,7 @@
 ﻿using Application.Contracts.Response;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
+using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Product;
 using Product.Domain.Contracts.Repositories;
 using Product.Services.Interfaces;
@@ -155,7 +156,7 @@ namespace Product.Services.Implementations
                         Name = product.Name,
                         Price = product.Price,
                         Images = productImages,
-                        Count = productImages.Count
+                        Count = product.Count
                     });
                 }
 
@@ -175,6 +176,44 @@ namespace Product.Services.Implementations
                     Data = new List<ProductResponse>()
                 };
 
+            }
+        }
+
+        public async Task<DataResponse<ProductSeller>> GetProductSeller(long productId)
+        {
+            try
+            {
+                var product = await productRepository.GetProductWithSeller(productId);
+
+                if(product.IsFailure)
+                {
+                    return new DataResponse<ProductSeller>
+                    {
+                        StatusCode = StatusCode.NotFound,
+                        Description = product.Error,
+                        Data = new ProductSeller()
+                    };
+                }
+
+                return new DataResponse<ProductSeller>
+                {
+                    StatusCode = StatusCode.Ok,
+                    Description = "Get Seller Info",
+                    Data = new ProductSeller
+                    {
+                        Email = product.Value.Sealer.Email,
+                        Name = product.Value.Sealer.Name
+                    }
+                };
+            }
+            catch
+            {
+                return new DataResponse<ProductSeller>
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Internal Server Error",
+                    Data = new ProductSeller()
+                };
             }
         }
 

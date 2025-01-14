@@ -22,21 +22,6 @@ namespace Product.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AccountProduct", b =>
-                {
-                    b.Property<long>("AccountInShopingCartId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("ShopingHistoryId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("AccountInShopingCartId", "ShopingHistoryId");
-
-                    b.HasIndex("ShopingHistoryId");
-
-                    b.ToTable("AccountProduct");
-                });
-
             modelBuilder.Entity("Product.Domain.Entities.CartItem", b =>
                 {
                     b.Property<long>("Id")
@@ -48,6 +33,9 @@ namespace Product.Migrations
                     b.Property<long?>("AccountId")
                         .HasColumnType("bigint");
 
+                    b.Property<long?>("AccountId1")
+                        .HasColumnType("bigint");
+
                     b.Property<int>("Count")
                         .HasColumnType("int");
 
@@ -57,6 +45,8 @@ namespace Product.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
+
+                    b.HasIndex("AccountId1");
 
                     b.HasIndex("ProductId");
 
@@ -143,7 +133,7 @@ namespace Product.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long?>("SealerId")
+                    b.Property<long>("SealerId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -153,27 +143,17 @@ namespace Product.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("AccountProduct", b =>
-                {
-                    b.HasOne("Product.Domain.Models.Account", null)
-                        .WithMany()
-                        .HasForeignKey("AccountInShopingCartId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Product.Domain.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ShopingHistoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Product.Domain.Entities.CartItem", b =>
                 {
                     b.HasOne("Product.Domain.Models.Account", null)
                         .WithMany("ShopingCart")
                         .HasForeignKey("AccountId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Product.Domain.Models.Account", null)
+                        .WithMany("ShopingHistory")
+                        .HasForeignKey("AccountId1")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("Product.Domain.Models.Product", "Product")
                         .WithMany()
@@ -189,7 +169,8 @@ namespace Product.Migrations
                     b.HasOne("Product.Domain.Models.Account", "Sealer")
                         .WithMany("SoldProducts")
                         .HasForeignKey("SealerId")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("Sealer");
                 });
@@ -197,6 +178,8 @@ namespace Product.Migrations
             modelBuilder.Entity("Product.Domain.Models.Account", b =>
                 {
                     b.Navigation("ShopingCart");
+
+                    b.Navigation("ShopingHistory");
 
                     b.Navigation("SoldProducts");
                 });

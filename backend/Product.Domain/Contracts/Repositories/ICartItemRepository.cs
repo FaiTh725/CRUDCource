@@ -10,6 +10,8 @@ namespace Product.Domain.Contracts.Repositories
 {
     public interface ICartItemRepository
     {
-        Task<Result> RemoveCartByProductId(long productId);
+        Task<Result> RemoveCart(CartItem cartItem);
+
+        Task<Result> RemoveCarts(List<CartItem> cartItems);
     }
 }

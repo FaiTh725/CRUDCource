@@ -36,6 +36,20 @@ namespace Product.Helpers.Extentions
                         ValidIssuer = jwtSetting.Issuer,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SecretKey))
                     };
+
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = ctx =>
+                        {
+                            var token = ctx.Request.Cookies["token"];
+                            if (!string.IsNullOrEmpty(token))
+                            {
+                                ctx.Token = token;
+                            }
+
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
 
             services.AddAuthorization();
@@ -77,18 +91,20 @@ namespace Product.Helpers.Extentions
 
             var connectionString = $"DefaultEndpointsProtocol=http;AccountName={blobConf.AccountName};" +
                 $"AccountKey={blobConf.Key};" +
-                $"BlobEndpoint=http://127.0.0.1:{blobConf.Port}/{blobConf.AccountName};";
+                $"BlobEndpoint={blobConf.BaseUrl}:{blobConf.Port}/{blobConf.AccountName};";
 
             service.AddSingleton(_ => new BlobServiceClient(connectionString));
         }
 
-        public static void AddCorses(this IServiceCollection service)
+        public static void AddCorses(this IServiceCollection service, IConfiguration configuration)
         {
+            var frontendBaseUrl = configuration.GetValue<string>("APIList:Frontend");
+
             service.AddCors(options =>
             {
                 options.AddPolicy("Frontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173")
+                    policy.WithOrigins(frontendBaseUrl!)
                     .AllowCredentials()
                     .AllowAnyHeader()
                     .AllowAnyMethod();
@@ -130,6 +146,16 @@ namespace Product.Helpers.Extentions
 
             });
 
+        }
+
+        public static void AddCustomHttpClient(this IServiceCollection services)
+        {
+            services.AddHttpClient("ClientHttp")
+                .ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback =
+                    (sender, cert, chain, sllPolicy) => { return true; }
+                });
         }
     }
 }

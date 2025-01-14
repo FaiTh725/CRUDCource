@@ -1,6 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,16 @@ namespace Product.Domain.Entities
             }
 
             return Result.Success(new CartItem(count, product));  
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is CartItem other)
+            {
+                return other.Id == Id;
+            }
+
+            return false;
         }
     }
 }

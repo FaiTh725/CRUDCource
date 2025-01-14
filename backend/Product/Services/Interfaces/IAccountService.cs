@@ -21,5 +21,7 @@ namespace Product.Services.Interfaces
         Task<BaseResponse> AddProductToCart(AccountWithProductCountRequest request);
 
         Task<BaseResponse> DeleteProductFromCart(AccountWithProductRequest request);
+
+        Task<BaseResponse> BuyProducts(AccountBuyProductRequest request);
     }
 }

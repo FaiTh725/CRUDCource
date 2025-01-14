@@ -1,29 +1,23 @@
-# Stage 1: build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
 
-# like mkdir inside the container
 WORKDIR /src
+COPY ["Authorize/Authorize.csproj", "Authorize/"]
 
-# Copy all .csproj files for restore dependency
-COPY ["Notification/Notification.csproj", "Notification/"]
-COPY ["Notification.Domain/Notification.Domain.csproj", "Notification.Domain/"]
-
-#restore - its mean that include all dependencies
-RUN dotnet restore 'Notification/Notification.csproj'
+RUN dotnet restore 'Authorize/Authorize.csproj'
 
 COPY . .
-#build
-WORKDIR /src/Notification
+
+WORKDIR /src/Authorize
 RUN dotnet build -c Release -o /app/build
 
-# Stage 2: publish stage
 FROM build as publish
 RUN dotnet publish -c Release -o /app/publish
 
-# Stage 3: run stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 
-ENV ASPNETCORE_HTTP_PORTS=5001
-EXPOSE 5001
+ENV ASPNETCORE_HTTP_PORTS=5101
+ENV ASPNETCORE_HTTPS_PORTS=5102
+EXPOSE 5101
+EXPOSE 5102
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT [ "dotnet", "Notification.dll" ]
+ENTRYPOINT [ "dotnet", "Authorize.dll" ]

@@ -27,15 +27,27 @@ namespace Product.Dal.Implementations
                 Result.Failure<Account>("Error with add new account");
         }
 
-        public async Task<Result> AddProductToCart(Account account, CartItem product)
+
+        public async Task<Result> AddProductsToCart(Account account, List<CartItem> products)
         {
-            account.ShopingCart.Add(product);
+            account.ShopingCart.AddRange(products);
             
             int countChanges = await context.SaveChangesAsync();
 
             return countChanges > 0 ?
                 Result.Success() :
-                Result.Failure("Something called error when was updating");
+                Result.Failure("Something called error when was addinging");
+        }
+
+        public async Task<Result> AddProductToOrderHistory(Account account, List<CartItem> products)
+        {
+            account.ShopingHistory.AddRange(products);
+
+            int countChanges = await context.SaveChangesAsync();
+
+            return countChanges > 0 ?
+                Result.Success() :
+                Result.Failure("Something called error when was addinging");
         }
 
         public async Task<Result<Account>> GetAccountByEmail(string email)
@@ -64,6 +76,7 @@ namespace Product.Dal.Implementations
         {
             var account = await context.Accounts
                 .Include(x => x.ShopingHistory)
+                .ThenInclude(x => x.Product)
                 .FirstOrDefaultAsync(x => x.Email == email);
 
             return account == null ?

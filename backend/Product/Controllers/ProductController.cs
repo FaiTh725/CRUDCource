@@ -57,5 +57,13 @@ namespace Product.Controllers
 
             return new JsonResult(response);
         }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ProductSeller(long id)
+        {
+            var response = await productService.GetProductSeller(id);
+
+            return new JsonResult(response);
+        }
     }
 }

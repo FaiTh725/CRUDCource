@@ -1,6 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
 using Product.Domain.Contracts.Repositories;
+using System.Reflection.Metadata.Ecma335;
 using ProductEntity = Product.Domain.Models.Product;
 
 namespace Product.Dal.Implementations
@@ -41,15 +42,26 @@ namespace Product.Dal.Implementations
             return Result.Success(products);
         }
 
-        public async Task<Result<ProductEntity>> GetProductWithShopingCart(long id)
+        public async Task<Result<ProductEntity>> GetProductWithSeller(long productId)
         {
             var product = await context.Products
-                .Include(p => p.AccountInShopingCart)
-                .FirstOrDefaultAsync(p => p.Id == id);
-        
+                .Include(x => x.Sealer)
+                .FirstOrDefaultAsync(x => x.Id == productId);
+
             return product is null ?
-                Result.Failure<ProductEntity>("Product not exist") :
-                Result.Success<ProductEntity>(product);
+                Result.Failure<ProductEntity>("Product dont found") :
+                Result.Success(product);
+        }
+
+        public async Task<Result> UpdateProducts(List<ProductEntity> products)
+        {
+            context.Products.UpdateRange(products);
+
+            var countChanges = await context.SaveChangesAsync();
+
+            return countChanges > 0 ?
+                Result.Success() :
+                Result.Failure("Error update products count");
         }
     }
 }

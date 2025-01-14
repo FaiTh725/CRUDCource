@@ -23,7 +23,7 @@ namespace Product.Domain.Models
 
         public List<CartItem> ShopingCart {  get; set; } = new List<CartItem>();
 
-        public List<Product> ShopingHistory { get; set; } = new List<Product>();
+        public List<CartItem> ShopingHistory { get; set; } = new List<CartItem>();
 
         public List<Product> SoldProducts { get; set; } = new List<Product>();
     

@@ -23,7 +23,7 @@ namespace Notification.Helpers.Extentions
             }
 
             var messageBrokerSetting = builder.Configuration.GetSection(rabbitMqSection).Get<MessageBrokerSetting>();
-
+            
             builder.Services.AddMassTransit(conf =>
             {
                 conf.AddConsumer<SentEmailConsumer>();

@@ -1,6 +1,7 @@
 ﻿using Application.Contracts.Response;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query;
+using Product.Dal.Interfaces;
 using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Product;
 using Product.Domain.Contracts.Models.Request;
@@ -11,6 +12,7 @@ using Product.Helpers.Settings;
 using Product.Services.Interfaces;
 using System.Text;
 using System.Text.Json;
+using ProductEntity = Product.Domain.Models.Product;
 
 namespace Product.Services.Implementations
 {
@@ -21,32 +23,35 @@ namespace Product.Services.Implementations
         private readonly IProductRepository productRepository;
         private readonly ICartItemRepository cartItemRepository;
         private readonly IBlobService blobService;
-        private readonly HttpClient httpClient;
+        private readonly IHttpClientFactory httpClientFactory;
         private readonly IConfiguration configuration;
+        private readonly IDatabaseTransaction databaseTransaction;
 
         public AccountService(
             IAccountRepository accountRepository,
             IChangeRoleRepository changeRoleRepository,
             IBlobService blobService,
-            HttpClient httpClient,
+            IHttpClientFactory httpClientFactory,
             IConfiguration configuration,
             IProductRepository productRepository,
-            ICartItemRepository cartItemRepository)
+            ICartItemRepository cartItemRepository,
+            IDatabaseTransaction databaseTransaction)
         {
             this.accountRepository = accountRepository;
             this.changeRoleRepository = changeRoleRepository;
             this.productRepository = productRepository;
             this.cartItemRepository = cartItemRepository;
             this.blobService = blobService;
-            this.httpClient = httpClient;
+            this.httpClientFactory = httpClientFactory;
             this.configuration = configuration;
+            this.databaseTransaction = databaseTransaction;
         }
 
         public async Task<BaseResponse> AddProductToCart(AccountWithProductCountRequest request)
         {
             try
             {
-                var account = await accountRepository.GetAccountByEmail(request.Email);
+                var account = await accountRepository.GetAccountWithCart(request.Email);
 
                 if(account.IsFailure)
                 {
@@ -54,6 +59,18 @@ namespace Product.Services.Implementations
                     {
                         StatusCode = StatusCode.BadRequest,
                         Description = "Accocunt with current email was not found"
+                    };
+                }
+
+                var productInCart = account.Value.ShopingCart
+                    .FirstOrDefault(x => x.Product.Id == request.ProductId);
+
+                if (productInCart != null)
+                {
+                    return new BaseResponse
+                    {
+                        StatusCode = StatusCode.BadRequest,
+                        Description = "Product already in cart"
                     };
                 }
 
@@ -88,7 +105,7 @@ namespace Product.Services.Implementations
                     };
                 }
 
-                var resultUpdate = await accountRepository.AddProductToCart(account.Value, cartItem.Value);
+                var resultUpdate = await accountRepository.AddProductsToCart(account.Value, new List<CartItem> { cartItem.Value });
 
                 if(resultUpdate.IsFailure)
                 {
@@ -112,6 +129,125 @@ namespace Product.Services.Implementations
                     Description = "Internal Server Eror",
                     StatusCode = StatusCode.Ok
                 };
+            }
+        }
+
+        public async Task<BaseResponse> BuyProducts(AccountBuyProductRequest request)
+        {
+            try
+            {
+                var account = await accountRepository.GetAccountWithCart(request.Email);
+
+                if(account.IsFailure)
+                {
+                    return new BaseResponse
+                    {
+                        StatusCode = StatusCode.BadRequest,
+                        Description = account.Error
+                    };
+                }
+                await databaseTransaction.StartTransaction();
+
+                //var itemsToRemove = account.Value.ShopingCart.Where(x => request.Products.Any(y => y.ProductId == x.Product.Id));
+                var itemsToRemove = new List<CartItem>();
+                var productsToUpdate = new List<ProductEntity>();
+
+                foreach (var requestProduct in request.Products)
+                {
+                    var cartItem = account.Value.ShopingCart
+                        .FirstOrDefault(x => x.Product.Id == requestProduct.ProductId);
+
+                    if (cartItem == null)
+                    {
+                        return new BaseResponse 
+                        { 
+                            StatusCode = StatusCode.BadRequest,
+                            Description = "Product is not in cart"
+                        };
+                    }
+
+                    cartItem.Count = requestProduct.Count;
+                    itemsToRemove.Add(cartItem);
+
+                    var resultBuy = cartItem.Product.BuyProduct(requestProduct.Count);
+
+                    if(!resultBuy)
+                    {
+                        return new BaseResponse 
+                        { 
+                            Description = "Invalid count product for buy",
+                            StatusCode = StatusCode.BadRequest,
+                        };
+
+                    }
+
+                    productsToUpdate.Add(cartItem.Product);
+                }
+
+                var resultUpdate = await productRepository.UpdateProducts(productsToUpdate);
+
+                var resultRemove = await cartItemRepository
+                    .RemoveCarts(itemsToRemove);
+
+                if(resultRemove.IsFailure || resultUpdate.IsFailure)
+                {
+                    await databaseTransaction.RollBackTransaction();
+                    return new BaseResponse
+                    {
+                        StatusCode = StatusCode.InternalServerError,
+                        Description = resultRemove.Error
+                    };
+                }
+
+                var itemsForOrderHistory = itemsToRemove.Select(x => 
+                {
+                    var newItemCart = CartItem.Initialize(x.Count, x.Product);
+
+                    if(newItemCart.IsFailure)
+                    {
+                        throw new InvalidDataException();
+                    }
+
+                    return newItemCart.Value;
+                }).ToList();
+
+                var accountWithShopingHistory = await accountRepository
+                    .GetAccountWithOrderHistory(request.Email);
+
+                var resultAddItemsToHistory = await accountRepository
+                    .AddProductToOrderHistory(accountWithShopingHistory.Value, itemsForOrderHistory);
+
+                if(resultAddItemsToHistory.IsFailure)
+                {
+                    await databaseTransaction.RollBackTransaction();
+                    return new BaseResponse 
+                    { 
+                        Description = resultAddItemsToHistory.Error,
+                        StatusCode = StatusCode.InternalServerError
+                    };
+
+                }
+
+                await databaseTransaction.CommitTransaction();
+                return new BaseResponse
+                {
+                    StatusCode = StatusCode.Ok,
+                    Description = "Product bought"
+                };
+            }
+            catch
+            {
+                await databaseTransaction.RollBackTransaction();
+
+                return new BaseResponse
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Internal Server Error"
+                };
+            }
+            finally
+            {
+                await databaseTransaction.Dispose();
             }
         }
 
@@ -149,6 +285,8 @@ namespace Product.Services.Implementations
 
                 var apiList = configuration.GetSection("APIList").Get<APIList>() ??
                     throw new NullReferenceException("Configuration of api is empty");
+
+                var httpClient = httpClientFactory.CreateClient("ClientHttp");
 
                 var response = await httpClient.PatchAsync(
                     $@"{apiList.AuthorizeAPI}/User/UpdateUser",
@@ -340,9 +478,9 @@ namespace Product.Services.Implementations
                     };
                 }
 
-                var isProductInCart = account.Value.ShopingCart.FirstOrDefault(x => x.Product.Id == request.ProductId);
+                var cartItem = account.Value.ShopingCart.FirstOrDefault(x => x.Product.Id == request.ProductId);
 
-                if (isProductInCart == null)
+                if (cartItem == null)
                 {
                     return new BaseResponse
                     {
@@ -351,7 +489,7 @@ namespace Product.Services.Implementations
                     };
                 }
 
-                var resultRemove = await cartItemRepository.RemoveCartByProductId(request.ProductId);
+                var resultRemove = await cartItemRepository.RemoveCart(cartItem);
 
                 if(resultRemove.IsFailure)
                 {
@@ -394,13 +532,15 @@ namespace Product.Services.Implementations
                 }
 
                 var cartItems = await Task.WhenAll(
-                    account.Value.ShopingCart.Select(async x => new ProductResponse
+                    account.Value.ShopingCart.Select(async x => new ProductCartResponse
                     {
                         Id = x.Product.Id,
                         Count = x.Count,
                         Description = x.Product.Description,
                         Name = x.Product.Name,
+                        MaxCountProduct = x.Product.Count,
                         Price = x.Product.Price,
+                        
                         Images = await blobService.DownLoadBlobFolder(x.Product.ImageFolder)
                     }));
 
@@ -484,11 +624,12 @@ namespace Product.Services.Implementations
                 var orderHistory = await Task.WhenAll(
                     account.Value.ShopingHistory.Select(async x => new ProductResponse
                     {
-                        Id = x.Id,
-                        Name = x.Name,
-                        Price = x.Price,
-                        Description = x.Description,
-                        Images = await blobService.DownLoadBlobFolder(x.ImageFolder)
+                        Id = x.Product.Id,
+                        Name = x.Product.Name,
+                        Price = x.Product.Price,
+                        Description = x.Product.Description,
+                        Count = x.Count,    
+                        Images = await blobService.DownLoadBlobFolder(x.Product.ImageFolder)
                     })
                 );
 
