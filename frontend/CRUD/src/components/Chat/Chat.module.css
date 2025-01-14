@@ -1,0 +1,100 @@
+.Chat__Main {
+  font-family: var(--font-family-default);
+  font-size: 12px;
+  color: #222;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+.Chat__OpenChat {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  transition: opacity .3s;
+  pointer-events: all;
+}
+
+.Chat__OpenChatClose {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Chat__OpenChat:hover {
+  animation: hoverOnChat 0.6s ease-out infinite;
+}
+
+@keyframes hoverOnChat {
+  30% {
+    transform: translateY(13px);
+    box-shadow: 0 5px 5px #808080;
+  }
+  50%{
+    transform: translateY(8px);
+    box-shadow: 0 0 5px #808080;
+  }
+  70%
+  {
+    transform: translateY(13px);
+    box-shadow: 0 5px 5px #808080;
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.Chat__Body {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: #e9e3da;
+  width: 600px;
+  height: 350px;
+  border-radius: 7px;
+  transition: opacity .2s, width .4s, height .4s;
+  pointer-events: all;
+}
+
+.Chat__BodyClose {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.Chat__Head {
+  background-color: #be2119;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 5px;
+  padding-top: 3px;
+}
+
+.Chat__Chats {
+  display: flex;
+  height: 100%;
+  padding-bottom: 27px;
+}
+
+.Chat__AllChat {
+  border-right: 1px dashed #222;
+  min-width: 120px;
+  overflow-y: auto;
+}
+
+.Chat__CurrentChat {
+  width: 100%;
+}

@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import EmptyButton from "../buttons/empty_button/EmptyButton";
+import { useEffect } from "react";
 import styles from "./MiniMessages.module.css"
+import EmptyButton from "../buttons/empty_button/EmptyButton";
 
 const MiniMessages = ({message, isActive, setIsActive}) => {
 

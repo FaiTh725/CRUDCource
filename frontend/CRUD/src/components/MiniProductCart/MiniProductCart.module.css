@@ -1,0 +1,42 @@
+.MiniProductCart__Main {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+  font-family: var(--font-family-default);
+  color: var(--color-default);
+  padding-right: 30px;
+}
+
+.MiniProductCart__Image {
+  width: 40px;
+  height: 60px;
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.MiniProductCart__ProductData {
+  flex: 3;
+  margin-left: 5px;
+}
+
+.MiniProductCart__ProductSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.MiniProductCart__Name {
+  font-size: 22px;
+}
+
+.MiniProductCart__DeleteBtn {
+  transition: all .3s;
+}
+
+.MiniProductCart__DeleteBtn:hover {
+  stroke: rgb(131, 131, 131);
+}

@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { useAuth } from "../../components/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
-import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
-import SimpleInput from "../../components/inputs/simple_input/Input";
-
 import styles from "./AuthLogin.module.css"
-import decodeJWT from "../../services/JWTService";
-import TextLink from "../../components/links/TextLink/TextLink";
 import axios from "axios";
+import SimpleInput from "../../components/inputs/simple_input/Input";
+import TextLink from "../../components/links/TextLink/TextLink";
+import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
 
 const AuthLogin = () => {
   const [loginForm, setLoginForm] = useState({
@@ -33,26 +31,21 @@ const AuthLogin = () => {
   const handleLogin = async () => {
     try
     {
-      const response = await axios.post("https://localhost:7004/api/Authorize/Login", 
+      const response = await axios.post("https://localhost:5102/api/Authorize/Login", 
         {
           password: loginForm.password,
           email: loginForm.email
+        },
+        {
+          withCredentials: true
         }
       );
 
       if(response.data.statusCode === 0)
       {
-        const jwtData = decodeJWT(response.data.data); 
-
-        if(jwtData)
-        {
-          auth.login(jwtData);
-          navigate("/");
-        }
-        else
-        {
-          setErrorMessage("Server error please contact admin");
-        }
+        localStorage.setItem("authData", JSON.stringify(response.data.data));
+        auth.login(response.data.data);
+        navigate("/");
       }
       else
       {

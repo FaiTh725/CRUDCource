@@ -1,8 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import { useEffect, useState } from "react";
-import Cookies from "js-cookie";
-import decodeJWT from "../../services/JWTService";
 import Loading from "../Loading/Loading";
 
 const ProtectedRoutes = ({ roles }) => {
@@ -10,13 +8,9 @@ const ProtectedRoutes = ({ roles }) => {
   const [currentUser, setCurrentUser] = useState(undefined);
 
   useEffect(() => {
-    const token = Cookies.get("token");
-
-    if (token) {
-      const decodeJwt = decodeJWT(token);
-      
-      auth.login(decodeJwt);
-      setCurrentUser(decodeJwt);
+    const user = auth.user
+    if (user != null) {
+      setCurrentUser(user);
     }
     else
     {
@@ -36,7 +30,6 @@ const ProtectedRoutes = ({ roles }) => {
   if (currentUser && roles.includes(currentUser.role)) 
   {
     return <Outlet />;
-    
   } 
   else 
   {

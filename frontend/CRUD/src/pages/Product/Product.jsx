@@ -1,16 +1,17 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./Product.module.css"
-import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import BigImageSlider from "../../components/BigImageSlider/BigImageSlider";
-import Counter from "../../components/inputs/counter/Counter";
-import Cookies from "js-cookie";
 import { useAuth } from "../../components/Auth/AuthContext";
-import decodeJWT from "../../services/JWTService";
+import useLogout from "../../hooks/useLogOut";
+import { useCart } from "../../components/Cart/CartContext";
+import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
+import Counter from "../../components/inputs/counter/Counter";
+import BigImageSlider from "../../components/BigImageSlider/BigImageSlider";
 
 const Product = () => {
   const auth = useAuth();
+  const cart = useCart();
   const [product, setProduct] = useState({
     id: null,
     name: "",
@@ -20,8 +21,23 @@ const Product = () => {
     images: []
   });
   const [count, setCount] = useState(0);
-  const [isProductInCart, setIsProductInCart] = useState(false);
   const navigate = useNavigate();
+  const logout = useLogout();
+
+  const isProductInCart = useMemo(() => {
+    const params = new URLSearchParams(document.location.search);
+    const productId = Number.parseInt(params.get("product"));
+    if(cart.cart.length !== 0 && !Number.isNaN(productId))
+    {
+      return cart.cart.find(cartItem => 
+        cartItem.id === productId) !== undefined ?
+        true : false;
+    }
+    else
+    {
+      return false;
+    }
+  }, [cart]);
 
   const handleDeleteProductrFromCart = async () => {
     if(!isProductInCart)
@@ -37,12 +53,9 @@ const Product = () => {
 
     try
     {
-      const token = Cookies.get("token");
-      const response = await axios.delete("https://localhost:7080/api/Account/DeleteProductFromCart", 
+      const response = await axios.delete("https://localhost:5202/api/Account/DeleteProductFromCart", 
       {  
-        headers: {
-          "Authorization": "Bearer " + token
-        },
+        withCredentials: true,
         data: {
           productId: product.id,
           email: auth.user.email 
@@ -51,16 +64,14 @@ const Product = () => {
 
       if(response.data.statusCode === 0)
       {
-        setIsProductInCart(false);
+        cart.removeCartItem(product.id);
       }
     }
     catch (error)
     {
       if(error.status == 401)
       {
-        auth.logout();
-        navigate("/account/login");
-        return;
+        logout();
       }
 
       console.log("Error delete product from cart");
@@ -75,29 +86,31 @@ const Product = () => {
     
     if(auth.user == null)
     {
-      console.log(auth);
-      auth.logout();
-      navigate("/account/login");
-      return;
+      logout();
     }
 
     try
     {
-      const token = Cookies.get("token");
-      var response = await axios.post("https://localhost:7080/api/Account/AddToCartProduct", {
+      var response = await axios.post("https://localhost:5202/api/Account/AddToCartProduct", {
         productId: product.id,
         email: auth.user.email,
         count: count
-      }, {
-        headers: {
-          "Authorization": "Bearer " + token
-        }
+      }, { 
+        withCredentials: true
       });
 
       if(response.data.statusCode == 0)
       {
         setCount(0);
-        setIsProductInCart(true);
+        cart.addCartitem({
+          id: product.id,
+          description: product.description,
+          price: product.price,
+          name: product.name,
+          images: product.images,
+          maxCountProduct: product.count,
+          count: count
+        });
       }
       else
       {
@@ -108,9 +121,7 @@ const Product = () => {
     {
       if(error.status === 401)
       {
-        auth.logout();
-        navigate("/account/login");
-        return;
+        logout();
       }
       console.error("Error added product to cart - " + error.message);
     }
@@ -119,7 +130,7 @@ const Product = () => {
   const fetchProduct = async (productId, abortController) => {
     try
     {
-      var response = await axios.get("https://localhost:7080/api/Product/Product?id="+productId, {
+      var response = await axios.get("https://localhost:5202/api/Product/Product?id="+productId, {
         signal: abortController.signal
       });
     
@@ -139,45 +150,7 @@ const Product = () => {
     }
     catch(error)
     {
-      console.log("Error fetch product data");
-    }
-  }
-
-  const fetchIsProductInCart = async (productId, abortController) => {
-    try
-    {
-      
-      if(auth.user == null)
-      {
-        setIsProductInCart(false);
-        return;
-      }
-        
-      const token = Cookies.get("token");
-      const response = await axios.get(`https://localhost:7080/api/Product/IsProductInCart?productId=${productId}&email=${auth.user.email}`, {
-        headers: {
-          "Authorization" : "Bearer " + token
-        },
-        signal: abortController.signal
-      });
-
-      if(response.data.statusCode == 1)
-      {
-        setIsProductInCart(false);
-        return;
-      }
-      else if(response.data.statusCode == 0)
-      {
-        setIsProductInCart(true);
-      }
-      else
-      {
-        console.log(response.data.description);
-      }
-    }
-    catch(error)
-    {
-      console.log("Error check is product in cart");
+      console.log(error.message);
     }
   }
 
@@ -194,17 +167,13 @@ const Product = () => {
       await fetchProduct(productId, controller);
     }
 
-    const callCheckProductInCart = async () => {
-      await fetchIsProductInCart(productId, controller);
-    }
-
     callFetchData();
-    callCheckProductInCart();
 
     return () => {
       controller.abort("The Request canceled");
     }
   }, []);
+
 
   return (
     <div className={styles.Product__Main}>

@@ -1,0 +1,21 @@
+.SellerDisputs__Main {
+  font-family: var(--font-family-default);
+  font-size: 16;
+  color: var(--color-default);
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  height: 80vh;
+  border-left: 1px solid var(--color-default);
+  border-right: 1px solid var(--color-default);
+  border-style: dashed;
+  background-color: #e9e3da;
+}
+
+.SellerDisputs__Chats {
+  min-width: 150px;
+}
+
+.SellerDisputs__CurrentChat {
+  flex: 1;
+}

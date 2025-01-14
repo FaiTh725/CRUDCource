@@ -4,6 +4,7 @@ import styles from "./Counter.module.css"
 const Counter = ({value , setValue, min = 0, max, range = 1}) => {
   
   const handleChangeRangeUp = () => {
+    console.log(max);
     setValue((prev) => {
       if(max >= prev + range)
       {

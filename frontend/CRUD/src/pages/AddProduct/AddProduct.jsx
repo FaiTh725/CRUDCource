@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
-import FileInput from "../../components/inputs/file_input/FileInput";
-import SimpleArea from "../../components/inputs/simple_area/SimpleArea";
-import SimpleInput from "../../components/inputs/simple_input/Input";
 import styles from "./AddProduct.module.css"
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useAuth } from "../../components/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
+import SimpleInput from "../../components/inputs/simple_input/Input";
+import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
 import MiniMessages from "../../components/MiniMessages/MiniMessages";
+import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import FileInput from "../../components/inputs/file_input/FileInput";
+import SimpleArea from "../../components/inputs/simple_area/SimpleArea";
 
 
 const AddProduct = () => {
@@ -135,7 +135,7 @@ const AddProduct = () => {
 
     try
     {
-      const response = await axios.post("https://localhost:7080/api/Product/Upload", 
+      const response = await axios.post("http://localhost:5201/api/Product/Upload", 
         form,
         {
           headers: {

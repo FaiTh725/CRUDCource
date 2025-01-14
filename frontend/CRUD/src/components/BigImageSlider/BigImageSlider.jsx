@@ -1,6 +1,6 @@
-import { useEffect, useInsertionEffect, useMemo, useRef, useState } from "react";
-import HeaderButton from "../buttons/header_button/HeaderButton";
+import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./BigImageSlider.module.css";
+import HeaderButton from "../buttons/header_button/HeaderButton";
 
 const BigImageSlider = ({images = []}) => {
   const imageContainer = useRef(null);

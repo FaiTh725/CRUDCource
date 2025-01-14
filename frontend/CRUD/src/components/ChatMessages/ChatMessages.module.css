@@ -1,0 +1,57 @@
+.ChatMessages__Main {
+  font-family: var(--font-family-default);
+  font-size: 12px;
+  color: #222;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #7979797e;
+}
+
+.ChatMessages__Messages{
+  flex: 1;
+  overflow-y: auto;
+}
+
+.ChatMessages__InputField {
+  width: 100%;
+
+}
+
+.ChatMessages__InputWrapper {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
+  background-color: #797979;
+}
+
+.ChatMessages__InputContainer {
+  width: 100%;
+  padding: 5px;
+}
+
+.ChatMessages__SendBtn {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+}
+
+.ChatMessages__SendBtn:hover {
+  background-color: #be2119;
+}
+
+.ChatMessages__SendBtn svg {
+  transition: all .3s;
+} 
+
+.ChatMessages__SendBtn:hover svg 
+{
+  fill: #fff;
+}

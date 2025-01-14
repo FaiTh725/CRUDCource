@@ -1,0 +1,19 @@
+.EmptyInput__Main {
+  width: 100%;
+  font-family: var(--font-family-default);
+  font-size: 12px;
+  color: #fff;
+  padding: 3px 10px;
+}
+
+.EmptyInput__Input {
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  caret-color: #fff;
+  resize: none;
+}
+
+.EmptyInput__Input:focus {
+  outline: none;
+}

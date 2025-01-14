@@ -5,6 +5,7 @@
   background-color: var(--color-default);
   color: #fff;
   transition: color .2s ;
+  width: 100%;
 }
 
 .SimpleButton__Button:hover {

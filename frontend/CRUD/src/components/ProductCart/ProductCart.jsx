@@ -1,7 +1,7 @@
-import React, { useRef } from "react"
-import ImageSlider from "../ImageSlider/ImageSlider"
+import { useRef } from "react"
 import styles from "./ProductCart.module.css"
 import { useNavigate } from "react-router-dom";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
 const ProductCart = ({product}) => {
 

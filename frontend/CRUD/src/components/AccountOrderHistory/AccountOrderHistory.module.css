@@ -1,0 +1,9 @@
+.AccountOrderHistory__Main {
+  font-family: var(--font-family-default);
+  color: #222;
+  font-weight: 400;
+}
+
+.AccountOrderHistory__Header {
+  font-size: 20px;
+}
