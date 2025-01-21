@@ -1,0 +1,41 @@
+.Paginator__Main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 20px;
+  height: 50px;
+}
+
+.Paginator__Statistic {
+  padding-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #222;
+  font-family: var(--font-family-default);
+}
+
+.Paginator__BtnWrapper {
+  display: flex;
+}
+
+.Paginator__BtnWrapper * + * {
+  margin-left: 5px;
+}
+
+.Paginator__BtnInner {
+  height: 50px;
+  border: 0.5px solid #707070;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Paginator__BtnInnerInactive {
+  border: 0.5px solid #949494;
+}
+
+.Paginator__BtnInnerInactive svg {
+  fill: #949494;
+}

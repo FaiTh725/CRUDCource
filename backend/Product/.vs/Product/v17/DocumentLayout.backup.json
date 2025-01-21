@@ -3,115 +3,216 @@
   "WorkspaceRootPath": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountresponsecartitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\productcartresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\product.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:product.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\productseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountwithproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\createaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\blobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\blobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\settings\\blobconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\settings\\blobconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\settings\\jwtconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\settings\\jwtconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\itelemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\itelemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\validators\\createproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:validators\\createproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\databasetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\databasetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\interfaces\\idatabasetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\interfaces\\idatabasetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\features\\exceptions\\aplicationconfigurationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:features\\exceptions\\aplicationconfigurationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\responseapi\\promqljsonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\responseapi\\promqljsonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\features\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:features\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accounttransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\ifeedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\feedback\\feedbackaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountresponsecartitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\productseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\validators\\addfeedbackvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:validators\\addfeedbackvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\validators\\accountvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:validators\\accountvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\uploadproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\iblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\iblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\ifeedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\ifeedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\feedback\\feedbackresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\createaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\migrations\\20250119122112_add feedbascks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:migrations\\20250119122112_add feedbascks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\background\\clearcompleterequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\background\\clearcompleterequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\configurations\\changeroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\configurations\\changeroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\cartitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\implementations\\cartitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\product.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:product.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\productcartresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountwithproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\settings\\blobconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\settings\\blobconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\settings\\jwtconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\settings\\jwtconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\ichangerolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\repositories\\icartitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\implementations\\changerolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,24 +223,12 @@
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\configurations\\cartitemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\interfaces\\idatabasetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\interfaces\\idatabasetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\configurations\\changeroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\configurations\\changeroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountbuyproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -152,9 +241,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\request\\changeroleaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\product\\uploadproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountwithproductcountrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -170,7 +256,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -190,105 +276,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductCartResponse.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "IDatabaseTransaction.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Interfaces\\IDatabaseTransaction.cs",
+              "RelativeDocumentMoniker": "Dal\\Interfaces\\IDatabaseTransaction.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Interfaces\\IDatabaseTransaction.cs",
+              "RelativeToolTip": "Dal\\Interfaces\\IDatabaseTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T20:27:23.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountResponseCartItems.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T20:28:22.941Z",
+              "WhenOpened": "2024-12-27T15:12:16.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Account.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\Account.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Account.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Entities\\Account.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAuwDUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "DatabaseTransaction.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\DatabaseTransaction.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementations\\DatabaseTransaction.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\DatabaseTransaction.cs",
+              "RelativeToolTip": "Dal\\Implementations\\DatabaseTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:03:07.356Z",
+              "WhenOpened": "2024-12-27T15:13:12.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateProductValidator.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\CreateProductValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\CreateProductValidator.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\CreateProductValidator.cs",
+              "RelativeToolTip": "Validators\\CreateProductValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T14:40:43.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ProductResponse.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Title": "ITelemetryService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\ITelemetryService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ITelemetryService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\ITelemetryService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ITelemetryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:50:28.086Z"
+              "WhenOpened": "2025-01-17T21:39:43.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TelemetryService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\TelemetryService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\TelemetryService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\TelemetryService.cs",
+              "RelativeToolTip": "Services\\Implementations\\TelemetryService.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAJAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T19:28:14.175Z"
+              "WhenOpened": "2025-01-17T21:39:51.565Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\ProductService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\ProductService.cs",
               "RelativeToolTip": "Services\\Implementations\\ProductService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABsAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:33:21.654Z"
+              "WhenOpened": "2024-12-27T14:33:21.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FeedBackService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\FeedBackService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\FeedBackService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\FeedBackService.cs",
+              "RelativeToolTip": "Services\\Implementations\\FeedBackService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwD8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T20:26:22.245Z"
+              "WhenOpened": "2025-01-19T13:02:00.845Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppExtention.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
-              "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
-              "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADMAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BlobService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\BlobService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\BlobService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\BlobService.cs",
+              "RelativeToolTip": "Services\\Implementations\\BlobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T15:28:03.235Z"
+              "WhenOpened": "2025-01-02T15:47:44.739Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AccountService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\AccountService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AccountService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:45:43.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementations\\AccountRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\AccountRepository.cs",
+              "RelativeToolTip": "Dal\\Implementations\\AccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:32:17.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FeedBackController.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\FeedBackController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FeedBackController.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\FeedBackController.cs",
+              "RelativeToolTip": "Controllers\\FeedBackController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowBwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T12:48:04.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -296,119 +427,217 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:46:07.056Z"
+              "WhenOpened": "2024-12-27T13:46:07.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\AccountService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\AccountService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\AccountService.cs",
-              "RelativeToolTip": "Services\\Implementations\\AccountService.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAAAACEBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Dal\\AppDbContext.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
+              "RelativeToolTip": "Dal\\AppDbContext.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwC0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T16:45:43.91Z"
+              "WhenOpened": "2024-12-27T14:38:02.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\CartItem.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\CartItem.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\CartItem.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Entities\\CartItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAD4vxYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:13:36.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Account.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\Account.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Account.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Entities\\Account.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAtwB0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:03:07.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppExtention.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
+              "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
+              "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAALwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T15:28:03.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AplicationConfigurationException.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\AplicationConfigurationException.cs",
+              "RelativeDocumentMoniker": "Features\\Exceptions\\AplicationConfigurationException.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\AplicationConfigurationException.cs",
+              "RelativeToolTip": "Features\\Exceptions\\AplicationConfigurationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T23:11:33.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PromQLJsonModel.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLJsonModel.cs",
+              "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLJsonModel.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLJsonModel.cs",
+              "RelativeToolTip": "Helpers\\ResponseApi\\PromQLJsonModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T17:14:26.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T23:09:32.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAD8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T15:15:17.16Z"
+              "WhenOpened": "2024-12-27T15:15:17.16Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Product.http",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Product.http",
-              "RelativeDocumentMoniker": "Product.http",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Product.http",
-              "RelativeToolTip": "Product.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-01-05T12:29:25.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-01T23:04:39.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-02T13:30:24.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAcwFgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:14:05.615Z"
+              "WhenOpened": "2024-12-27T14:05:10.977Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABJAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "AccountTransactions.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountTransactions.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountTransactions.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountTransactions.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountTransactions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:32:59.324Z"
+              "WhenOpened": "2025-01-19T22:12:40.346Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CreateAccount.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAccountService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IAccountService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:49:33.49Z"
+              "WhenOpened": "2024-12-26T20:28:01.978Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AccountWithProductRequest.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TestController.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\TestController.cs",
+              "RelativeToolTip": "Controllers\\TestController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:49:36.422Z"
+              "WhenOpened": "2025-01-18T13:24:05.867Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
+              "Title": "FeedBackRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\FeedBackRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementations\\FeedBackRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\FeedBackRepository.cs",
+              "RelativeToolTip": "Dal\\Implementations\\FeedBackRepository.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowC8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T12:50:50.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FeedBackAddRequest.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackAddRequest.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackAddRequest.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackAddRequest.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackAddRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:02:52.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductRating.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T17:41:33.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IFeedBackRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T12:48:48.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "ProductSeller.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\ProductSeller.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\ProductSeller.cs",
@@ -420,259 +649,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementations\\ProductRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ProductRepository.cs",
-              "RelativeToolTip": "Dal\\Implementations\\ProductRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAowDQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:31:33.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "BlobService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\BlobService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\BlobService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\BlobService.cs",
-              "RelativeToolTip": "Services\\Implementations\\BlobService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwC4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T15:47:44.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "BlobConf.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\BlobConf.cs",
-              "RelativeDocumentMoniker": "Helpers\\Settings\\BlobConf.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\BlobConf.cs",
-              "RelativeToolTip": "Helpers\\Settings\\BlobConf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T14:18:28.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IAccountService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IAccountService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IAccountService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IAccountService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IAccountService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T20:28:01.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "JwtConf.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\JwtConf.cs",
-              "RelativeDocumentMoniker": "Helpers\\Settings\\JwtConf.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\JwtConf.cs",
-              "RelativeToolTip": "Helpers\\Settings\\JwtConf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T15:27:04.03Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IChangeRoleRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T20:06:23.912Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "ICartItemRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAdAAAAAAAAAA==",
+              "Title": "AccountResponseCartItems.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:05:51.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CartItemRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\CartItemRepository.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementations\\CartItemRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\CartItemRepository.cs",
-              "RelativeToolTip": "Dal\\Implementations\\CartItemRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwCEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:07:17.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\CartItem.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\CartItem.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\CartItem.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Entities\\CartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:13:36.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:05:10.977Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementations\\AccountRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\AccountRepository.cs",
-              "RelativeToolTip": "Dal\\Implementations\\AccountRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvysAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:32:17.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "DatabaseTransaction.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\DatabaseTransaction.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementations\\DatabaseTransaction.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\DatabaseTransaction.cs",
-              "RelativeToolTip": "Dal\\Implementations\\DatabaseTransaction.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T15:13:12.672Z"
+              "WhenOpened": "2024-12-26T20:28:22.941Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "ChangeRoleRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ChangeRoleRepository.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementations\\ChangeRoleRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ChangeRoleRepository.cs",
-              "RelativeToolTip": "Dal\\Implementations\\ChangeRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FeedBack.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\FeedBack.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\FeedBack.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\FeedBack.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Entities\\FeedBack.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T15:28:20.396Z"
+              "WhenOpened": "2025-01-19T11:26:15.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IDatabaseTransaction.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Interfaces\\IDatabaseTransaction.cs",
-              "RelativeDocumentMoniker": "Dal\\Interfaces\\IDatabaseTransaction.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Interfaces\\IDatabaseTransaction.cs",
-              "RelativeToolTip": "Dal\\Interfaces\\IDatabaseTransaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 28,
+              "Title": "ProductResponse.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T15:12:16.957Z"
+              "WhenOpened": "2024-12-27T13:50:28.086Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "CartItemConfiguration.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\CartItemConfiguration.cs",
-              "RelativeDocumentMoniker": "Dal\\Configurations\\CartItemConfiguration.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\CartItemConfiguration.cs",
-              "RelativeToolTip": "Dal\\Configurations\\CartItemConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Title": "AddFeedBackValidator.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\AddFeedBackValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\AddFeedBackValidator.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\AddFeedBackValidator.cs",
+              "RelativeToolTip": "Validators\\AddFeedBackValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:31:15.173Z"
+              "WhenOpened": "2025-01-19T14:39:39.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Dal\\AppDbContext.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
-              "RelativeToolTip": "Dal\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:38:02.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ChangeRoleConfiguration.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ChangeRoleConfiguration.cs",
-              "RelativeDocumentMoniker": "Dal\\Configurations\\ChangeRoleConfiguration.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ChangeRoleConfiguration.cs",
-              "RelativeToolTip": "Dal\\Configurations\\ChangeRoleConfiguration.cs",
+              "DocumentIndex": 33,
+              "Title": "AccountValidator.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\AccountValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\AccountValidator.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\AccountValidator.cs",
+              "RelativeToolTip": "Validators\\AccountValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:31:23.182Z"
+              "WhenOpened": "2025-01-19T14:41:38.833Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "ProductConfiguration.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ProductConfiguration.cs",
-              "RelativeDocumentMoniker": "Dal\\Configurations\\ProductConfiguration.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ProductConfiguration.cs",
-              "RelativeToolTip": "Dal\\Configurations\\ProductConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:31:17.131Z"
+              "WhenOpened": "2024-12-26T20:26:22.245Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "AccountConfiguration.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\AccountConfiguration.cs",
-              "RelativeDocumentMoniker": "Dal\\Configurations\\AccountConfiguration.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\AccountConfiguration.cs",
-              "RelativeToolTip": "Dal\\Configurations\\AccountConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:30:38.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "BuyProductRequest.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:50:45.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ChangeRoleAccount.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:50:32.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
               "Title": "UploadProduct.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\UploadProduct.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\UploadProduct.cs",
@@ -684,7 +733,343 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\Product.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAFgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:14:05.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementations\\ProductRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ProductRepository.cs",
+              "RelativeToolTip": "Dal\\Implementations\\ProductRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowDIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:31:33.297Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 38,
+              "Title": "FeedBackConfiguration.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\FeedBackConfiguration.cs",
+              "RelativeDocumentMoniker": "Dal\\Configurations\\FeedBackConfiguration.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\FeedBackConfiguration.cs",
+              "RelativeToolTip": "Dal\\Configurations\\FeedBackConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T11:46:10.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IBlobService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IBlobService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IBlobService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IBlobService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IBlobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:29:50.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IFeedBackService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IFeedBackService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IFeedBackService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IFeedBackService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IFeedBackService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:01:51.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "FeedBackResponse.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:13:18.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CreateAccount.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T13:49:33.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T19:28:14.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "20250119122112_Add FeedBascks.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Migrations\\20250119122112_Add FeedBascks.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250119122112_Add FeedBascks.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Migrations\\20250119122112_Add FeedBascks.cs",
+              "RelativeToolTip": "Migrations\\20250119122112_Add FeedBascks.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T12:21:22.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-02T13:30:24.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:32:59.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ClearCompleteRequests.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Background\\ClearCompleteRequests.cs",
+              "RelativeDocumentMoniker": "Services\\Background\\ClearCompleteRequests.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Background\\ClearCompleteRequests.cs",
+              "RelativeToolTip": "Services\\Background\\ClearCompleteRequests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T17:28:16.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ChangeRoleConfiguration.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ChangeRoleConfiguration.cs",
+              "RelativeDocumentMoniker": "Dal\\Configurations\\ChangeRoleConfiguration.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ChangeRoleConfiguration.cs",
+              "RelativeToolTip": "Dal\\Configurations\\ChangeRoleConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:31:23.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Product.http",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Product.http",
+              "RelativeDocumentMoniker": "Product.http",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Product.http",
+              "RelativeToolTip": "Product.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-01-05T12:29:25.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "CartItemRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\CartItemRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementations\\CartItemRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\CartItemRepository.cs",
+              "RelativeToolTip": "Dal\\Implementations\\CartItemRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAABQwCEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:07:17.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-01T23:04:39.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ProductCartResponse.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T20:27:23.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AccountWithProductRequest.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T13:49:36.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "BlobConf.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\BlobConf.cs",
+              "RelativeDocumentMoniker": "Helpers\\Settings\\BlobConf.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\BlobConf.cs",
+              "RelativeToolTip": "Helpers\\Settings\\BlobConf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T14:18:28.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "JwtConf.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\JwtConf.cs",
+              "RelativeDocumentMoniker": "Helpers\\Settings\\JwtConf.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\JwtConf.cs",
+              "RelativeToolTip": "Helpers\\Settings\\JwtConf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T15:27:04.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "IChangeRoleRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T20:06:23.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ICartItemRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:05:51.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ChangeRoleRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ChangeRoleRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementations\\ChangeRoleRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ChangeRoleRepository.cs",
+              "RelativeToolTip": "Dal\\Implementations\\ChangeRoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T15:28:20.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CartItemConfiguration.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\CartItemConfiguration.cs",
+              "RelativeDocumentMoniker": "Dal\\Configurations\\CartItemConfiguration.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\CartItemConfiguration.cs",
+              "RelativeToolTip": "Dal\\Configurations\\CartItemConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:31:15.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ProductConfiguration.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ProductConfiguration.cs",
+              "RelativeDocumentMoniker": "Dal\\Configurations\\ProductConfiguration.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ProductConfiguration.cs",
+              "RelativeToolTip": "Dal\\Configurations\\ProductConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:31:17.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "AccountConfiguration.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\AccountConfiguration.cs",
+              "RelativeDocumentMoniker": "Dal\\Configurations\\AccountConfiguration.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\AccountConfiguration.cs",
+              "RelativeToolTip": "Dal\\Configurations\\AccountConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:30:38.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "BuyProductRequest.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T13:50:45.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ChangeRoleAccount.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T13:50:32.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
               "Title": "AccountBuyProductRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountBuyProductRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountBuyProductRequest.cs",
@@ -696,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 64,
               "Title": "AccountResponseDetail.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseDetail.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseDetail.cs",
@@ -708,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 66,
               "Title": "AccountWithProductCountRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductCountRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductCountRequest.cs",
@@ -720,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 67,
               "Title": "AccountResponseOrderHisory.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseOrderHisory.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseOrderHisory.cs",

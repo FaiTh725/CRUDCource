@@ -26,6 +26,7 @@ namespace Product.Services.Implementations
         private readonly IHttpClientFactory httpClientFactory;
         private readonly IConfiguration configuration;
         private readonly IDatabaseTransaction databaseTransaction;
+        private readonly ITelemetryService telemetryService;
 
         public AccountService(
             IAccountRepository accountRepository,
@@ -35,7 +36,8 @@ namespace Product.Services.Implementations
             IConfiguration configuration,
             IProductRepository productRepository,
             ICartItemRepository cartItemRepository,
-            IDatabaseTransaction databaseTransaction)
+            IDatabaseTransaction databaseTransaction,
+            ITelemetryService telemetryService)
         {
             this.accountRepository = accountRepository;
             this.changeRoleRepository = changeRoleRepository;
@@ -45,6 +47,7 @@ namespace Product.Services.Implementations
             this.httpClientFactory = httpClientFactory;
             this.configuration = configuration;
             this.databaseTransaction = databaseTransaction;
+            this.telemetryService = telemetryService;
         }
 
         public async Task<BaseResponse> AddProductToCart(AccountWithProductCountRequest request)
@@ -226,6 +229,12 @@ namespace Product.Services.Implementations
                         StatusCode = StatusCode.InternalServerError
                     };
 
+                }
+
+                // create specifics metrics
+                foreach(var cartItem in itemsForOrderHistory)
+                {
+                    telemetryService.RecordProductBought(cartItem.Product.Id, cartItem.Count);
                 }
 
                 await databaseTransaction.CommitTransaction();

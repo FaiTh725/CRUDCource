@@ -2,11 +2,15 @@
   font-family: var(--font-family-default);
   color: #222;
   font-size: 16px;
-  max-width: 850px;
+  max-width: 1250px;
   margin: 0 auto;
-  display: flex;
   font-weight: 400;
   margin-top: 80px;
+}
+
+.Product__ProductView {
+  display: flex;
+  width: 100%;
 }
 
 .Product__ImageWrapper {

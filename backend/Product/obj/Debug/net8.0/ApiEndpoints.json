@@ -128,6 +128,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Product.Controllers.FeedBackController",
+    "Method": "AddFeedBack",
+    "RelativePath": "api/FeedBack/AddFeedBack",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailAccount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FeedBackImages",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      },
+      {
+        "Name": "Text",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rate",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Product.Controllers.FeedBackController",
+    "Method": "ProductFeedBacks",
+    "RelativePath": "api/FeedBack/ProductFeedBacks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Product.Controllers.ProductController",
     "Method": "IsProductInCart",
     "RelativePath": "api/Product/IsProductInCart",
@@ -247,6 +299,42 @@
       {
         "Name": "Count",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Product.Controllers.TestController",
+    "Method": "TestAddAccountMetrics",
+    "RelativePath": "api/Test/TestAddAccountMetrics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Product.Controllers.TestController",
+    "Method": "TestAddProductMetrics",
+    "RelativePath": "api/Test/TestAddProductMetrics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Product.Controllers.TestController",
+    "Method": "TestGet",
+    "RelativePath": "api/Test/TestGet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int64",
         "IsRequired": false
       }
     ],

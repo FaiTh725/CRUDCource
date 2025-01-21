@@ -1,0 +1,30 @@
+
+.InputRating__Main {
+  display: flex;
+  align-items: center;
+}
+
+.RatingStar__Main {
+  border: 1px solid #222;
+  border-radius: 7px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  padding: 10px;
+  transition: all .3s;
+}
+
+.RatingStar__MainActive {
+  background-color: #222;
+}
+
+/* .RatingStar__Main:hover {
+  background-color: #222;
+} */
+
+.RatingStar__Main + .RatingStar__Main {
+  margin-left: 10px;
+}

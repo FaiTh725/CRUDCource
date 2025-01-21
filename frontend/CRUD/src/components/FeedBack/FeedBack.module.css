@@ -1,0 +1,36 @@
+.FeedBack__Main {
+  width: 100%;
+  font-family: var(--font-family-default);
+  font-weight: 300;
+  font-size: 14px;
+  color: #222;
+  padding: 10px;
+}
+
+.FeedBack__UnitRating {
+  padding: 1px;
+  height: 25px;
+  width: 25px;
+}
+
+.FeedBack__RatingWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.FeedBack__Main {
+  margin-top: 20px;
+}
+
+.FeedBack__Owner {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.FeedBack__RatingWrapper {
+  margin: 10px 0;
+}
+
+.FeedBack__Text {
+  margin-top: 10px;
+}

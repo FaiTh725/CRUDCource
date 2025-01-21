@@ -1,5 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
+using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Repositories;
 using Product.Domain.Entities;
 using Product.Domain.Models;
@@ -58,6 +59,18 @@ namespace Product.Dal.Implementations
             return account == null ?
                 Result.Failure<Account>("Account with this email not exist") :
                 Result.Success(account);
+        }
+
+        public IQueryable<AccountTransactions> GetAccountsWithTotalTransactions()
+        {
+            return context.Accounts
+                .Include(x => x.ShopingHistory)
+                .ThenInclude(x => x.Product)
+                .Select(x => new AccountTransactions
+                {
+                    Email = x.Email,
+                    Transactions = (double)x.ShopingHistory.Sum(x => x.Count * x.Product.Price)
+                });
         }
 
         public async Task<Result<Account>> GetAccountWithCart(string email)

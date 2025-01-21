@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MassTransit;
+using Microsoft.EntityFrameworkCore;
 using Product.Dal.Configurations;
 using Product.Domain.Entities;
 using Product.Domain.Models;
+using Product.Features.Exceptions;
 using ProductEntity = Product.Domain.Models.Product;
 
 namespace Product.Dal
@@ -24,17 +26,29 @@ namespace Product.Dal
 
         public DbSet<ChangeAccountRoleRequest> ChangeRoleRequests { get; set; }
 
+        public DbSet<FeedBack> FeedBacks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AccountConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new ChangeRoleConfiguration());
             modelBuilder.ApplyConfiguration(new CartItemConfiguration());
+            modelBuilder.ApplyConfiguration(new FeedBackConfiguration());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("SQLServerConnection"));
+            var connectionString = configuration.GetConnectionString("SQLServerConnection");
+
+            if(connectionString is null)
+            {
+                throw new AplicationConfigurationException(
+                    "Error Aplication Configuration",
+                    "DbConnection");
+            }
+
+            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 }

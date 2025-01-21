@@ -1,0 +1,33 @@
+.Reviews__Main {
+  background-color: #e9e3da;
+  border-radius: 7px;
+  padding: 30px;
+  font-weight: 300;
+  font-family: var(--font-family-default);
+  color: #222;
+  font-size: 14px;
+}
+
+.Reviews__HeaderName {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.Reviews__RatingWrapper {
+  width: 100%;
+}
+
+.Reviews__RatingSection {
+  flex: 1;
+  display: inline-block;
+  min-width: 300px;
+  font-weight: 400;
+}
+
+.Reviews__RatingSectionHeader {
+  margin-bottom: 20px;
+}
+
+.Reviews__RatingContent {
+  padding-left: 20px;
+}

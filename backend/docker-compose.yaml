@@ -60,6 +60,7 @@ services:
       - "BlobStorage__BaseUrl=http://azurite"
       - "APIList__AuthorizeAPI=https://authorize_api:5102/api"
       - "APIList__Frontend=https://localhost:5173"
+      - "APIList__PromethesAPI=http://prometheus:9090"
       - ASPNETCORE_URLS=https://+:5202;http://+:5201
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
@@ -71,6 +72,7 @@ services:
       - message-broker
       - auth-database
       - azurite
+      - prometheus
 
   azurite:
     image: mcr.microsoft.com/azure-storage/azurite:latest
@@ -119,6 +121,16 @@ services:
     # command: ["redis-server", "--appendonly", "yes"]
     # volumes:
     #   - redis_data:/data
+  
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus-telemetry
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - rabbitmq_network
     
 volumes:
   sqlvolume:

@@ -84,6 +84,42 @@ namespace Product.Migrations
                     b.ToTable("ChangeRoleRequests");
                 });
 
+            modelBuilder.Entity("Product.Domain.Entities.FeedBack", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("FeedBackText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("OwnerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Rate")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SendTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("FeedBacks", t =>
+                        {
+                            t.HasCheckConstraint("CK_FeedBack_Rate", "Rate >= 0 AND Rate <= 5");
+                        });
+                });
+
             modelBuilder.Entity("Product.Domain.Models.Account", b =>
                 {
                     b.Property<long>("Id")
@@ -160,6 +196,25 @@ namespace Product.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Product.Domain.Entities.FeedBack", b =>
+                {
+                    b.HasOne("Product.Domain.Models.Account", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Product.Domain.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
 
                     b.Navigation("Product");
                 });
