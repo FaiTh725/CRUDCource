@@ -27,13 +27,22 @@ namespace Product.Dal.Implementations
 
         }
 
-        public IQueryable<FeedBack> GetFeedBacksProduct(long productId)
+        public IQueryable<FeedBack> GetFeedBacksProduct(long productId, int? rating = null)
         {
 
-            return context.FeedBacks
-                .Include(x => x.Product)
+            var feedBacks = context.FeedBacks
                 .Include(x => x.Owner)
+                .Include(x => x.Product)
                 .Where(x => x.Product.Id == productId);
+
+            if (rating is not null)
+            {
+                feedBacks = feedBacks.Where(x => x.Rate == rating);
+            }
+
+            return
+                feedBacks
+                .OrderByDescending(x => x.SendTime);
         }
 
         public IQueryable<ProductRating> GetProductsRating()
@@ -44,7 +53,13 @@ namespace Product.Dal.Implementations
                 .Select(x => new ProductRating
                 {
                     ProductId = x.Key,
-                    Rating = (double)x.Sum(y => y.Rate) / x.Count()
+                    GeneralRating = (double)x.Sum(y => y.Rate) / x.Count(),
+                    PartRatingCount = x
+                        .GroupBy(x => x.Rate)
+                        .Select(y => new KeyValuePair<int, int>(
+                            y.Key,
+                            y.Count()))
+                        .ToList()
                 });
         }
 

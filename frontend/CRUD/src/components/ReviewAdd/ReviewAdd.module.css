@@ -1,0 +1,37 @@
+.ReviewAdd__RatingContent {
+  padding-left: 20px;
+  width: 100%;
+}
+
+.ReviewAdd__RatingAddForm {
+  margin-top: 15px;
+}
+
+.ReviewAdd__RatingAddFromBtn {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+.ReviewAdd__RatingAddFormBtnWrapper {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ReviewAdd__FileInput {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.ReviewAdd__Error {
+  margin-top: 5px;
+  margin-left: 3px;
+}

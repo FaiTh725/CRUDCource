@@ -225,7 +225,10 @@ const Product = () => {
         </div>
       </div>
       <div>
-        <Reviews/>
+        {
+          product.id != null &&
+          <Reviews productId={product.id}/>
+        }
       </div>
     </div>
   )

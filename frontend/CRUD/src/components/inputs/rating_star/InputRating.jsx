@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import styles from "./InputRating.module.css";
 import RatingStar from "./RatingStar";
 
-const InputRating = () => {
+const InputRating = ({rate, setRate}) => {
   const [stars, setStars] = useState([
     {position:0, isSelected: false},
     {position:1, isSelected: false},
@@ -11,7 +11,17 @@ const InputRating = () => {
     {position:4, isSelected: false}
   ]);
 
+  const handleMouseClick = (position) => {
+    
+    setRate(position + 1);
+  }
+
   const handleMouseEnter = (position) => {
+    if(position != null && position != rate - 1)
+    {
+      setRate(null);
+    }
+
     const updatedStars = stars.map((cur, index) => 
       position >= index ? {...cur, isSelected: true} : {...cur, isSelected: false}
     );
@@ -20,6 +30,11 @@ const InputRating = () => {
   }
 
   const handleMouseLeave = () => {
+    if(rate != null)
+    {
+      return;
+    }
+
     const updatedStars = stars.map(cur => 
       ({...cur, isSelected: false})
     );
@@ -37,7 +52,8 @@ const InputRating = () => {
             position={star.position} 
             isActive={star.isSelected}
             handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}/>
+            handleMouseLeave={handleMouseLeave}
+            handleMouseClick={handleMouseClick}/>
         ))
       }
     </div>

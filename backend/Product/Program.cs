@@ -26,6 +26,7 @@ builder.Services.AddBlobStorage(builder.Configuration);
 builder.Services.AddCorses(builder.Configuration);
 builder.Services.AddValidators();
 builder.Services.AddCustomHttpClient();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();

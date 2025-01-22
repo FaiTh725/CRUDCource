@@ -16,4 +16,19 @@ const FormatDate = (date) => {
   return `${minues}:${hours}:${day}:${month}`;
 }
 
+export const ShortFormatDate = (date) => {
+  const dateObj = new Date(date);
+
+  if(isNaN(dateObj.getTime()))
+  {
+    return "Invalid Date";
+  }
+
+  const day = dateObj.getDate();
+  const month = dateObj.toLocaleString('default', { month: 'short' });
+  const year = dateObj.getUTCFullYear();
+
+  return `${day}.${month}.${year}`;
+}
+
 export default FormatDate;

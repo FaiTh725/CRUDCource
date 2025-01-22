@@ -35,11 +35,9 @@ namespace Product.Dal.Implementations
                 Result.Failure<ProductEntity>("Product not exist");
         }
 
-        public Result<IQueryable<ProductEntity>> GetProducts()
+        public IQueryable<ProductEntity> GetProducts()
         {
-            var products = context.Products.AsQueryable();
-
-            return Result.Success(products);
+            return context.Products.AsQueryable();
         }
 
         public async Task<Result<ProductEntity>> GetProductWithSeller(long productId)

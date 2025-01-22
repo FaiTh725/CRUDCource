@@ -3,7 +3,9 @@ import styles from "./Progress.module.css"
 
 const Progress = ({label, 
                 currentValue, 
-                maxValue}) => {
+                maxValue,
+                handleClick,
+                isSelected=false}) => {
   
   const scaleRef = useRef();
 
@@ -18,11 +20,13 @@ const Progress = ({label,
   }, [currentValue, maxValue])
 
   return (
-    <div className={styles.Progress__Main}>
+    <div className={`${styles.Progress__Main} 
+      ${isSelected ? styles.Progress__Selected : ""}`}
+      onClick={handleClick}>
       <div className={styles.Progress__Wrapper}>
         <div className={styles.Progress__Label}>{label}</div>
         <div className={styles.Progress__Scale} ref={scaleRef}></div>
-        <div className={styles.Progress__MaxValue}>{maxValue}</div>
+        <div className={styles.Progress__MaxValue}>{currentValue}</div>
       </div>
     </div>
   )

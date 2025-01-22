@@ -9,5 +9,9 @@ namespace Product.Services.Interfaces
         Task<Result<int>> GetProductCountMetric(long productId);
 
         Task<Result<decimal>> GetUserTransaction(long userId);
+
+        Task<Result<double>> GetProductGeneralRating(long productId);
+
+        Task<Result<List<KeyValuePair<int, int>>>> GetProductExtentionRating(long productId);
     }
 }

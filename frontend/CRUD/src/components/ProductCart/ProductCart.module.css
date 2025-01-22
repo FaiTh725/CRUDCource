@@ -2,7 +2,7 @@
   font-family: var(--font-family-default);
   color: var(--color-default);
   font-weight: 300;
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px 20px;
   position: relative;
   background: transparent;
@@ -37,10 +37,11 @@
 }
 
 .ProductCart__ImageWrapper {
-  width: 150px;
-  height: 240px;
+  /* width: 150px; */
+  height: 280px;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .ProductCart__Name {

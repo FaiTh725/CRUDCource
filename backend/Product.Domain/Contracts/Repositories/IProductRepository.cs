@@ -16,7 +16,7 @@ namespace Product.Domain.Contracts.Repositories
 
         Task<Result<ProductEntity>> GetProduct(long id);
 
-        Result<IQueryable<ProductEntity>> GetProducts();
+        IQueryable<ProductEntity> GetProducts();
 
         Task<Result> UpdateProducts(List<ProductEntity> products);
 

@@ -52,5 +52,31 @@ namespace Product.Controllers
                 "erorr check logs" :
                 result.Value);
         }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductAverageRating(long productId)
+        {
+            var response = await telemetryService.GetProductGeneralRating(productId);
+
+            if(response.IsFailure)
+            {
+                return Ok(response.Error);
+            }
+
+            return new JsonResult(response.Value);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductExtentionRating(long productId)
+        {
+            var response = await telemetryService.GetProductExtentionRating(productId);
+
+            if (response.IsFailure)
+            {
+                return Ok(response.Error);
+            }
+
+            return new JsonResult(response.Value);
+        }
     }
 }

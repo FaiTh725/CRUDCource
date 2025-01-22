@@ -14,7 +14,6 @@ namespace Product.Services.Implementations
     public class TelemetryService : ITelemetryService
     {
         private readonly Counter<long> productBoughtCounter;
-        //private readonly Counter<double> accountTransactionsCounter;
         private readonly HttpClient httpClient;
         private readonly IConfiguration configuration;
         private readonly IServiceProvider serviceProvider;
@@ -39,12 +38,6 @@ namespace Product.Services.Implementations
                 "product-sold-count",
                 description: "Count sold products");
 
-            //accountTransactionsCounter = meter.CreateCounter<double>(
-            //    "user-total-transactions",
-            //    unit: "USD",
-            //    description: "Total price of user transactions" +
-            //    "(total price all bougth products)");
-
             meter.CreateObservableGauge(
                 "user-total-transactions",
                 GetUsersTransactions,
@@ -57,10 +50,15 @@ namespace Product.Services.Implementations
                 GetProductsRating,
                 description: "Average rating of product");
 
-            Console.WriteLine("hui - 123");
+            meter.CreateObservableGauge(
+                "product-ratings",
+                GetProductExtentionRating,
+                description: "product feedbacks count");
             
             httpClient = httpClientFactory.CreateClient("DefaultHttpClient");
         }
+
+
 
         private IEnumerable<Measurement<double>> GetUsersTransactions()
         {
@@ -79,6 +77,26 @@ namespace Product.Services.Implementations
             }
         }
 
+        private IEnumerable<Measurement<int>> GetProductExtentionRating()
+        {
+            using var scope = serviceProvider.CreateScope();
+
+            var feedBackRepository = scope.ServiceProvider
+                .GetRequiredService<IFeedBackRepository>();
+
+            var ratings = feedBackRepository.GetProductsRating();
+
+            foreach(var rating in ratings)
+            {
+                foreach(var ratingUnit in rating.PartRatingCount)
+                {
+                    yield return new Measurement<int>(ratingUnit.Value, 
+                        KeyValuePair.Create<string, object?>("Rating", ratingUnit.Key),
+                        KeyValuePair.Create<string, object?>("ProductRatingId", rating.ProductId)); 
+                }
+            }
+        }
+
         private IEnumerable<Measurement<double>> GetProductsRating()
         {
             using var scope = serviceProvider.CreateScope();
@@ -91,7 +109,7 @@ namespace Product.Services.Implementations
             foreach(var rating in ratings)
             {
                 yield return new Measurement<double>(
-                    rating.Rating,
+                    rating.GeneralRating,
                     KeyValuePair.Create<string, object?>("ProductId", rating.ProductId));
             }
         }
@@ -203,6 +221,141 @@ namespace Product.Services.Implementations
             catch
             {
                 return Result.Failure<decimal>("Error get metrics user transactions");
+            }
+        }
+
+        public async Task<Result<double>> GetProductGeneralRating(long productId)
+        {
+            try
+            {
+                var requestBaseUrl = configuration.GetValue<string>("APIList:PromethesAPI") ??
+                    throw new AplicationConfigurationException(
+                        "Configuration api list is null",
+                        "ApiListPrometheus");
+
+                var requestUrl = $"{requestBaseUrl}/api/v1/query?query=" +
+                    $"product_average_rating{{ProductId = \"{productId}\"}}";
+
+                var response = await httpClient.GetAsync(requestUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return Result.Failure<double>("Error send inner api request");
+                }
+
+                var responseJson = await response.Content.ReadAsStringAsync();
+
+                if (responseJson is null)
+                {
+                    return Result.Failure<double>("Error get response from inner api");
+                }
+
+                var responseData = JsonSerializer.Deserialize<PromQLAverageRating>(responseJson);
+
+                if (responseData is null)
+                {
+                    return Result.Failure<double>("Error Deserialize Response");
+                }
+
+                if (responseData.Status != "success")
+                {
+                    return Result.Failure<double>("Error PromQL request path");
+                }
+
+                if (responseData.Data.Result.Length == 0)
+                {
+                    return Result.Success<double>(-1);
+                }
+
+                double.TryParse(
+                    responseData.Data.Result[0].Value[1].ToString(), 
+                    out double averageRatin);
+                
+                
+                return Result.Success(averageRatin);
+            }
+            catch (AplicationConfigurationException ex)
+            {
+                throw new AplicationConfigurationException(
+                    ex.Message,
+                    ex.ConfigurationWithError);
+            }
+            catch
+            {
+                return Result.Failure<double>("Error Get Metrics " +
+                    "Product Averate Rating");
+            }
+        }
+
+        public async Task<Result<List<KeyValuePair<int, int>>>> GetProductExtentionRating(long productId)
+        {
+            try
+            {
+                var requestBaseUrl = configuration.GetValue<string>("APIList:PromethesAPI") ??
+                    throw new AplicationConfigurationException(
+                        "Configuration api list is null",
+                        "ApiListPrometheus");
+
+                var requestUrl = $"{requestBaseUrl}/api/v1/query?query=" +
+                    $"product_ratings{{ProductRatingId = \"{productId}\"}}";
+
+
+                var response = await httpClient.GetAsync(requestUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return Result.Failure<List<KeyValuePair<int, int>>>(
+                        "Error send inner api request");
+                }
+
+                var responseJson = await response.Content.ReadAsStringAsync();
+
+                if (responseJson is null)
+                {
+                    return Result.Failure<List<KeyValuePair<int, int>>>(
+                        "Error get response from inner api");
+                }
+
+                var responseData = JsonSerializer.Deserialize<PromQLStatRating>(responseJson);
+
+                if (responseData is null)
+                {
+                    return Result.Failure<List<KeyValuePair<int, int>>>(
+                        "Error Deserialize Response");
+                }
+
+                if (responseData.Status != "success")
+                {
+                    return Result.Failure<List<KeyValuePair<int, int>>>(
+                        "Error PromQL request path");
+                }
+
+                var ratings = new List<KeyValuePair<int, int>>();
+
+                foreach (var stat in responseData.Data.Result)
+                {
+                    var statRating = stat.Metric;
+
+                    int.TryParse(statRating.Rating, out int statKey);
+                    int.TryParse(stat.Value[1].ToString(), out int statValue);
+
+                    ratings.Add(KeyValuePair.Create(statKey, statValue));
+                }
+
+                return Result.Success(ratings);
+            }
+            catch (AplicationConfigurationException ex)
+            {
+                throw new AplicationConfigurationException(
+                    ex.Message,
+                    ex.ConfigurationWithError);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return Result.Failure<List<KeyValuePair<int, int>>>(
+                    "Error Get Metrics " +
+                    "Proudct Extention Rating");
             }
         }
     }

@@ -12,10 +12,12 @@ namespace Product.Services.Interfaces
 
         Task<BaseResponse> IsProductInCart(long productId, string email);
 
-        Task<DataResponse<List<ProductResponse>>> GetProductPagination(int page, int count);
+        Task<DataResponse<ProductPaginationResponse>> GetProductPagination(int page, int count);
 
         Task<DataResponse<List<ProductResponse>>> GetProducts();
 
         Task<DataResponse<ProductSeller>> GetProductSeller(long productId);
+
+        Task<DataResponse<ProductMetricsResponse>> GetProductMetrics(long productId);
     }
 }

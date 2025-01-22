@@ -8,5 +8,10 @@ namespace Product.Services.Interfaces
         Task<DataResponse<FeedBackResponse>> UploadFeedBack(FeedBackAddRequest request);
 
         Task<DataResponse<List<FeedBackResponse>>> GetFeedBacksProduct(long productId);
+
+        Task<DataResponse<FeedBackPaginationResponse>> GetFeedBacksProductWithPagination(
+            long productId, int start, int count, int? rating);
+
+        Task<DataResponse<FeedBackResponse>> GetFeedBackAccount(long productId, string emailAccount);
     }
 }

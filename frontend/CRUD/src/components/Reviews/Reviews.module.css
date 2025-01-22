@@ -15,11 +15,13 @@
 
 .Reviews__RatingWrapper {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .Reviews__RatingSection {
   flex: 1;
-  display: inline-block;
   min-width: 300px;
   font-weight: 400;
 }
@@ -28,6 +30,20 @@
   margin-bottom: 20px;
 }
 
-.Reviews__RatingContent {
-  padding-left: 20px;
+.Reviews__UserFeedBack {
+  margin-top: 20px;
+  font-size: 22px;
+  border-style: dashed;
+  border-bottom: 1px solid #222 ;
+}
+
+.Reviews__GeneralRatingSection {
+  display: flex;
+  align-items: start;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.Reviews__GeneralRating {
+  font-size: 30px;
 }

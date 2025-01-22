@@ -65,5 +65,13 @@ namespace Product.Controllers
 
             return new JsonResult(response);
         }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductMetrics(long productId)
+        {
+            var response = await productService.GetProductMetrics(productId);
+
+            return new JsonResult(response);
+        }
     }
 }

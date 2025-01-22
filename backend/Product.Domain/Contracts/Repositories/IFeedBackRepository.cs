@@ -13,7 +13,7 @@ namespace Product.Domain.Contracts.Repositories
     {
         Task<Result<FeedBack>> AddFeedBack(FeedBack feedBack);
 
-        IQueryable<FeedBack> GetFeedBacksProduct(long productId);
+        IQueryable<FeedBack> GetFeedBacksProduct(long productId, int? rating = null);
 
         IQueryable<FeedBack> GetUserFeedBacks(string emailUser);
 

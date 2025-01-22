@@ -34,3 +34,23 @@
 .FeedBack__Text {
   margin-top: 10px;
 }
+
+.FeedBack__Images {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.FeedBack__Image + .FeedBack__Image {
+  margin-left: 10px;
+}
+
+.FeedBack__Image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 7px;
+  height: 140px;
+  width: 100px;
+}

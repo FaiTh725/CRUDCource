@@ -2,29 +2,29 @@
 
 namespace Product.Helpers.ResponseApi
 {
-    public class PromQLJsonModel
+    public class PromQLAverageRating
     {
         [JsonPropertyName("status")]
         public string Status { get; set; } = string.Empty;
 
         [JsonPropertyName("data")]
-        public PromQLDataModel Data { get; set; }
+        public PromQLDataAverageRating Data { get; set; }
     }
 
-    public class PromQLDataModel
+    public class PromQLDataAverageRating
     {
         [JsonPropertyName("resultType")]
         public string ResultType { get; set; } = string.Empty;
 
         [JsonPropertyName("result")]
-        public PromQLResultQueryModel[] Result { get; set; } =
-            Array.Empty<PromQLResultQueryModel>();
+        public PromQLResultQueryAverageRating[] Result { get; set; } = 
+            Array.Empty<PromQLResultQueryAverageRating>();
     }
 
-    public class PromQLResultQueryModel
+    public class PromQLResultQueryAverageRating
     {
         [JsonPropertyName("metric")]
-        public PromQLBaseMetric Metric { get; set; }
+        public PromQLProductRatingMetric Metric { get; set; }
 
         [JsonPropertyName("value")]
         public object[] Value { get; set; } = Array.Empty<object>();

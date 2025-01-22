@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Query;
 using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Product;
 using Product.Domain.Contracts.Repositories;
+using Product.Domain.Models;
 using Product.Services.Interfaces;
 using ProductEntity = Product.Domain.Models.Product;
 
@@ -14,15 +15,21 @@ namespace Product.Services.Implementations
         private readonly IProductRepository productRepository;
         private readonly IAccountRepository accountRepository;
         private readonly IBlobService blobService;
+        private readonly ITelemetryService telemetryService;
+        private readonly IFeedBackRepository feedBackRepository;
 
         public ProductService(
             IProductRepository productRepository,
             IBlobService blobService,
-            IAccountRepository accountRepository)
+            IAccountRepository accountRepository,
+            ITelemetryService telemetryService,
+            IFeedBackRepository feedBackRepository)
         {
             this.blobService = blobService;
             this.productRepository = productRepository;
             this.accountRepository = accountRepository;
+            this.telemetryService = telemetryService;
+            this.feedBackRepository = feedBackRepository;
         }
 
         public async Task<DataResponse<ProductResponse>> GetProduct(long productId)
@@ -70,57 +77,115 @@ namespace Product.Services.Implementations
             }
         }
 
-        public async Task<DataResponse<List<ProductResponse>>> GetProductPagination(int page, int count)
+        public async Task<DataResponse<ProductMetricsResponse>> GetProductMetrics(long productId)
+        {
+            try
+            {
+                var product = await productRepository.GetProduct(productId);
+
+                if (product.IsFailure)
+                {
+                    return new DataResponse<ProductMetricsResponse>
+                    {
+                        StatusCode = StatusCode.BadRequest,
+                        Description = "Invalid Product Id",
+                        Data = new()
+                    };
+                }
+
+                var generalRating = await telemetryService.GetProductGeneralRating(productId);
+                if(generalRating.IsFailure)
+                {
+                    return new DataResponse<ProductMetricsResponse>
+                    {
+                        StatusCode = StatusCode.InternalServerError,
+                        Description = generalRating.Error,
+                        Data = new()
+                    };
+                }
+
+                var extentionRating = await telemetryService.GetProductExtentionRating(productId);
+
+                if(extentionRating.IsFailure)
+                {
+                    return new DataResponse<ProductMetricsResponse>
+                    {
+                        StatusCode = StatusCode.InternalServerError,
+                        Description = extentionRating.Error,
+                        Data = new()
+                    };
+                }
+
+                var countFeedBacks = feedBackRepository
+                    .GetFeedBacksProduct(productId)
+                    .Count();
+
+                return new DataResponse<ProductMetricsResponse>
+                {
+                    StatusCode = StatusCode.Ok,
+                    Description = "Get Product Rating",
+                    Data = new ProductMetricsResponse
+                    {
+                        ProductId = product.Value.Id,
+                        GeneralRating = Math.Round(generalRating.Value, 2),
+                        PartRatingCount = extentionRating.Value,
+                        MaxCount = countFeedBacks
+                    }
+                };
+            }
+            catch
+            {
+                return new DataResponse<ProductMetricsResponse>
+                {
+                    StatusCode = StatusCode.InternalServerError,
+                    Description = "Internal Server Error",
+                    Data = new()
+                };
+            }
+        }
+
+        public async Task<DataResponse<ProductPaginationResponse>> GetProductPagination(int page, int count)
         {
             try
             {
                 var products = productRepository.GetProducts();
 
-                if(products.IsFailure)
-                {
-                    return new DataResponse<List<ProductResponse>>
-                    {
-                        StatusCode = StatusCode.InternalServerError,
-                        Description = "Internal Server Error"
-                    };
-                }
-
-                var productsPagination = await products.Value
+                var productsPagination = await products
                     .Skip((page - 1)  * count)
                     .Take(count)
                     .ToListAsync();
 
-                var productsResponse = new List<ProductResponse>();
-
-                foreach(var product in productsPagination)
-                {
-                    var productImages = await blobService.DownLoadBlobFolder(product.ImageFolder);
-
-                    productsResponse.Add(new ProductResponse
+                var productsWithImages = await Task.WhenAll(
+                    productsPagination.Select(async x => new ProductResponse
                     {
-                        Id = product.Id,
-                        Description = product.Description,
-                        Name = product.Name,
-                        Price = product.Price,
-                        Images = productImages,
-                        Count = product.Count
-                    });
-                }
+                        Id = x.Id,
+                        Description = x.Description,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Images = await blobService.DownLoadBlobFolder(x.ImageFolder),
+                        Count = x.Count
+                    }));
 
-                return new DataResponse<List<ProductResponse>>
+                return new DataResponse<ProductPaginationResponse>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Success Get products",
-                    Data = productsResponse
+                    Data = new ProductPaginationResponse
+                    {
+                        Count = count,
+                        Page = page,
+                        Products = productsWithImages.ToList(),
+                        MaxCount = await products.CountAsync()
+                    }
                 };
             }
             catch
             {
-                return new DataResponse<List<ProductResponse>> 
+                return new DataResponse<ProductPaginationResponse> 
                 { 
                     StatusCode = StatusCode.InternalServerError,
                     Description = "Internal Server Error",
-                    Data = new List<ProductResponse>()
+                    Data = new ()
                 };
 
             }
@@ -132,16 +197,7 @@ namespace Product.Services.Implementations
             {
                 var products = productRepository.GetProducts();
 
-                if (products.IsFailure)
-                {
-                    return new DataResponse<List<ProductResponse>>
-                    {
-                        StatusCode = StatusCode.InternalServerError,
-                        Description = "Internal Server Error"
-                    };
-                }
-
-                var productsPagination = await products.Value.ToListAsync();
+                var productsPagination = await products.ToListAsync();
 
                 var productsResponse = new List<ProductResponse>();
 
