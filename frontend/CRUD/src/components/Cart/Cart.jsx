@@ -8,13 +8,14 @@ import { useCart } from "./CartContext";
 import EmptyButton from "../buttons/empty_button/EmptyButton";
 import MiniProductCart from "../MiniProductCart/MiniProductCart";
 import SimpleButton from "../buttons/simple_button/SimpleButton";
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({isOpen, setIsOpen}) => {
-  // const [products, setProducts] = useState([]);
   const cartItems = useCart();
   const auth = useAuth();
   const cart = useRef(null);
   const logout = useLogout();
+  const navigate = useNavigate();
 
   const cartClass = useMemo(() => {
     if(cart.current !== null)
@@ -134,8 +135,8 @@ const Cart = ({isOpen, setIsOpen}) => {
     }
   }, [auth.user]);
 
-  // TODO usecallback
   const handleDeleteFromCart = async (productId) => {
+    console.log("1");
     try
     {
       if(auth.user == null)
@@ -209,10 +210,21 @@ const Cart = ({isOpen, setIsOpen}) => {
               <SimpleButton name="CHECK OUT" action={handleBuyProucts}/>
             </div>
           </div> : 
+          auth.user == null ? 
+          <div className={styles.Cart__CartIsUnAvaliable}>
+            <p className={styles.Cart__CartUnAvaliableHeader}>SHOPING CART IS AVALIABLE ONLY FOR REGISTERED USERS</p>
+            <SimpleButton 
+              name="Sign In"
+              action={() => {navigate("/account/login"); setIsOpen(false);}}  
+            />
+          </div> :
           <div className={styles.Cart__EmptyCart}>
             <p className={styles.Cart__EmptyHeader}>YOUR CART IS EMPTY</p>
             <p className={styles.Cart__EmptyBody}>Add your favorite items to your cart</p>
-            <SimpleButton name="SHOP NOW"/>
+            <SimpleButton 
+              name="SHOP NOW"
+              action={() => {navigate("/"); setIsOpen(false);}}
+            />
           </div>
         }
       </div>

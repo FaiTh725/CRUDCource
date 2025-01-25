@@ -1,9 +1,8 @@
 import { HubConnectionBuilder } from "@microsoft/signalr";
-import { createContext, useContext, useEffect, useState} from "react"
+import { createContext, useContext, useEffect, useMemo, useState} from "react"
 import Chat from "../Chat/Chat";
 import { useAuth } from "../Auth/AuthContext";
-import useLogout from "../../hooks/useLogOut";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
+import { useNotification } from "../Notification/NotificationContext";
 
 const SignalRContext = createContext();
 
@@ -11,28 +10,25 @@ export const SignalRProvider = ({children}) => {
   const [connection, setConnection] = useState(null);
   const [chats, setChats] = useState([]);
   const [sellerChats, setSellerChats] = useState(undefined);
+  const [chatIsAvaliable, setChatIsAvaliable] = useState(false);
   const auth = useAuth();
-  const logout = useLogout();
+  const notification = useNotification();
 
   useEffect(() => {
-    if(auth.user == null)
-    {
-      setConnection(null);
-      return;
-    }
-
     const newConnection = new HubConnectionBuilder()
-        .withUrl("https://localhost:7045/SupportChat")
+        .withUrl("https://localhost:5302/SupportChat")
         // .withAutomaticReconnect()
         .build(); 
 
     newConnection.on("ChatCreatedResult", data => {
       if(data.id == "")
       {
-        console.log("Chat already exist");
+        notification.notify("Chat already exist");
+        // console.log("Chat already exist");
         return;
       }
 
+      notification.notify("Chat had already been created, look chats");
       if(data.customerEmail == auth.user.email)
       {
         setChats(prev => [
@@ -83,12 +79,10 @@ export const SignalRProvider = ({children}) => {
 
     newConnection.on("UserConnected", data => {
       setChats([...data]);
-      console.log(data);
     });
 
     newConnection.on("SellerConnected", data => {
       setSellerChats([...data]);
-      console.log(data);
     });
 
     newConnection.on("ChatDeleted", data => {
@@ -110,10 +104,18 @@ export const SignalRProvider = ({children}) => {
         newConnection.stop();
       }
     }
-  }, [auth.user]);
+  }, []);
 
   useEffect(() => {
-    if(connection == null)
+    if(auth.user == null)
+    {
+      setConnection(null);
+      return;
+    }
+
+    if((connection != null && 
+      connection.connectionState == 1) ||
+      connection == null)
     {
       return;
     }
@@ -124,6 +126,9 @@ export const SignalRProvider = ({children}) => {
       .start()
       .then(() => {
         console.log("Connected");
+
+        setChatIsAvaliable(true);
+
         connection.invoke("UserConnected");
         if(auth.user.role === "Seller" ||
           auth.user.role === "Admin"
@@ -133,10 +138,9 @@ export const SignalRProvider = ({children}) => {
         }
       });
     }
-    catch(error)
+    catch
     {
-      console.log(error);
-      console.log(error.message);
+      console.error("Error connect to hub");
     }
   }, [connection]);
 
@@ -146,11 +150,6 @@ export const SignalRProvider = ({children}) => {
       return;
     }
 
-    if(auth.user == null)
-    {
-      logout();
-    }
-    
     if(connection == null)
     {
       console.error("do not connected to hub");
@@ -165,19 +164,13 @@ export const SignalRProvider = ({children}) => {
         chatId: chatId
       });
     }
-    catch(error)
+    catch
     {
-      console.log(error);
-      console.log(error.message);
+      console.log("Error send message");
     }
   }
 
   const handleCloseDispute = (chatId) => {
-    if(auth.user == null)
-    {
-      logout();
-    }
-    
     if(connection == null)
     {
       console.log("connection is null");
@@ -192,11 +185,6 @@ export const SignalRProvider = ({children}) => {
   }
 
   const handleCloseSellerDispute = (chatId) => {
-    if(auth.user == null)
-    {
-      logout();
-    }
-
     if(connection == null)
     {
       console.log("connection is null");
@@ -211,29 +199,36 @@ export const SignalRProvider = ({children}) => {
   }
 
   const handleOpenDispute = (product) => {
-    if(auth.user == null)
-    {
-      logout();
-    }
-    
-    if(connection === null
-    )
+    if(connection === null)
     {
       console.log("Error with user identity or signalR connection");
       return;
     }
 
-    connection.invoke("CreateNewChat", {
-      consumerEmail: auth.user.email,
-      productId: product.id,
-      productName: product.name
-    });
+    try
+    {
+      connection.invoke("CreateNewChat", {
+        consumerEmail: auth.user.email,
+        productId: product.id,
+        productName: product.name
+      });
+    }
+    catch(error)
+    {
+      console.log(error);
+    }
+    
   }
+
+  useEffect(() => {
+    setChatIsAvaliable(connection !== null);
+  }, [connection, auth.user]);
 
   return (
     <SignalRContext.Provider value={{ 
       chats,
       sellerChats,
+      chatIsAvaliable,
       handleSendMessage,
       handleCloseDispute,
       handleCloseSellerDispute,

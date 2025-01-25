@@ -176,7 +176,6 @@ C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\Authorize.pdb
 C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\Authorize.genruntimeconfig.cache
 C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\ref\Authorize.dll
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Application.Contracts.dll
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Application.Contracts.pdb
@@ -192,3 +191,4 @@ C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Notification.Domain.
 C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\Authorize.sourcelink.json
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Product.Domain.dll
 C:\VSProjects\CourceCRUD\backend\Authorize\bin\Debug\net8.0\Product.Domain.pdb
+C:\VSProjects\CourceCRUD\backend\Authorize\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

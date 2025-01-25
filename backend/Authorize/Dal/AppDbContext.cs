@@ -10,7 +10,9 @@ namespace Authorize.Dal
         private readonly IConfiguration configuration;
 
         public AppDbContext(
-            IConfiguration configuration)
+            DbContextOptions<AppDbContext> options,
+            IConfiguration configuration) :
+            base(options)
         {
             this.configuration = configuration;
         }

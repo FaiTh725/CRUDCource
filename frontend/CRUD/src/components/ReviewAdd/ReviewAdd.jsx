@@ -6,9 +6,12 @@ import styles from "./ReviewAdd.module.css";
 import useLogout from "../../hooks/useLogOut";
 import { useAuth } from "../Auth/AuthContext";
 import axios from "axios";
+import { useNotification } from "../Notification/NotificationContext";
 
 // TODO Add mini message 
 const ReviewAdd = ({productId}) => {
+  const notification = useNotification();
+
   const [feedBack, setFeedBack] = useState({
     rate: null,
     text: "",
@@ -95,6 +98,8 @@ const ReviewAdd = ({productId}) => {
         text: "",
         images: []
       });
+
+      notification.notify("Thank you for you review");
     }
     catch(error)
     {

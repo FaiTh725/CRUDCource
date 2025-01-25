@@ -42,6 +42,7 @@ builder.Services.AddSingleton<IBlobService, BlobService>();
 builder.Services.AddSingleton<ITelemetryService, TelemetryService>();
 
 builder.Services.AddHostedService<ClearCompleteRequests>();
+builder.Services.AddHostedService<InitializeService>();
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();

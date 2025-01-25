@@ -23,7 +23,7 @@ const FeedBack = ({feedBack}) => {
           feedBack.images.map((image, index) => (
             <div className={styles.FeedBack__Image} 
               key={index} 
-              style={{backgroundImage: `url(http://localhost:10000/faith725/images/FeedBacks/4/a8aa89eb-313d-459e-a0f1-4898b1a8b0e7Logo.png?sv=2025-01-05&se=2025-02-22T19%3A25%3A59Z&sr=b&sp=r&sig=QDGesjYmYIDn33FpfOEnFXT8Ezrds%2B43Z5hiA9%2BgD1A%3D)`}}>
+              style={{backgroundImage: `url(${image})`}}>
             </div>
           ))
         }

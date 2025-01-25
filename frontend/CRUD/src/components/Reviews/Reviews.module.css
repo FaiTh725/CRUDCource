@@ -47,3 +47,7 @@
 .Reviews__GeneralRating {
   font-size: 30px;
 }
+
+.Reviews__PaginationControl {
+  margin-top: 10px;
+}

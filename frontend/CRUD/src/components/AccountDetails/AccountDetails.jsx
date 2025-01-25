@@ -4,21 +4,19 @@ import { useAuth } from "../Auth/AuthContext";
 import useLogout from "../../hooks/useLogOut";
 import TextLink from "../links/TextLink/TextLink";
 import SimpleButton from "../buttons/simple_button/SimpleButton";
-import MiniMessages from "../MiniMessages/MiniMessages";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useNotification } from "../Notification/NotificationContext";
 
 const AccountDetails = () => {
   const [accountName, setAccountName] = useState("");
   const [accountRole, setAccountRole] = useState("");
   
-  const [miniMessageIsActive, setMiniMessageIsActive] = useState(false);
-  const [message, setMessage] = useState("");
-  
   const auth = useAuth();
   const logout = useLogout();
   const navigate = useNavigate();
+  const notification = useNotification();
 
-  //TODO use call back
   const sendRequestToStartSell = async () => {
     try
     {
@@ -31,8 +29,7 @@ const AccountDetails = () => {
 
       if(response.data.statusCode === 4)
       {
-        setMessage(response.data.description);
-        setMiniMessageIsActive(true);
+        console.log(response.data.description);
         return;
       }
 
@@ -42,8 +39,7 @@ const AccountDetails = () => {
         return;
       }
 
-      setMessage("Send request to get permissions");
-      setMiniMessageIsActive(true);
+      notification("Request to change role sended");
     }
     catch (error)
     {
@@ -91,7 +87,6 @@ const AccountDetails = () => {
           }
         </div>
       </div>
-      <MiniMessages message={message} isActive={miniMessageIsActive} setIsActive={setMiniMessageIsActive}/>
     </div>
   )
 }

@@ -4,28 +4,6 @@
     "title": "Message",
     "version": "1.0"
   },
-  "paths": {
-    "/api/Message/GetChatHistory": {
-      "get": {
-        "tags": [
-          "Message"
-        ],
-        "parameters": [
-          {
-            "name": "chatId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    }
-  },
+  "paths": { },
   "components": { }
 }

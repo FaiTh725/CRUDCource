@@ -4,8 +4,6 @@ using Message.Domain.Entities;
 using Redis.OM;
 using Redis.OM.Searching;
 using StackExchange.Redis;
-using System.Diagnostics.CodeAnalysis;
-using System.Text.Json;
 
 namespace Message.Dal.Implementations
 {

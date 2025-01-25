@@ -3,15 +3,31 @@
   "WorkspaceRootPath": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\implementations\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:services\\implementations\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\implementations\\initializeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:services\\implementations\\initializeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A370F452-4397-4091-84AE-5C5865569B5D}|..\\Authorize.Domain\\Authorize.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\authorize.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:authorize.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A370F452-4397-4091-84AE-5C5865569B5D}|..\\Authorize.Domain\\Authorize.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize.domain\\repositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\implementations\\cookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,12 +38,28 @@
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:services\\implementations\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\controllers\\authorizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:controllers\\authorizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51801748-7A1B-4593-9AF2-C5411E49AE9D}|..\\Application.Contracts\\Application.Contracts.csproj|c:\\vsprojects\\courcecrud\\backend\\application.contracts\\response\\statuscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51801748-7A1B-4593-9AF2-C5411E49AE9D}|..\\Application.Contracts\\Application.Contracts.csproj|c:\\vsprojects\\courcecrud\\backend\\application.contracts\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51801748-7A1B-4593-9AF2-C5411E49AE9D}|..\\Application.Contracts\\Application.Contracts.csproj|c:\\vsprojects\\courcecrud\\backend\\application.contracts\\response\\dataresponce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\implementations\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:services\\implementations\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A370F452-4397-4091-84AE-5C5865569B5D}|..\\Authorize.Domain\\Authorize.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\interfaces\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,10 +72,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\implementations\\cacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -68,10 +96,6 @@
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:contracts\\user\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -84,10 +108,6 @@
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:contracts\\user\\userregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\authorize.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:authorize.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\dal\\implementation\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:dal\\implementation\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -96,14 +116,8 @@
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:helpers\\settings\\jwtsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51801748-7A1B-4593-9AF2-C5411E49AE9D}|..\\Application.Contracts\\Application.Contracts.csproj|c:\\vsprojects\\courcecrud\\backend\\application.contracts\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\dal\\implementation\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:dal\\implementation\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51801748-7A1B-4593-9AF2-C5411E49AE9D}|..\\Application.Contracts\\Application.Contracts.csproj|c:\\vsprojects\\courcecrud\\backend\\application.contracts\\response\\dataresponce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\dal\\configurations\\roleconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,18 +127,8 @@
       "AbsoluteMoniker": "D:0:0:{A370F452-4397-4091-84AE-5C5865569B5D}|..\\Authorize.Domain\\Authorize.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize.domain\\entities\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|solutionrelative:services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51801748-7A1B-4593-9AF2-C5411E49AE9D}|..\\Application.Contracts\\Application.Contracts.csproj|c:\\vsprojects\\courcecrud\\backend\\application.contracts\\response\\statuscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A370F452-4397-4091-84AE-5C5865569B5D}|..\\Authorize.Domain\\Authorize.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize.domain\\repositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF8F4509-F26F-4B28-B6F5-3D6FD9533B18}|Authorize.csproj|c:\\vsprojects\\courcecrud\\backend\\authorize\\validators\\uservalidatorregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -168,7 +172,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -188,310 +192,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthorizeController.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Controllers\\AuthorizeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthorizeController.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Controllers\\AuthorizeController.cs",
-              "RelativeToolTip": "Controllers\\AuthorizeController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "InitializeService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\InitializeService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\InitializeService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\InitializeService.cs",
+              "RelativeToolTip": "Services\\Implementations\\InitializeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T09:00:22.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppExtention.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Extentions\\AppExtention.cs",
-              "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Extentions\\AppExtention.cs",
-              "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAnwC4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T09:44:17.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\JwtService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\JwtService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\JwtService.cs",
-              "RelativeToolTip": "Services\\Implementations\\JwtService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAswBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T09:19:39.074Z",
+              "WhenOpened": "2025-01-23T16:59:22.961Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CookieService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CookieService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\CookieService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CookieService.cs",
-              "RelativeToolTip": "Services\\Implementations\\CookieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:51:16.034Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-18T20:17:36.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Entities\\User.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "..\\Authorize.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAmwDIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:40:45.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\AuthenticationService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\AuthenticationService.cs",
-              "RelativeToolTip": "Services\\Implementations\\AuthenticationService.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAswO4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:53:24.624Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IAuthenticationService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IAuthenticationService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthenticationService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IAuthenticationService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IAuthenticationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:53:42.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICacheService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICacheService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\ICacheService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICacheService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\ICacheService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T18:45:15.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\UserService.cs",
-              "RelativeToolTip": "Services\\Implementations\\UserService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:57:24.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:37:02.213Z"
+              "WhenOpened": "2024-11-18T20:37:02.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CacheService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CacheService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\CacheService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CacheService.cs",
-              "RelativeToolTip": "Services\\Implementations\\CacheService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwB0AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AppExtention.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Extentions\\AppExtention.cs",
+              "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Extentions\\AppExtention.cs",
+              "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAawFYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T18:45:21.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ICookieService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICookieService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\ICookieService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICookieService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\ICookieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:52:06.521Z"
+              "WhenOpened": "2024-11-19T09:44:17.389Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "IJwtService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IJwtService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IJwtService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IJwtService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IJwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T09:19:33.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TokenData.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
-              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
-              "RelativeToolTip": "..\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:10:28.198Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Authorize.Domain.csproj",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Authorize.Domain.csproj",
-              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Authorize.Domain.csproj",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Authorize.Domain.csproj",
-              "RelativeToolTip": "..\\Authorize.Domain\\Authorize.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-18T20:37:48.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserLogin.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserLogin.cs",
-              "RelativeDocumentMoniker": "Contracts\\User\\UserLogin.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserLogin.cs",
-              "RelativeToolTip": "Contracts\\User\\UserLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:49:36.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Dal\\AppDbContext.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\AppDbContext.cs",
-              "RelativeToolTip": "Dal\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:56:04.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-18T22:25:39.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Authorize.csproj",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.csproj",
-              "RelativeDocumentMoniker": "Authorize.csproj",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.csproj",
-              "RelativeToolTip": "Authorize.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-18T20:33:27.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserRegister.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserRegister.cs",
-              "RelativeDocumentMoniker": "Contracts\\User\\UserRegister.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserRegister.cs",
-              "RelativeToolTip": "Contracts\\User\\UserRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:51:11.59Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "JwtSetting.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Settings\\JwtSetting.cs",
-              "RelativeDocumentMoniker": "Helpers\\Settings\\JwtSetting.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Settings\\JwtSetting.cs",
-              "RelativeToolTip": "Helpers\\Settings\\JwtSetting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T09:29:36.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Authorize.http",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.http",
-              "RelativeDocumentMoniker": "Authorize.http",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.http",
-              "RelativeToolTip": "Authorize.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-01-01T22:20:41.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RolesRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\RolesRepository.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementation\\RolesRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\RolesRepository.cs",
-              "RelativeToolTip": "Dal\\Implementation\\RolesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T13:20:11.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "BaseResponse.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Response\\BaseResponse.cs",
-              "RelativeDocumentMoniker": "..\\Application.Contracts\\Response\\BaseResponse.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Response\\BaseResponse.cs",
-              "RelativeToolTip": "..\\Application.Contracts\\Response\\BaseResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:16:02.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
               "Title": "DataResponce.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Response\\DataResponce.cs",
               "RelativeDocumentMoniker": "..\\Application.Contracts\\Response\\DataResponce.cs",
@@ -503,67 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RoleConfigurations.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Configurations\\RoleConfigurations.cs",
-              "RelativeDocumentMoniker": "Dal\\Configurations\\RoleConfigurations.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Configurations\\RoleConfigurations.cs",
-              "RelativeToolTip": "Dal\\Configurations\\RoleConfigurations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T22:28:25.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Dal\\Implementation\\UserRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\UserRepository.cs",
-              "RelativeToolTip": "Dal\\Implementation\\UserRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAuwB8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:51:41.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Roles.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\Roles.cs",
-              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Entities\\Roles.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\Roles.cs",
-              "RelativeToolTip": "..\\Authorize.Domain\\Entities\\Roles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:43:21.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "UserValidatorRegister.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Validators\\UserValidatorRegister.cs",
-              "RelativeDocumentMoniker": "Validators\\UserValidatorRegister.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Validators\\UserValidatorRegister.cs",
-              "RelativeToolTip": "Validators\\UserValidatorRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:52:30.044Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IRolesRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
-              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
-              "RelativeToolTip": "..\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T13:19:02.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 11,
               "Title": "StatusCode.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Response\\StatusCode.cs",
               "RelativeDocumentMoniker": "..\\Application.Contracts\\Response\\StatusCode.cs",
@@ -575,7 +254,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 9,
+              "Title": "AuthorizeController.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Controllers\\AuthorizeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthorizeController.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Controllers\\AuthorizeController.cs",
+              "RelativeToolTip": "Controllers\\AuthorizeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:00:22.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -587,7 +278,332 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CookieService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CookieService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\CookieService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CookieService.cs",
+              "RelativeToolTip": "Services\\Implementations\\CookieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T13:51:16.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRolesRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
+              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
+              "RelativeToolTip": "..\\Authorize.Domain\\Repositories\\IRolesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T13:19:02.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Authorize.http",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.http",
+              "RelativeDocumentMoniker": "Authorize.http",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.http",
+              "RelativeToolTip": "Authorize.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-01-01T22:20:41.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Dal\\AppDbContext.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\AppDbContext.cs",
+              "RelativeToolTip": "Dal\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T21:56:04.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Response\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "..\\Application.Contracts\\Response\\BaseResponse.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Response\\BaseResponse.cs",
+              "RelativeToolTip": "..\\Application.Contracts\\Response\\BaseResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T15:16:02.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-18T20:17:36.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\JwtService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\JwtService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\JwtService.cs",
+              "RelativeToolTip": "Services\\Implementations\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:19:39.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "Services\\Implementations\\UserService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T22:57:24.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ICacheService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICacheService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICacheService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICacheService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICacheService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T18:45:15.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AuthenticationService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\AuthenticationService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AuthenticationService.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAkwO4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T21:53:24.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthenticationService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IAuthenticationService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T21:53:42.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "..\\Authorize.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T20:40:45.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CacheService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CacheService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\CacheService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Implementations\\CacheService.cs",
+              "RelativeToolTip": "Services\\Implementations\\CacheService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T18:45:21.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ICookieService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICookieService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICookieService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\ICookieService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICookieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T13:52:06.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IJwtService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IJwtService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IJwtService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:19:33.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TokenData.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
+              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
+              "RelativeToolTip": "..\\Authorize.Domain\\Modals\\Auth\\TokenData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T13:10:28.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Authorize.Domain.csproj",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Authorize.Domain.csproj",
+              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Authorize.Domain.csproj",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Authorize.Domain.csproj",
+              "RelativeToolTip": "..\\Authorize.Domain\\Authorize.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-18T20:37:48.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserLogin.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserLogin.cs",
+              "RelativeDocumentMoniker": "Contracts\\User\\UserLogin.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserLogin.cs",
+              "RelativeToolTip": "Contracts\\User\\UserLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T21:49:36.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-18T22:25:39.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Authorize.csproj",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.csproj",
+              "RelativeDocumentMoniker": "Authorize.csproj",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Authorize.csproj",
+              "RelativeToolTip": "Authorize.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-18T20:33:27.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserRegister.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserRegister.cs",
+              "RelativeDocumentMoniker": "Contracts\\User\\UserRegister.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Contracts\\User\\UserRegister.cs",
+              "RelativeToolTip": "Contracts\\User\\UserRegister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:51:11.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "JwtSetting.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Settings\\JwtSetting.cs",
+              "RelativeDocumentMoniker": "Helpers\\Settings\\JwtSetting.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Settings\\JwtSetting.cs",
+              "RelativeToolTip": "Helpers\\Settings\\JwtSetting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:29:36.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RolesRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\RolesRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementation\\RolesRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\RolesRepository.cs",
+              "RelativeToolTip": "Dal\\Implementation\\RolesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T13:20:11.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RoleConfigurations.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Configurations\\RoleConfigurations.cs",
+              "RelativeDocumentMoniker": "Dal\\Configurations\\RoleConfigurations.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Configurations\\RoleConfigurations.cs",
+              "RelativeToolTip": "Dal\\Configurations\\RoleConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T22:28:25.125Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 30,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Dal\\Implementation\\UserRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Implementation\\UserRepository.cs",
+              "RelativeToolTip": "Dal\\Implementation\\UserRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T21:51:41.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\Roles.cs",
+              "RelativeDocumentMoniker": "..\\Authorize.Domain\\Entities\\Roles.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Entities\\Roles.cs",
+              "RelativeToolTip": "..\\Authorize.Domain\\Entities\\Roles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T20:43:21.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserValidatorRegister.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Validators\\UserValidatorRegister.cs",
+              "RelativeDocumentMoniker": "Validators\\UserValidatorRegister.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Validators\\UserValidatorRegister.cs",
+              "RelativeToolTip": "Validators\\UserValidatorRegister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:52:30.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
@@ -599,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "APIList.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Settings\\APIList.cs",
               "RelativeDocumentMoniker": "Helpers\\Settings\\APIList.cs",
@@ -611,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize.Domain\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "..\\Authorize.Domain\\Repositories\\IUserRepository.cs",
@@ -623,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "UserValidator.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Validators\\UserValidator.cs",
               "RelativeDocumentMoniker": "Validators\\UserValidator.cs",
@@ -635,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Hashing\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "Helpers\\Hashing\\PasswordHasher.cs",
@@ -647,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "MessageBrokerSetting.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Helpers\\Settings\\MessageBrokerSetting.cs",
               "RelativeDocumentMoniker": "Helpers\\Settings\\MessageBrokerSetting.cs",
@@ -659,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Application.Contracts.csproj",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Application.Contracts\\Application.Contracts.csproj",
               "RelativeDocumentMoniker": "..\\Application.Contracts\\Application.Contracts.csproj",
@@ -671,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UserConfigurations.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Dal\\Configurations\\UserConfigurations.cs",
               "RelativeDocumentMoniker": "Dal\\Configurations\\UserConfigurations.cs",
@@ -683,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Authorize\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\AppDbContextModelSnapshot.cs",

@@ -24,6 +24,9 @@ builder.Services.AddValidators();
 builder.Services.AddCustomHttpClient();
 builder.Services.AddHttpContextAccessor();
 
+
+builder.Services.AddHostedService<InitializeService>();
+
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRolesRepository, RolesRepository>();
 

@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import styles from "./ProductOrderCart.module.css"
 import EmptyButton from "../buttons/empty_button/EmptyButton";
-import MiniMessages from "../MiniMessages/MiniMessages";
 import { useSignalR } from "../SignalR/SignalRContext";
+import { useNavigate } from "react-router-dom";
 
 const ProductOrderCart = ({product}) => {
   const cart = useRef(null);
   const connection = useSignalR();
+  const navigate = useNavigate();
 
   const handleMouseMove = (e) => {
     if(cart.current != null)
@@ -24,7 +25,8 @@ const ProductOrderCart = ({product}) => {
   return (
     <div className={styles.ProductOrderCart__Main}
       onMouseMove={handleMouseMove}
-      ref={cart}>
+      ref={cart}
+      onClick={() => {navigate(`/products?product=${product.id}`);}}>
       <div className={styles.ProductOrderCart__Wrapper}>
         <div className={styles.ProductOrderCart__Image}
           style={{backgroundImage: `url(${product.image})`}}>
@@ -39,10 +41,11 @@ const ProductOrderCart = ({product}) => {
               ${product.price}
             </p>
           </div>
-          <div className={styles.ProductOrderCart__DisputeBtnWrapper}>
+          <div className={styles.ProductOrderCart__DisputeBtnWrapper}
+            onClick={(e) => {e.stopPropagation()}}>
             <p>{product.count}x</p>
             <EmptyButton
-              action={() => {connection.handleOpenDispute(product)}}>
+              action={() => {connection.handleOpenDispute(product);}}>
               <span className={styles.ProductOrderCart__DisputeText}>
                 open dispute
               </span>
@@ -50,7 +53,6 @@ const ProductOrderCart = ({product}) => {
           </div>
         </div>
       </div>
-      <MiniMessages/>
     </div>
   )
 }

@@ -24,11 +24,11 @@
 .MiniMessages__Wrapper {
   position: fixed;
   right: 50px;
-  bottom: 50px;
+  bottom: 700px;
   border-radius: 7px;
   border: 1px solid #222;
   min-width: 100px;
-  animation: 1s show;
+  animation: 0.7s show;
 }
 
 .MiniMessages__Header {

@@ -1,7 +1,8 @@
 import AccountDetails from "../../components/AccountDetails/AccountDetails";
 import AccountOrderHistory from "../../components/AccountOrderHistory/AccountOrderHistory";
 import HeaderAccount from "../../components/HeaderAccount/HeaderAccount";
-import styles from "./Account.module.css"
+import styles from "./Account.module.css";
+
 const Account = () => {
   return (
     <>

@@ -74,6 +74,26 @@ services:
       - azurite
       - prometheus
 
+  message_api:
+    image: message_crud
+    container_name: message_api_aplication
+    ports:
+      - 5301:5301
+      - 5302:5302
+    environment:
+      - ApiList__ProductApi=https://product_api:5202/api
+      - ApiList__Frontend=https://localhost:5173
+      - ASPNETCORE_URLS=https://+:5302;http://+:5301
+      - "ConnectionStrings__RedisConnection=redis-db:6379"
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - C:\Users\zelen\.aspnet\https:/https:ro
+    networks:
+      - rabbitmq_network
+    depends_on:
+      - redis-db
+
   azurite:
     image: mcr.microsoft.com/azure-storage/azurite:latest
     container_name: files-storages

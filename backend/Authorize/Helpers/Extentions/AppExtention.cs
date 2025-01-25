@@ -73,21 +73,6 @@ namespace Authorize.Helpers.Extentions
                 });
             });
         }
-        
-        // TODO there are error when start in docker
-        public static void InitializeDatabase(this WebApplication app)
-        {
-            using var scope = app.Services.CreateScope();
-            
-            var services = scope.ServiceProvider;
-            var dbContext = services.GetRequiredService<AppDbContext>();
-
-            if(dbContext.Database.GetPendingMigrations().Any())
-            {
-                dbContext.Database.Migrate();
-
-            }
-        }
 
         public static void AddCaching(this IServiceCollection services, IConfiguration configuration)
         {

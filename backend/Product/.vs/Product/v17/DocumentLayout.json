@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\background\\initializeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\background\\initializeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,10 +90,6 @@
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:services\\implementations\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\contracts\\models\\account\\accountdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -147,18 +159,10 @@
       "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E8EECB-7016-4694-B8D0-D9B78FDD9A90}|..\\Product.Domain\\Product.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\product.domain\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95030EC1-D0CD-4EBD-8C5D-6CA3756FAA29}|Product.csproj|c:\\vsprojects\\courcecrud\\backend\\product\\features\\exceptions\\aplicationconfigurationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -288,7 +292,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -308,46 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductPaginationResponse.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T22:50:15.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T19:28:14.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GlobalExceptionHandler.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "RelativeToolTip": "Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T23:09:32.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FeedBackRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\FeedBackRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\FeedBackRepository.cs",
@@ -355,25 +320,11 @@
               "RelativeToolTip": "Dal\\Implementations\\FeedBackRepository.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAwwC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T12:50:50.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T12:50:50.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IFeedBackRepository.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
-              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
-              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T12:48:48.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\ProductService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
@@ -381,12 +332,60 @@
               "RelativeToolTip": "Services\\Implementations\\ProductService.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAiwFwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:33:21.654Z",
+              "WhenOpened": "2024-12-27T14:33:21.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T19:28:14.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppExtention.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
+              "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
+              "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAmwKoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T15:28:03.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
+              "Title": "ProductPaginationResponse.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductPaginationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T22:50:15.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IFeedBackRepository.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IFeedBackRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T12:48:48.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
@@ -394,12 +393,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Repositories\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:32:59.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T14:32:59.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\ProductRepository.cs",
@@ -407,12 +405,60 @@
               "RelativeToolTip": "Dal\\Implementations\\ProductRepository.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:31:33.297Z",
+              "WhenOpened": "2024-12-27T14:31:33.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T15:15:17.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Dal\\AppDbContext.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
+              "RelativeToolTip": "Dal\\AppDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:38:02.361Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "InitializeService.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Background\\InitializeService.cs",
+              "RelativeDocumentMoniker": "Services\\Background\\InitializeService.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Background\\InitializeService.cs",
+              "RelativeToolTip": "Services\\Background\\InitializeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T17:06:43.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T23:09:32.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "FeedBackPaginationResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackPaginationResponse.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackPaginationResponse.cs",
@@ -420,12 +466,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackPaginationResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T11:44:05.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T11:44:05.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "BuyProductRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
@@ -433,12 +478,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\BuyProductRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:50:45.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T13:50:45.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "ProductCartResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
@@ -446,12 +490,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductCartResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T20:27:23.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T20:27:23.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ProductMetricsResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductMetricsResponse.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductMetricsResponse.cs",
@@ -459,12 +502,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductMetricsResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T17:39:01.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T17:39:01.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ProductRating.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
@@ -472,12 +514,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductRating.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T17:41:33.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T17:41:33.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -485,12 +526,11 @@
               "RelativeToolTip": "Controllers\\ProductController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowC8AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T20:26:22.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T20:26:22.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "FeedBackService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\FeedBackService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\FeedBackService.cs",
@@ -498,12 +538,11 @@
               "RelativeToolTip": "Services\\Implementations\\FeedBackService.cs",
               "ViewState": "AgIAALIAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T13:02:00.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T13:02:00.845Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "FeedBackController.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\FeedBackController.cs",
               "RelativeDocumentMoniker": "Controllers\\FeedBackController.cs",
@@ -511,12 +550,11 @@
               "RelativeToolTip": "Controllers\\FeedBackController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T12:48:04.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T12:48:04.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "ProductResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
@@ -524,12 +562,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Product\\ProductResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:50:28.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T13:50:28.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "IFeedBackService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IFeedBackService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IFeedBackService.cs",
@@ -537,12 +574,11 @@
               "RelativeToolTip": "Services\\Interfaces\\IFeedBackService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T13:01:51.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T13:01:51.673Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
@@ -550,12 +586,11 @@
               "RelativeToolTip": "Controllers\\TestController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwD8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T13:24:05.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-18T13:24:05.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "TelemetryService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\TelemetryService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\TelemetryService.cs",
@@ -563,25 +598,11 @@
               "RelativeToolTip": "Services\\Implementations\\TelemetryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAOkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T21:39:51.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-17T21:39:51.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T15:15:17.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "AccountData.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountData.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountData.cs",
@@ -589,12 +610,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T18:25:23.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T18:25:23.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "FeedBackResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
@@ -602,12 +622,11 @@
               "RelativeToolTip": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T13:13:18.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T13:13:18.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "PromQLBaseMetric.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLBaseMetric.cs",
               "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLBaseMetric.cs",
@@ -619,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "PromQLStatRatingMetric.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLStatRatingMetric.cs",
               "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLStatRatingMetric.cs",
@@ -631,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "PromQLProductRatingMetric.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLProductRatingMetric.cs",
               "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLProductRatingMetric.cs",
@@ -643,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "PromQLAverageRating.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLAverageRating.cs",
               "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLAverageRating.cs",
@@ -655,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "PromQLStatRating.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLStatRating.cs",
               "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLStatRating.cs",
@@ -667,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "PromQLJsonModel.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\ResponseApi\\PromQLJsonModel.cs",
               "RelativeDocumentMoniker": "Helpers\\ResponseApi\\PromQLJsonModel.cs",
@@ -679,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "ITelemetryService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\ITelemetryService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ITelemetryService.cs",
@@ -691,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -703,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "FeedBack.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\FeedBack.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\FeedBack.cs",
@@ -715,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\AccountService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AccountService.cs",
@@ -727,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "BlobService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Implementations\\BlobService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\BlobService.cs",
@@ -739,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "CreateProductValidator.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\CreateProductValidator.cs",
               "RelativeDocumentMoniker": "Validators\\CreateProductValidator.cs",
@@ -751,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "DatabaseTransaction.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\DatabaseTransaction.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\DatabaseTransaction.cs",
@@ -763,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "IDatabaseTransaction.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Interfaces\\IDatabaseTransaction.cs",
               "RelativeDocumentMoniker": "Dal\\Interfaces\\IDatabaseTransaction.cs",
@@ -775,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\AccountRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\AccountRepository.cs",
@@ -787,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -799,19 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Dal\\AppDbContext.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\AppDbContext.cs",
-              "RelativeToolTip": "Dal\\AppDbContext.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAUwC0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:38:02.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\CartItem.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\CartItem.cs",
@@ -823,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Account.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\Account.cs",
@@ -835,19 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "AppExtention.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
-              "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Extentions\\AppExtention.cs",
-              "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAALwAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T15:28:03.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "AplicationConfigurationException.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Features\\Exceptions\\AplicationConfigurationException.cs",
               "RelativeDocumentMoniker": "Features\\Exceptions\\AplicationConfigurationException.cs",
@@ -859,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IAccountRepository.cs",
@@ -871,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "AccountTransactions.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountTransactions.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountTransactions.cs",
@@ -883,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "IAccountService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IAccountService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAccountService.cs",
@@ -895,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "FeedBackAddRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackAddRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\FeedBack\\FeedBackAddRequest.cs",
@@ -907,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "ProductSeller.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\ProductSeller.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\ProductSeller.cs",
@@ -919,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "AccountResponseCartItems.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseCartItems.cs",
@@ -931,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "AddFeedBackValidator.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\AddFeedBackValidator.cs",
               "RelativeDocumentMoniker": "Validators\\AddFeedBackValidator.cs",
@@ -943,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "AccountValidator.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Validators\\AccountValidator.cs",
               "RelativeDocumentMoniker": "Validators\\AccountValidator.cs",
@@ -955,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "UploadProduct.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Product\\UploadProduct.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Product\\UploadProduct.cs",
@@ -967,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Entities\\Product.cs",
@@ -979,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "FeedBackConfiguration.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\FeedBackConfiguration.cs",
               "RelativeDocumentMoniker": "Dal\\Configurations\\FeedBackConfiguration.cs",
@@ -991,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "IBlobService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Interfaces\\IBlobService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IBlobService.cs",
@@ -1003,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "CreateAccount.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\CreateAccount.cs",
@@ -1015,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "20250119122112_Add FeedBascks.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Migrations\\20250119122112_Add FeedBascks.cs",
               "RelativeDocumentMoniker": "Migrations\\20250119122112_Add FeedBascks.cs",
@@ -1027,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "ClearCompleteRequests.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Services\\Background\\ClearCompleteRequests.cs",
               "RelativeDocumentMoniker": "Services\\Background\\ClearCompleteRequests.cs",
@@ -1039,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "ChangeRoleConfiguration.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ChangeRoleConfiguration.cs",
               "RelativeDocumentMoniker": "Dal\\Configurations\\ChangeRoleConfiguration.cs",
@@ -1051,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "Product.http",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Product.http",
               "RelativeDocumentMoniker": "Product.http",
@@ -1063,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "CartItemRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\CartItemRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\CartItemRepository.cs",
@@ -1075,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -1087,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "AccountWithProductRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductRequest.cs",
@@ -1099,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "BlobConf.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\BlobConf.cs",
               "RelativeDocumentMoniker": "Helpers\\Settings\\BlobConf.cs",
@@ -1111,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "JwtConf.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Helpers\\Settings\\JwtConf.cs",
               "RelativeDocumentMoniker": "Helpers\\Settings\\JwtConf.cs",
@@ -1123,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "IChangeRoleRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\IChangeRoleRepository.cs",
@@ -1135,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "ICartItemRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Repositories\\ICartItemRepository.cs",
@@ -1147,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "ChangeRoleRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Implementations\\ChangeRoleRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\ChangeRoleRepository.cs",
@@ -1159,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "CartItemConfiguration.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\CartItemConfiguration.cs",
               "RelativeDocumentMoniker": "Dal\\Configurations\\CartItemConfiguration.cs",
@@ -1171,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "ProductConfiguration.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\ProductConfiguration.cs",
               "RelativeDocumentMoniker": "Dal\\Configurations\\ProductConfiguration.cs",
@@ -1183,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "AccountConfiguration.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product\\Dal\\Configurations\\AccountConfiguration.cs",
               "RelativeDocumentMoniker": "Dal\\Configurations\\AccountConfiguration.cs",
@@ -1195,7 +1190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "ChangeRoleAccount.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Request\\ChangeRoleAccount.cs",
@@ -1207,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "AccountBuyProductRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountBuyProductRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountBuyProductRequest.cs",
@@ -1219,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "AccountResponseDetail.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseDetail.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseDetail.cs",
@@ -1231,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "AccountWithProductCountRequest.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductCountRequest.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountWithProductCountRequest.cs",
@@ -1243,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "AccountResponseOrderHisory.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseOrderHisory.cs",
               "RelativeDocumentMoniker": "..\\Product.Domain\\Contracts\\Models\\Account\\AccountResponseOrderHisory.cs",

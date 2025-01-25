@@ -13,32 +13,35 @@ import AddProduct from './pages/AddProduct/AddProduct'
 import Header from './components/Header/Header'
 import { SignalRProvider } from './components/SignalR/SignalRContext'
 import SellerDisputs from './pages/SellerDisputs/SellerDisputs'
+import { NotificationUserProvider } from './components/Notification/NotificationContext'
 
 const App = () => {
   return (
   <BrowserRouter>
     <AuthProvider>
       <CartContextProvider>
-        <SignalRProvider>
-          <Routes>
-            <Route element={<Header/>}>
-              <Route path='/' element={<Home/>}/>
-              <Route path='/account/*' element={<AuthLogin/>}/>
-              <Route path='/account/register' element={<AuthRegister/>}/>
-              <Route path='/*' element={<NotFound/>}/>
-              <Route path='/products/*' element={<Product/>}/>
-              <Route element={<ProtectedRoutes roles={["User"]}/>}>
+        <NotificationUserProvider>
+          <SignalRProvider>
+            <Routes>
+              <Route element={<Header/>}>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/account/*' element={<AuthLogin/>}/>
+                <Route path='/account/register' element={<AuthRegister/>}/>
+                <Route path='/*' element={<NotFound/>}/>
+                <Route path='/products/*' element={<Product/>}/>
+                <Route element={<ProtectedRoutes roles={["User"]}/>}>
+                </Route>
+                <Route element={<ProtectedRoutes roles={["Admin", "User", "Seller"]}/>}>
+                  <Route path='/user' element={<Account/>}/>
+                </Route>
+                <Route element={<ProtectedRoutes roles={["Admin", "Seller"]}/>}>
+                  <Route path='/add_product' element={<AddProduct/>}/>
+                  <Route path='/disputs_cats' element={<SellerDisputs/>}/>
+                </Route>
               </Route>
-              <Route element={<ProtectedRoutes roles={["Admin", "User", "Seller"]}/>}>
-                <Route path='/user' element={<Account/>}/>
-              </Route>
-              <Route element={<ProtectedRoutes roles={["Admin", "Seller"]}/>}>
-                <Route path='/add_product' element={<AddProduct/>}/>
-                <Route path='/disputs_cats' element={<SellerDisputs/>}/>
-              </Route>
-            </Route>
-          </Routes>
-        </SignalRProvider>
+            </Routes>
+          </SignalRProvider>
+        </NotificationUserProvider>
       </CartContextProvider>
     </AuthProvider>
   </BrowserRouter>

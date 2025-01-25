@@ -197,6 +197,7 @@ const Reviews = ({productId}) => {
           </h3>
           {
             feedBacksStat &&
+            feedBacksStat.count !== 0 ? 
             <div className={`${styles.Reviews__RatingContent} ${styles.Reviews__GeneralRatingSection}`}>
               <div className={styles.Reviews__GeneralRating}>
                 {feedBacksStat.generalRating}
@@ -205,6 +206,9 @@ const Reviews = ({productId}) => {
                 <p></p>
                 <p>{feedBacksStat.count} reviews</p>
               </div>
+            </div> :
+            <div className={styles.Reviews__RatingIsEmpty}>
+              <p>This product has no reviews</p>
             </div>
           }
         </div>

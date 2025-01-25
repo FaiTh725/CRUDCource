@@ -12,7 +12,10 @@ namespace Product.Dal
     {
         private readonly IConfiguration configuration;
 
-        public AppDbContext(IConfiguration configuration)
+        public AppDbContext(
+            DbContextOptions<AppDbContext> options,
+            IConfiguration configuration) :
+            base(options)
         {
             this.configuration = configuration;    
         }

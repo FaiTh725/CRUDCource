@@ -21,13 +21,13 @@ namespace Message.Hubs.Implementations
         private readonly IMessageRepository messageRepository;
 
         public MessageHub(
-            HttpClient httpClient,
+            IHttpClientFactory httpClientFactory,
             IConfiguration configuration, 
             ILogger<MessageHub> logger,
             IChatRoomRepository chatRoomRepository,
             IMessageRepository messageRepository)
         {
-            this.httpClient = httpClient;
+            this.httpClient = httpClientFactory.CreateClient("HttpClientTrustCert");
             this.configuration = configuration;
             this.logger = logger;
             this.chatRoomRepository = chatRoomRepository;
@@ -49,6 +49,7 @@ namespace Message.Hubs.Implementations
 
                 if(!request.IsSuccessStatusCode)
                 {
+                    Console.WriteLine(request.StatusCode);
                     await Clients.Caller.ChatCreatedResult(new());
                     return;
                 }
@@ -59,6 +60,7 @@ namespace Message.Hubs.Implementations
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 };
+                Console.WriteLine("Error deserialize");
                 var responseData = JsonSerializer.Deserialize<DataResponse<ProductSeller>>(
                     responseJson, jsonOptions)
                     ?? throw new JsonException();
@@ -77,6 +79,7 @@ namespace Message.Hubs.Implementations
                     return;
                 }
 
+                Console.WriteLine("Error add to data base");
                 var existChat = await chatRoomRepository.GetChatRoom(
                     responseData.Data.Email,
                     connection.ConsumerEmail,
@@ -127,8 +130,9 @@ namespace Message.Hubs.Implementations
                 await Clients.User(responseData.Data.Email)
                     .ChatCreatedResult(chatCreatedResponse);
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 logger.LogError("Error create chat");
             }
         }

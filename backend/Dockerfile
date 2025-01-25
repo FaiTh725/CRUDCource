@@ -1,23 +1,23 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
 
 WORKDIR /src
-COPY ["Product/Product.csproj", "Product/"]
+COPY ["Message/Message.csproj", "Message/"]
 
-RUN dotnet restore 'Product/Product.csproj'
+RUN dotnet restore 'Message/Message.csproj'
 
 COPY . .
 
-WORKDIR /src/Product
+WORKDIR /src/Message
 RUN dotnet build -c Release -o /app/build
 
 FROM build as publish
 RUN dotnet publish -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 
-ENV ASPNETCORE_HTTP_PORTS=5201
-ENV ASPNETCORE_HTTPS_PORTS=5202
-EXPOSE 5201
-EXPOSE 5202
+ENV ASPNETCORE_HTTP_PORTS=5301
+ENV ASPNETCORE_HTTPS_PORTS=5302
+EXPOSE 5301
+EXPOSE 5302
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT [ "dotnet", "Product.dll" ]
+ENTRYPOINT [ "dotnet", "Message.dll" ]

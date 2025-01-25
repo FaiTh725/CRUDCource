@@ -1,8 +1,9 @@
 ﻿using Message.Helpers.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Redis.OM.Searching.Query;
 using StackExchange.Redis;
-using System.Runtime.CompilerServices;
+using System.Net.Security;
 using System.Text;
 
 namespace Message.Helpers.Extentiosn
@@ -73,6 +74,16 @@ namespace Message.Helpers.Extentiosn
                 });
 
             services.AddAuthorization();
+        }
+
+        public static void AddCustomHttpClietns(this IServiceCollection services)
+        {
+            services.AddHttpClient("HttpClientTrustCert")
+                .ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = 
+                    (sender, cert, chain, sllPolicy) => { return true; }
+                });
         }
     }
 }

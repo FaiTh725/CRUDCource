@@ -1,18 +1,19 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./AddProduct.module.css"
 import axios from "axios";
-import Cookies from "js-cookie";
 import { useAuth } from "../../components/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 import SimpleInput from "../../components/inputs/simple_input/Input";
 import SimpleButton from "../../components/buttons/simple_button/SimpleButton";
-import MiniMessages from "../../components/MiniMessages/MiniMessages";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import FileInput from "../../components/inputs/file_input/FileInput";
 import SimpleArea from "../../components/inputs/simple_area/SimpleArea";
+import { useNotification } from "../../components/Notification/NotificationContext";
 
 
 const AddProduct = () => {
+  const notification = useNotification();
+
   const [addProductForm, setAddProductForm] = useState({
     productName: "",
     description: "",
@@ -28,8 +29,6 @@ const AddProduct = () => {
     countError: "",
     resultAddProduct: "",
   });
-
-  const [modalIsActive, setModalIsActive] = useState(false);
 
   const auth = useAuth();
   const navigate = useNavigate();
@@ -155,20 +154,17 @@ const AddProduct = () => {
           files: []
         });
 
+        notification.notify("You succesfully add product");
+
         handleChangeErrorsForm("Product Upload", "resultAddProduct");
-        setModalIsActive(true);
       }
       else
       {
         handleChangeErrorsForm(response.data.description, "resultAddProduct");
-        setModalIsActive(true);
       }
-
-      console.log(response);
     }
     catch(error)
     {
-      console.log(error);
       if(error.status === 401)
       {
         auth.logout();
@@ -225,9 +221,6 @@ const AddProduct = () => {
           <SimpleButton name="Add" action={handleAddProduct}/>
         </div>
       </div>
-      <MiniMessages message={formError.resultAddProduct} 
-        isActive={modalIsActive} 
-        setIsActive={setModalIsActive}/>
     </div>
   )
 }

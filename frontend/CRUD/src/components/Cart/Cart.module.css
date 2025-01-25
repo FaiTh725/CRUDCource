@@ -123,5 +123,15 @@
 
 .Cart__Context {
   height: 100%;
+}
 
+.Cart__CartIsUnAvaliable {
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.Cart__CartUnAvaliableHeader {
+  margin-bottom: 10px;
 }

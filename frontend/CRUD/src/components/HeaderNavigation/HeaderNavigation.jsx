@@ -5,9 +5,9 @@ const HeaderNavigation = () => {
   return (
     <div className={styles.HeaderNavigation__Main}>
       <div className={styles.HeaderNavigation__Wrapper}>
-        <HeaderNavigationButton name="TEST1"></HeaderNavigationButton>
-        <HeaderNavigationButton name="TEST2"></HeaderNavigationButton>
-        <HeaderNavigationButton name="TEST3"></HeaderNavigationButton>
+        <HeaderNavigationButton name="TODO"></HeaderNavigationButton>
+        <HeaderNavigationButton name="TODO"></HeaderNavigationButton>
+        <HeaderNavigationButton name="TODO"></HeaderNavigationButton>
       </div>
     </div>
   )

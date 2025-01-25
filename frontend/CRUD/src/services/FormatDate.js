@@ -13,7 +13,7 @@ const FormatDate = (date) => {
   const hours = dateObj.getHours();
   const minues = dateObj.getMinutes();
 
-  return `${minues}:${hours}:${day}:${month}`;
+  return `${hours}:${minues} ${day} ${month}`;
 }
 
 export const ShortFormatDate = (date) => {

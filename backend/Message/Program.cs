@@ -19,10 +19,14 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddRedis(builder.Configuration);
 builder.Services.AddJwtService(builder.Configuration);
-builder.Services.AddSignalR();
 builder.Services.AddCorsExt(builder.Configuration);
+builder.Services.AddSignalR();
+builder.Services.AddCustomHttpClietns();
+
 builder.Services.AddHttpClient<Hub<IMessageHub>, MessageHub>();
+
 builder.Services.AddScoped<IMessageService, MessageService>();
+
 builder.Services.AddSingleton<IChatRoomRepository, ChatRoomRepository>();
 builder.Services.AddSingleton<IMessageRepository, MessageRepository>();
 
@@ -30,12 +34,8 @@ builder.Services.AddSingleton<IUserIdProvider, EmailUserProvider>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
