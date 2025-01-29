@@ -1,4 +1,5 @@
-﻿using Azure.Storage.Blobs;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using Azure.Storage.Blobs;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MassTransit;
@@ -26,9 +27,7 @@ namespace Product.Helpers.Extentions
         public static void AddJwtService(this IServiceCollection services, IConfiguration configuration)
         {
             var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtConf>() 
-                ?? throw new AplicationConfigurationException(
-                    "Setting jwt token is null",
-                    "JwtSetting");
+                ?? throw new AppConfigurationException("JwtSetting");
             
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -65,9 +64,7 @@ namespace Product.Helpers.Extentions
         public static void AddMessageBroker(this IServiceCollection services, IConfiguration configuration)
         {
             var messageBrokerSetting = configuration.GetSection("MassTransitSetting").Get<MessageBrokerConf>() 
-                ?? throw new AplicationConfigurationException(
-                    "Setting mass transit is invalid",
-                    "MassTransitSetting");
+                ?? throw new AppConfigurationException("MassTransitSetting");
 
             services.AddMassTransit(conf =>
             {
@@ -97,9 +94,7 @@ namespace Product.Helpers.Extentions
         public static void AddBlobStorage(this IServiceCollection service, IConfiguration configuration)
         {
             var blobConf = configuration.GetSection("BlobStorage").Get<BlobConf>() 
-                ?? throw new AplicationConfigurationException(
-                    "Blob configuration is empty",
-                    "BlobStorage");
+                ?? throw new AppConfigurationException("BlobStorage");
 
             var connectionString = $"DefaultEndpointsProtocol=http;AccountName={blobConf.AccountName};" +
                 $"AccountKey={blobConf.Key};" +
@@ -111,9 +106,7 @@ namespace Product.Helpers.Extentions
         public static void AddCorses(this IServiceCollection service, IConfiguration configuration)
         {
             var frontendBaseUrl = configuration.GetValue<string>("APIList:Frontend")
-                ?? throw new AplicationConfigurationException(
-                    "Error with client api endpoint",
-                    "APIList:Frontend");
+                ?? throw new AppConfigurationException("APIList:Frontend");
 
             service.AddCors(options =>
             {
@@ -184,19 +177,26 @@ namespace Product.Helpers.Extentions
                 ?? builder.Environment.ApplicationName;
 
             var productCountMeter = configuration.GetValue<string>("Telemetry:ProductsMetricsName")
-                ?? throw new AplicationConfigurationException(
-                    "Meter aplication setting is empty(product meter name)",
-                    "Telemetry:ProductsMetricsName");
+                ?? throw new AppConfigurationException("Telemetry:ProductsMetricsName");
 
             services.AddOpenTelemetry()
                 .ConfigureResource(resource => resource
                     .AddService(serviceName))
                 .WithMetrics(metrics => metrics
-                    //.AddAspNetCoreInstrumentation()
-                    //.AddHttpClientInstrumentation()
-                    //.AddConsoleExporter()
                     .AddPrometheusExporter()
                     .AddMeter(productCountMeter));
+        }
+
+        public static void AddCaching(this IServiceCollection services, IConfiguration configuration)
+        {
+            var redisConnectionString = configuration.GetConnectionString("RedisConnection") ??
+                throw new AppConfigurationException("Connection string to redis");
+
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = redisConnectionString;
+                options.InstanceName = "Product";
+            });
         }
     }
 }

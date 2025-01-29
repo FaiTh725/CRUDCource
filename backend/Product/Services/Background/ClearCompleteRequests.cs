@@ -1,5 +1,4 @@
 ﻿
-using Microsoft.OpenApi.Writers;
 using Product.Domain.Contracts.Repositories;
 
 namespace Product.Services.Background

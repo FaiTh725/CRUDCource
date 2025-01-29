@@ -6,15 +6,20 @@ namespace Product.Services.Background
 {
     public class InitializeService : BackgroundService
     {
-        private readonly AppDbContext context;
+        private readonly IServiceScopeFactory serviceProviderFactory;
 
-        public InitializeService(AppDbContext context)
+        public InitializeService(
+            IServiceScopeFactory serviceScopeFactory)
         {
-            this.context = context;
+            this.serviceProviderFactory = serviceScopeFactory;
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            using var scope = serviceProviderFactory.CreateScope();
+
+            var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
             if(context.Database.CanConnect() && 
                 context.Database.GetPendingMigrations().Any())
             {

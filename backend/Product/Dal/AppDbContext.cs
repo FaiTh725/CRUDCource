@@ -1,9 +1,9 @@
-﻿using MassTransit;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Product.Dal.Configurations;
 using Product.Domain.Entities;
 using Product.Domain.Models;
-using Product.Features.Exceptions;
 using ProductEntity = Product.Domain.Models.Product;
 
 namespace Product.Dal
@@ -46,8 +46,7 @@ namespace Product.Dal
 
             if(connectionString is null)
             {
-                throw new AplicationConfigurationException(
-                    "Error Aplication Configuration",
+                throw new AppConfigurationException(
                     "DbConnection");
             }
 

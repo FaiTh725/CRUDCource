@@ -29,7 +29,6 @@ services:
       - "ConnectionStrings__RedisConnection=redis-db:6379"
       - "ConnectionStrings__SQLServerConnection=Server=auth-database, 1433;Database=StoreAuthentication;User Id=sa;Password=goblinusik111W;MultipleActiveResultSets=true;TrustServerCertificate=True;"
       - "APIList__ProductAPI=https://product_api:5202/api"
-      - "APIList__Frontend=https://localhost:5173"
       - ASPNETCORE_URLS=https://+:5102;http://+:5101
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
@@ -54,6 +53,7 @@ services:
       - "MassTransitSetting__Host=rabbitmq:5672"
       - "ConnectionStrings__SQLServerConnection=Server=auth-database, 1433;Database=CRUDProducts;User Id=sa;Password=goblinusik111W;MultipleActiveResultSets=true;TrustServerCertificate=True;"
       - "ConnectionStrings__FileStorage=DefaultEndpointsProtocol=http;AccountName=faith725;AccountKey=supersecret=key.faith725;BlobEndpoint=azurite:10000/faith725;"
+      - "ConnectionStrings__RedisConnection=redis-db:6379"
       - "BlobStorage__Port=10000"
       - "BlobStorage__Key=ZGV2c3RvcmVhY2NvdW50Mw=="
       - "BlobStorage__AccountName=faith725"
@@ -81,10 +81,10 @@ services:
       - 5301:5301
       - 5302:5302
     environment:
-      - ApiList__ProductApi=https://product_api:5202/api
-      - ApiList__Frontend=https://localhost:5173
-      - ASPNETCORE_URLS=https://+:5302;http://+:5301
+      - "ApiList__ProductApi=https://product_api:5202/api"
+      - "ApiList__Frontend=https://localhost:5173"
       - "ConnectionStrings__RedisConnection=redis-db:6379"
+      - ASPNETCORE_URLS=https://+:5302;http://+:5301
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     volumes:
@@ -93,6 +93,26 @@ services:
       - rabbitmq_network
     depends_on:
       - redis-db
+  
+  main_proxy_api:
+    image: proxy_crud
+    container_name: reverse_proxy_application
+    ports:
+      - "5401:5401"
+      - "5402:5402"
+    environment:
+      - "ApiList__Frontend=https://localhost:5173"
+      - ASPNETCORE_URLS=https://+:5402;http://+:5401
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - C:\Users\zelen\.aspnet\https:/https:ro
+    networks:
+      - rabbitmq_network
+    depends_on:
+      - message_api
+      - authorize_api
+      - product_api
 
   azurite:
     image: mcr.microsoft.com/azure-storage/azurite:latest
@@ -138,9 +158,6 @@ services:
       - "6379:6379"
     networks:
       - rabbitmq_network
-    # command: ["redis-server", "--appendonly", "yes"]
-    # volumes:
-    #   - redis_data:/data
   
   prometheus:
     image: prom/prometheus
@@ -155,8 +172,6 @@ services:
 volumes:
   sqlvolume:
     driver: local
-  # redis_data:
-  #   driver: local
 
 networks:
   app_network:

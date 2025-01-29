@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Product.Domain.Contracts.Repositories;
 using Product.Domain.Entities;
-using System.Net;
 
 namespace Product.Dal.Implementations
 {

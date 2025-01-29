@@ -1,6 +1,5 @@
 ﻿using Application.Contracts.Response;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.FeedBack;
 using Product.Domain.Contracts.Repositories;
@@ -15,23 +14,38 @@ namespace Product.Services.Implementations
         private readonly IBlobService blobService;
         private readonly IAccountRepository accountRepository;
         private readonly IProductRepository productRepository;
+        private readonly ICachService cachService;
 
         public FeedBackService(
             IFeedBackRepository feedBackRepository,
             IBlobService blobService,
             IAccountRepository accountRepository,
-            IProductRepository productRepository)
+            IProductRepository productRepository,
+            ICachService cachService)
         {
             this.feedBackRepository = feedBackRepository;
             this.blobService = blobService;
             this.accountRepository = accountRepository;
             this.productRepository = productRepository;
+            this.cachService = cachService;
         }
 
         public async Task<DataResponse<FeedBackResponse>> GetFeedBackAccount(long productId, string emailAccount)
         {
             try
             {
+                var cachFeedBack = await cachService.GetData<FeedBackResponse>($"accountFeedBack-{productId}-{emailAccount}");
+
+                if(cachFeedBack.IsSuccess)
+                {
+                    return new DataResponse<FeedBackResponse>
+                    {
+                        StatusCode = StatusCode.Ok,
+                        Description = "Get User FeedBack",
+                        Data = cachFeedBack.Value
+                    };
+                }
+
                 var product = await productRepository.GetProduct(productId);
 
                 if(product.IsFailure)
@@ -69,24 +83,28 @@ namespace Product.Services.Implementations
                     };
                 }
 
+                var accountFeedBack = new FeedBackResponse
+                {
+                    Id = feedBackAccount.Id,
+                    FeedBackText = feedBackAccount.FeedBackText,
+                    ProductId = feedBackAccount.Product.Id,
+                    SendTime = feedBackAccount.SendTime,
+                    Rate = feedBackAccount.Rate,
+                    OwnerFeedBack = new ProductSeller
+                    {
+                        Email = feedBackAccount.Owner.Email,
+                        Name = feedBackAccount.Owner.Name,
+                    },
+                    Images = await blobService.DownLoadBlobFolder(feedBackAccount.ImageFilder)
+                };
+
+                await cachService.SetData($"accountFeedBack-{productId}-{emailAccount}", accountFeedBack, 600);
+
                 return new DataResponse<FeedBackResponse>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Get User FeedBack",
-                    Data = new FeedBackResponse 
-                    { 
-                        Id = feedBackAccount.Id,
-                        FeedBackText = feedBackAccount.FeedBackText,
-                        ProductId = feedBackAccount.Product.Id,
-                        SendTime = feedBackAccount.SendTime,
-                        Rate = feedBackAccount.Rate,
-                        OwnerFeedBack = new ProductSeller 
-                        { 
-                            Email = feedBackAccount.Owner.Email,
-                            Name = feedBackAccount.Owner.Name,
-                        },
-                        Images = await blobService.DownLoadBlobFolder(feedBackAccount.ImageFilder)
-                    }
+                    Data = accountFeedBack
 
                 };
             }
@@ -105,6 +123,18 @@ namespace Product.Services.Implementations
         {
             try
             {
+                var cachFeedBacks = await cachService.GetData<List<FeedBackResponse>>($"feedBack-{productId}");
+
+                if(cachFeedBacks.IsSuccess)
+                {
+                    return new DataResponse<List<FeedBackResponse>>
+                    {
+                        StatusCode = StatusCode.Ok,
+                        Description = "Success Get Product FeedBack",
+                        Data = cachFeedBacks.Value
+                    };
+                }
+
                 var product = await productRepository.GetProduct(productId);
 
                 if(product.IsFailure)
@@ -121,7 +151,7 @@ namespace Product.Services.Implementations
                     .GetFeedBacksProduct(productId)
                     .ToListAsync();
 
-                var feedBackWithImages = await Task.WhenAll(
+                var feedBackWithImages = (await Task.WhenAll(
                     feedBacks.Select(async x =>
                     {
                         return new FeedBackResponse
@@ -138,16 +168,19 @@ namespace Product.Services.Implementations
                                 Name = x.Owner.Name
                             }
                         };
-                    }).ToList());
+                    }).ToList()
+                )).ToList();
+
+                await cachService.SetData($"feedBack-{productId}", feedBackWithImages, 360);
 
                 return new DataResponse<List<FeedBackResponse>>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Success Get Product FeedBack",
-                    Data = feedBackWithImages.ToList()
+                    Data = feedBackWithImages
                 };
             }
-            catch(Exception ex  )
+            catch
             {
                 return new DataResponse<List<FeedBackResponse>>
                 {
@@ -163,7 +196,20 @@ namespace Product.Services.Implementations
         {
             try
             {
-                if(start < 1 || count < 0)
+                var cachFeedBacks = await cachService
+                    .GetData<FeedBackPaginationResponse>($"feedBack-{productId}-{start}-{count}");
+
+                if (cachFeedBacks.IsSuccess)
+                {
+                    return new DataResponse<FeedBackPaginationResponse>
+                    {
+                        StatusCode = StatusCode.Ok,
+                        Description = "Success Get Product FeedBack",
+                        Data = cachFeedBacks.Value
+                    };
+                }
+
+                if (start < 1 || count < 0)
                 {
                     return new DataResponse<FeedBackPaginationResponse>
                     {
@@ -211,17 +257,21 @@ namespace Product.Services.Implementations
                         };
                     }).ToList());
 
+                var feedBackresponse = new FeedBackPaginationResponse
+                {
+                    Count = count,
+                    Page = start,
+                    MaxCount = await feedBacks.CountAsync(),
+                    FeedBacks = feedBackWithImages.ToList()
+                };
+
+                await cachService.SetData($"feedBack-{productId}-{start}-{count}", feedBackresponse, 360);
+
                 return new DataResponse<FeedBackPaginationResponse>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Get Product FeedBacks",
-                    Data = new FeedBackPaginationResponse
-                    {
-                        Count = count,
-                        Page = start,
-                        MaxCount = await feedBacks.CountAsync(),
-                        FeedBacks = feedBackWithImages.ToList()
-                    }
+                    Data = feedBackresponse
                 };
             }
             catch
@@ -313,6 +363,8 @@ namespace Product.Services.Implementations
                         uploadedFeedBack.Value.ImageFilder,
                         request.FeedBackImages);
                 }
+
+                await cachService.RemoveKey($"feedBack-{request.ProductId}*");
 
                 return new DataResponse<FeedBackResponse>
                 {

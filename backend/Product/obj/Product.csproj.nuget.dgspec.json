@@ -161,6 +161,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "OpenTelemetry.Exporter.Console": {
               "target": "Package",
               "version": "[1.11.0, )"
@@ -184,6 +188,10 @@
             "OpenTelemetry.Instrumentation.Http": {
               "target": "Package",
               "version": "[1.10.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.24, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

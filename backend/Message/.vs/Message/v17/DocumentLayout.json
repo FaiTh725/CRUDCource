@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\hubs\\implementations\\messagehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:hubs\\implementations\\messagehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\helpers\\extentiosn\\appextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:helpers\\extentiosn\\appextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\helpers\\settings\\jwtconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:helpers\\settings\\jwtconf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\features\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:features\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\helpers\\extentiosn\\appextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:helpers\\extentiosn\\appextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\message.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:message.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|c:\\vsprojects\\courcecrud\\backend\\message\\hubs\\implementations\\messagehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5AF5C46-4465-4B7E-8A37-283CF8AB0068}|Message.csproj|solutionrelative:hubs\\implementations\\messagehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8E2EE4B-6370-496A-9C98-F1AF8A36DD4E}|..\\Message.Domain\\Message.Domain.csproj|c:\\vsprojects\\courcecrud\\backend\\message.domain\\contracts\\modals\\chatroom\\chathistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -76,8 +88,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JwtConf.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Helpers\\Settings\\JwtConf.cs",
+              "RelativeDocumentMoniker": "Helpers\\Settings\\JwtConf.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Helpers\\Settings\\JwtConf.cs",
+              "RelativeToolTip": "Helpers\\Settings\\JwtConf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T13:05:46.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Message",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Message.csproj",
+              "RelativeDocumentMoniker": "Message.csproj",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Message.csproj",
+              "RelativeToolTip": "Message.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-28T13:01:33.692Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -96,7 +134,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T13:02:12.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "IChatRoomRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Repositories\\IChatRoomRepository.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Repositories\\IChatRoomRepository.cs",
@@ -108,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "MessageRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Dal\\Implementations\\MessageRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\MessageRepository.cs",
@@ -120,33 +171,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACMAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T13:40:34.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AppExtentions.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Helpers\\Extentiosn\\AppExtentions.cs",
               "RelativeDocumentMoniker": "Helpers\\Extentiosn\\AppExtentions.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Helpers\\Extentiosn\\AppExtentions.cs",
               "RelativeToolTip": "Helpers\\Extentiosn\\AppExtentions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T16:08:52.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "SendMessage.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Modals\\Message\\SendMessage.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Modals\\Message\\SendMessage.cs",
@@ -158,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "NewChat.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Modals\\ChatRoom\\NewChat.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Modals\\ChatRoom\\NewChat.cs",
@@ -170,19 +221,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-12T16:09:08.336Z"
+              "WhenOpened": "2025-01-12T16:09:08.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ChatRoomRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Dal\\Implementations\\ChatRoomRepository.cs",
               "RelativeDocumentMoniker": "Dal\\Implementations\\ChatRoomRepository.cs",
@@ -194,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "MessageHub.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Hubs\\Implementations\\MessageHub.cs",
               "RelativeDocumentMoniker": "Hubs\\Implementations\\MessageHub.cs",
@@ -202,12 +254,11 @@
               "RelativeToolTip": "Hubs\\Implementations\\MessageHub.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAkwBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T13:32:22.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T13:32:22.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "IMessageRepository.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Repositories\\IMessageRepository.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Repositories\\IMessageRepository.cs",
@@ -219,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ChatRoom.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Entities\\ChatRoom.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Entities\\ChatRoom.cs",
@@ -231,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "MessageService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Services\\Implementations\\MessageService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\MessageService.cs",
@@ -243,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Entities\\Message.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Entities\\Message.cs",
@@ -255,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ChatRoomResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Modals\\ChatRoom\\ChatRoomResponse.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Modals\\ChatRoom\\ChatRoomResponse.cs",
@@ -267,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ChatHistory.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Modals\\ChatRoom\\ChatHistory.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Modals\\ChatRoom\\ChatHistory.cs",
@@ -279,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "IMessageHub.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Hubs\\Interfaces\\IMessageHub.cs",
               "RelativeDocumentMoniker": "Hubs\\Interfaces\\IMessageHub.cs",
@@ -291,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "MessageResponse.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message.Domain\\Contracts\\Modals\\Message\\MessageResponse.cs",
               "RelativeDocumentMoniker": "..\\Message.Domain\\Contracts\\Modals\\Message\\MessageResponse.cs",
@@ -303,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "IMessageService.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Message\\Services\\Interfaces\\IMessageService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IMessageService.cs",
@@ -315,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",

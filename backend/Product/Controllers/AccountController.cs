@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Query;
 using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Request;
 using Product.Services.Interfaces;
@@ -46,7 +45,7 @@ namespace Product.Controllers
         }
 
         [HttpPost("[action]")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CommitRequest(CommitRequestChangeRole request)
         {
             var response = await accountService.CommitRequest(request);

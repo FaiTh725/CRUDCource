@@ -1,5 +1,6 @@
 using Message.Dal.Implementations;
 using Message.Domain.Contracts.Repositories;
+using Message.Features.Exceptions;
 using Message.Helpers.Extentiosn;
 using Message.Hubs.Implementations;
 using Message.Hubs.Interfaces;
@@ -31,6 +32,9 @@ builder.Services.AddSingleton<IChatRoomRepository, ChatRoomRepository>();
 builder.Services.AddSingleton<IMessageRepository, MessageRepository>();
 
 builder.Services.AddSingleton<IUserIdProvider, EmailUserProvider>();
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 

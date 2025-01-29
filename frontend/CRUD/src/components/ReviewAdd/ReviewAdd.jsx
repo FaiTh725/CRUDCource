@@ -78,7 +78,7 @@ const ReviewAdd = ({productId}) => {
         })
       }
       
-      const response = await axios.post("https://localhost:5202/api/FeedBack/AddFeedBack", data,
+      const response = await axios.post("https://localhost:5402/api/FeedBack/AddFeedBack", data,
         {
           headers: {
             "Content-Type": "multipart/form-data"

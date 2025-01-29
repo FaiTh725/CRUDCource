@@ -4,7 +4,6 @@ using Product.Domain.Entities;
 using Product.Domain.Contracts.Models.Account;
 
 
-
 namespace Product.Domain.Contracts.Repositories
 {
     public interface IAccountRepository

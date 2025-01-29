@@ -1,9 +1,9 @@
-﻿using Authorize.Domain.Entities;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using Authorize.Domain.Entities;
 using Authorize.Domain.Modals.Auth;
 using Authorize.Helpers.Jwt;
 using Authorize.Services.Interfaces;
 using CSharpFunctionalExtensions;
-using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -50,10 +50,17 @@ namespace Authorize.Services.Implementations
 
         public string GenerateToken(string userName, User user)
         {
-            var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtSetting>();
+            var jwtSetting = configuration
+                .GetSection("JwtSetting")
+                .Get<JwtSetting>();
+
+            if(jwtSetting is null)
+            {
+                throw new AppConfigurationException("JWtSetting");
+            }
 
             var signingCredentials = new SigningCredentials(
-                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting!.SecretKey)),
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SecretKey)),
                 SecurityAlgorithms.HmacSha256);
 
             var claims = new Claim[]
@@ -77,10 +84,17 @@ namespace Authorize.Services.Implementations
 
         public string GenerateToken(User user)
         {
-            var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtSetting>();
+            var jwtSetting = configuration
+                .GetSection("JwtSetting")
+                .Get<JwtSetting>();
+
+            if (jwtSetting is null)
+            {
+                throw new AppConfigurationException("JWtSetting");
+            }
 
             var signingCredentials = new SigningCredentials(
-                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting!.SecretKey)),
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SecretKey)),
                 SecurityAlgorithms.HmacSha256);
 
             var claims = new Claim[]

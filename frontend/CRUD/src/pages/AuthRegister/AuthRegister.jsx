@@ -86,7 +86,7 @@ const AuthRegister = () => {
 
     try
     {
-      const response = await axios.post("https://localhost:5102/api/Authorize/Register", 
+      const response = await axios.post("https://localhost:5402/api/Authorize/Register", 
         {
           userName: formRegister.firstName,
           password: formRegister.password,

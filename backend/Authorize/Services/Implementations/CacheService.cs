@@ -1,6 +1,5 @@
 ﻿using Authorize.Services.Interfaces;
 using CSharpFunctionalExtensions;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 

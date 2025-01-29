@@ -1,17 +1,13 @@
 ﻿using Application.Contracts.Response;
+using Application.Contracts.SharedModels.Exceptions;
 using Authorize.Contracts.User;
-using Authorize.Dal.Implementation;
 using Authorize.Domain.Entities;
 using Authorize.Domain.Modals.Auth;
 using Authorize.Domain.Repositories;
-using Authorize.Helpers.Settings;
 using Authorize.Services.Interfaces;
-using CSharpFunctionalExtensions;
 using MassTransit;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Notification.Domain.Contacrs.Email;
 using Product.Domain.Contracts.Models.Account;
-using Product.Domain.Contracts.Models.Request;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
@@ -83,7 +79,7 @@ namespace Authorize.Services.Implementations
         {
             var userResult = await userRepository.GetUser(request.Email);
 
-            if(!userResult.IsSuccess)
+            if (!userResult.IsSuccess)
             {
                 return new DataResponse<TokenData>
                 {
@@ -93,7 +89,7 @@ namespace Authorize.Services.Implementations
                 };
             }
 
-            if(request.Password != userResult.Value.Password)
+            if (request.Password != userResult.Value.Password)
             {
                 return new DataResponse<TokenData>
                 {
@@ -104,16 +100,17 @@ namespace Authorize.Services.Implementations
             }
 
             var tokenToAnotherApi = jwtService.GenerateToken(userResult.Value);
-            var apiList = configuration.GetSection("APIList").Get<APIList>()
-                ?? throw new NullReferenceException("Configuration api list is empty");
+
+            var apiList = configuration.GetValue<string>("APIList:ProductAPI")
+                ?? throw new AppConfigurationException("ApiList");
 
             var httpClient = httpClientFactory.CreateClient("ProductHttp");
 
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenToAnotherApi);
             var responseGetAccountInfo = await httpClient.GetAsync(
-                    $@"{apiList.ProductAPI}/Account/AccountInfo?email={request.Email}");
+                    $@"{apiList}/Account/AccountInfo?email={request.Email}");
 
-            if(!responseGetAccountInfo.IsSuccessStatusCode)
+            if (!responseGetAccountInfo.IsSuccessStatusCode)
             {
                 return new DataResponse<TokenData>
                 {
@@ -133,7 +130,7 @@ namespace Authorize.Services.Implementations
             var responseData = JsonSerializer.Deserialize<DataResponse<AccountResponseDetail>>(
                 responseJson, jsonDesiarializeOptions);
 
-            if(responseData is null || responseData.StatusCode != StatusCode.Ok)
+            if (responseData is null || responseData.StatusCode != StatusCode.Ok)
             {
                 return new DataResponse<TokenData>
                 {
@@ -147,7 +144,7 @@ namespace Authorize.Services.Implementations
 
             var decodeToken = jwtService.DecodeToken(token);
 
-            if(decodeToken.IsFailure)
+            if (decodeToken.IsFailure)
             {
                 return new DataResponse<TokenData>
                 {

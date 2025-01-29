@@ -1,7 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
 using Product.Domain.Contracts.Repositories;
-using System.Reflection.Metadata.Ecma335;
 using ProductEntity = Product.Domain.Models.Product;
 
 namespace Product.Dal.Implementations

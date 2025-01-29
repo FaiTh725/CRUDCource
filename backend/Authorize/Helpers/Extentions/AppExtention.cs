@@ -1,4 +1,5 @@
 ﻿
+using Application.Contracts.SharedModels.Exceptions;
 using Authorize.Contracts.User;
 using Authorize.Dal;
 using Authorize.Helpers.Jwt;
@@ -21,6 +22,11 @@ namespace Authorize.Helpers.Extentions
         public static void AddJwtService(this IServiceCollection service, IConfiguration configuration)
         {
             var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtSetting>();
+
+            if(jwtSetting is null)
+            {
+                throw new AppConfigurationException("JwtSetting");
+            }
 
             service.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -58,6 +64,11 @@ namespace Authorize.Helpers.Extentions
         {
             var messageBrokerSetting = configuration.GetSection("RabbitMqSetting").Get<MessageBrokerSetting>();
 
+            if(messageBrokerSetting is null)
+            {
+                throw new AppConfigurationException("MessageBroker setting");
+            }
+
             services.AddMassTransit(conf =>
             {
                 conf.UsingRabbitMq((context, configurator) =>
@@ -76,9 +87,12 @@ namespace Authorize.Helpers.Extentions
 
         public static void AddCaching(this IServiceCollection services, IConfiguration configuration)
         {
+            var redisConnectionString = configuration.GetConnectionString("RedisConnection") ??
+                throw new AppConfigurationException("Connection string to redis");
+
             services.AddStackExchangeRedisCache(options =>
             {
-                options.Configuration = configuration.GetConnectionString("RedisConnection");
+                options.Configuration = redisConnectionString;
                 options.InstanceName = "Users";
             });
         }
@@ -88,22 +102,6 @@ namespace Authorize.Helpers.Extentions
             services.AddFluentValidationAutoValidation();
             services.AddScoped<IValidator<UserLogin>, UserValidator>();
             services.AddScoped<IValidator<UserRegister>, UserValidatorRegister>();
-        }
-
-        public static void AddCorses(this IServiceCollection services, IConfiguration configuration)
-        {
-            var frontendBaseUrl = configuration.GetValue<string>("APIList:Frontend");
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("Frontend", policy =>
-                {
-                    policy.WithOrigins(frontendBaseUrl!)
-                    .AllowCredentials()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-                });
-            });
         }
 
         public static void AddCustomHttpClient(this IServiceCollection services)

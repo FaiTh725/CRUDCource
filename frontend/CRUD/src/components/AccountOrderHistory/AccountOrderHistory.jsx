@@ -13,7 +13,7 @@ const AccountOrderHistory = () => {
   const getOrderHistory = async (emailAccount, abortSignal) => {
     try
     {
-      const response = await axios.get(`https://localhost:5202/api/Account/AccountOrderHistory?email=${emailAccount}`, {
+      const response = await axios.get(`https://localhost:5402/api/Account/AccountOrderHistory?email=${emailAccount}`, {
         withCredentials: true,
         signal: abortSignal
       });

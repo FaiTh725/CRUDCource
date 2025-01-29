@@ -24,7 +24,7 @@ const Reviews = ({productId}) => {
   const fetchProductMetrics = async (productId, signal) => {
     try
     {
-      const response = await axios.get(`https://localhost:5202/api/Product/GetProductMetrics?productId=${productId}`, {
+      const response = await axios.get(`https://localhost:5402/api/Product/GetProductMetrics?productId=${productId}`, {
         signal: signal
       });
     
@@ -58,7 +58,7 @@ const Reviews = ({productId}) => {
     
     try
     {
-      const response = await axios.get("https://localhost:5202/api/FeedBack/FeedBackAccount?" + 
+      const response = await axios.get("https://localhost:5402/api/FeedBack/FeedBackAccount?" + 
           `productId=${productId}&accountEmail=${auth.user.email}`, {
         withCredentials: true,
         signal: signal
@@ -93,7 +93,7 @@ const Reviews = ({productId}) => {
     try
     {
       const response = await axios.get(
-        "https://localhost:5202/api/FeedBack/ProductFeedBacksPagination?" + 
+        "https://localhost:5402/api/FeedBack/ProductFeedBacksPagination?" + 
         `productId=${productId}&start=${start}&count=${countItems}${rate == null ? "" : `&rating=${rate}`}`, {
         signal: abortSignal
       });

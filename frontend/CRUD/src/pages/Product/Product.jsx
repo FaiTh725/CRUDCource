@@ -54,7 +54,7 @@ const Product = () => {
 
     try
     {
-      const response = await axios.delete("https://localhost:5202/api/Account/DeleteProductFromCart", 
+      const response = await axios.delete("https://localhost:5402/api/Account/DeleteProductFromCart", 
       {  
         withCredentials: true,
         data: {
@@ -92,7 +92,7 @@ const Product = () => {
 
     try
     {
-      var response = await axios.post("https://localhost:5202/api/Account/AddToCartProduct", {
+      var response = await axios.post("https://localhost:5402/api/Account/AddToCartProduct", {
         productId: product.id,
         email: auth.user.email,
         count: count
@@ -131,7 +131,7 @@ const Product = () => {
   const fetchProduct = async (productId, abortController) => {
     try
     {
-      var response = await axios.get("https://localhost:5202/api/Product/Product?id="+productId, {
+      var response = await axios.get("https://localhost:5402/api/Product/Product?id="+productId, {
         signal: abortController.signal
       });
     

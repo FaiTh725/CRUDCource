@@ -1,5 +1,5 @@
-import { HubConnectionBuilder } from "@microsoft/signalr";
-import { createContext, useContext, useEffect, useMemo, useState} from "react"
+import { HttpTransportType, HubConnectionBuilder} from "@microsoft/signalr";
+import { createContext, useContext, useEffect, useState} from "react"
 import Chat from "../Chat/Chat";
 import { useAuth } from "../Auth/AuthContext";
 import { useNotification } from "../Notification/NotificationContext";
@@ -16,7 +16,10 @@ export const SignalRProvider = ({children}) => {
 
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
-        .withUrl("https://localhost:5302/SupportChat")
+        .withUrl("https://localhost:5402/Chat", {
+          skipNegotiation: true,
+          transport: HttpTransportType.WebSockets
+        })
         // .withAutomaticReconnect()
         .build(); 
 

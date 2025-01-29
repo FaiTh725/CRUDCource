@@ -1,8 +1,6 @@
-﻿using CSharpFunctionalExtensions;
-using Microsoft.OpenApi.Writers;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using CSharpFunctionalExtensions;
 using Product.Domain.Contracts.Repositories;
-using Product.Domain.Models;
-using Product.Features.Exceptions;
 using Product.Helpers.ResponseApi;
 using Product.Services.Interfaces;
 using System.Diagnostics.Metrics;
@@ -28,9 +26,7 @@ namespace Product.Services.Implementations
 
             var productMeterName = configuration
                 .GetValue<string>("Telemetry:ProductsMetricsName") ??
-                throw new AplicationConfigurationException(
-                    "Configuration file is empty",
-                    "Telemetry Section");
+                throw new AppConfigurationException("Telemetry Section");
 
             var meter = new Meter(productMeterName);
 
@@ -120,9 +116,7 @@ namespace Product.Services.Implementations
             {
                 var metricsBaseUrl = configuration
                     .GetValue<string>("APIList:PromethesAPI")
-                    ?? throw new AplicationConfigurationException(
-                        "Configuration api list is null",
-                        "ApiListPrometheus");
+                    ?? throw new AppConfigurationException("ApiListPrometheus");
 
                 var requestUri = $"{metricsBaseUrl}/api/v1/query?query=product_sold_count_total" +
                     $"{{ProductId = \"{productId}\"}}";
@@ -154,11 +148,9 @@ namespace Product.Services.Implementations
 
                 return Result.Success(countBoughtProduct);
             }
-            catch(AplicationConfigurationException ex)
+            catch(AppConfigurationException ex)
             {
-                throw new AplicationConfigurationException(
-                    ex.Message,
-                    ex.ConfigurationWithError);
+                throw new AppConfigurationException(ex.ConfigurationErrorSection);
             }
             catch
             {
@@ -179,9 +171,7 @@ namespace Product.Services.Implementations
             {
                 var metricsBaseUrl = configuration
                     .GetValue<string>("APIList:PromethesAPI")
-                    ?? throw new AplicationConfigurationException(
-                        "Configuration api list is null",
-                        "ApiListPrometheus");
+                    ?? throw new AppConfigurationException("ApiListPrometheus");
 
                 var requestUri = $"{metricsBaseUrl}/api/v1/query?query=user_total_transactions_USD_total" +
                     $"{{UserId = \"{userId}\"}}";
@@ -212,11 +202,9 @@ namespace Product.Services.Implementations
 
                 return Result.Success(totalTransactionsUser);
             }
-            catch(AplicationConfigurationException ex)
+            catch(AppConfigurationException ex)
             {
-                throw new AplicationConfigurationException(
-                    ex.Message, 
-                    ex.ConfigurationWithError);
+                throw new AppConfigurationException(ex.ConfigurationErrorSection);
             }
             catch
             {
@@ -229,9 +217,7 @@ namespace Product.Services.Implementations
             try
             {
                 var requestBaseUrl = configuration.GetValue<string>("APIList:PromethesAPI") ??
-                    throw new AplicationConfigurationException(
-                        "Configuration api list is null",
-                        "ApiListPrometheus");
+                    throw new AppConfigurationException("ApiListPrometheus");
 
                 var requestUrl = $"{requestBaseUrl}/api/v1/query?query=" +
                     $"product_average_rating{{ProductId = \"{productId}\"}}";
@@ -274,11 +260,9 @@ namespace Product.Services.Implementations
                 
                 return Result.Success(averageRatin);
             }
-            catch (AplicationConfigurationException ex)
+            catch (AppConfigurationException ex)
             {
-                throw new AplicationConfigurationException(
-                    ex.Message,
-                    ex.ConfigurationWithError);
+                throw new AppConfigurationException(ex.ConfigurationErrorSection);
             }
             catch
             {
@@ -292,9 +276,7 @@ namespace Product.Services.Implementations
             try
             {
                 var requestBaseUrl = configuration.GetValue<string>("APIList:PromethesAPI") ??
-                    throw new AplicationConfigurationException(
-                        "Configuration api list is null",
-                        "ApiListPrometheus");
+                    throw new AppConfigurationException("ApiListPrometheus");
 
                 var requestUrl = $"{requestBaseUrl}/api/v1/query?query=" +
                     $"product_ratings{{ProductRatingId = \"{productId}\"}}";
@@ -344,11 +326,9 @@ namespace Product.Services.Implementations
 
                 return Result.Success(ratings);
             }
-            catch (AplicationConfigurationException ex)
+            catch (AppConfigurationException ex)
             {
-                throw new AplicationConfigurationException(
-                    ex.Message,
-                    ex.ConfigurationWithError);
+                throw new AppConfigurationException(ex.ConfigurationErrorSection);
             }
             catch(Exception ex)
             {

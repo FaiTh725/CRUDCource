@@ -31,12 +31,15 @@ const AuthLogin = () => {
   const handleLogin = async () => {
     try
     {
-      const response = await axios.post("https://localhost:5102/api/Authorize/Login", 
+      const response = await axios.post("https://localhost:5402/api/Authorize/Login", 
         {
           password: loginForm.password,
           email: loginForm.email
         },
         {
+          headers: {
+            "Content-Type": "application/json"
+          },
           withCredentials: true
         }
       );

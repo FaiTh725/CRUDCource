@@ -20,7 +20,7 @@ const AccountDetails = () => {
   const sendRequestToStartSell = async () => {
     try
     {
-      var response = await axios.patch("https://localhost:5202/api/Account/ChangeRole", {
+      var response = await axios.patch("https://localhost:5402/api/Account/ChangeRole", {
         email: auth.user.email,
         newRole: "Seller"
       }, {

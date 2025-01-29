@@ -1,7 +1,6 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Azure.Storage.Sas;
-using Product.Domain.Contracts.Models;
 using Product.Services.Interfaces;
 
 namespace Product.Services.Implementations

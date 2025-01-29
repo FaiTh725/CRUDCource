@@ -50,7 +50,7 @@ const Cart = ({isOpen, setIsOpen}) => {
     
     try
     {
-      const response = await axios.post("https://localhost:5202/api/Account/BuyProducts", {
+      const response = await axios.post("https://localhost:5402/api/Account/BuyProducts", {
         email: auth.user.email,
         products: cartItems.cart
           .filter(product => product.count > 0)
@@ -88,7 +88,7 @@ const Cart = ({isOpen, setIsOpen}) => {
   const handleGetCart = async (signal) => {
     try
     {
-      const response = await axios.get(`https://localhost:5202/api/Account/GetAccountCart?email=${auth.user.email}`, {
+      const response = await axios.get(`https://localhost:5402/api/Account/GetAccountCart?email=${auth.user.email}`, {
         withCredentials: true,
         signal: signal
       });
@@ -143,7 +143,7 @@ const Cart = ({isOpen, setIsOpen}) => {
       {
         logout();
       }
-      const response = await axios.delete("https://localhost:5202/api/Account/DeleteProductFromCart", {
+      const response = await axios.delete("https://localhost:5402/api/Account/DeleteProductFromCart", {
         withCredentials: true,
         data: {
           productId: productId,

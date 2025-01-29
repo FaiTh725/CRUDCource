@@ -19,8 +19,6 @@ namespace Product.Dal.Configurations
 
             builder.Property(x => x.Count)
                 .IsRequired();
-
-            //builder.ToTable(x => x.HasCheckConstraint("CK_ProductEntity_Count", "[Count] > 0 AND [Count] <= 1000000"));
         }
     }
 }

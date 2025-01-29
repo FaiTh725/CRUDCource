@@ -1,6 +1,5 @@
 ﻿using Authorize.Dal.Configurations;
 using Authorize.Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Authorize.Dal

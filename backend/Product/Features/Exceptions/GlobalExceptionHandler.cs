@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -6,6 +7,17 @@ namespace Product.Features.Exceptions
 {
     public class GlobalExceptionHandler : IExceptionHandler
     {
+        private readonly IHostApplicationLifetime application;
+        private readonly ILogger<GlobalExceptionHandler> logger;
+
+        public GlobalExceptionHandler(
+            IHostApplicationLifetime application,
+            ILogger<GlobalExceptionHandler> logger)
+        {
+            this.application = application;
+            this.logger = logger;
+        }
+
         public async ValueTask<bool> TryHandleAsync(
             HttpContext httpContext, 
             Exception exception, 
@@ -18,11 +30,11 @@ namespace Product.Features.Exceptions
                 Title = "API Error"
             };
 
-            if(exception is AplicationConfigurationException aplicationEx)
+            if(exception is AppConfigurationException aplicationEx)
             {
-                problemDetails.Detail = aplicationEx.Message;
-                problemDetails.Type = "Error with configuration " + 
-                    aplicationEx.ConfigurationWithError;
+                logger.LogError("Error configure app, section with error - " + aplicationEx.ConfigurationErrorSection);
+
+                application.StopApplication();
             }
             else
             {
@@ -32,6 +44,7 @@ namespace Product.Features.Exceptions
 
             httpContext.Response.ContentType = "application/json";
             await httpContext.Response.WriteAsJsonAsync(problemDetails);
+
 
             return true;
         }

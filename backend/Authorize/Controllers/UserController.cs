@@ -16,7 +16,6 @@ namespace Authorize.Controllers
         }
 
         [HttpPatch("[action]")]
-        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateUser(ChangeRoleAccount request)
         {
             var response = await userService.UpdateRoleUser(request);

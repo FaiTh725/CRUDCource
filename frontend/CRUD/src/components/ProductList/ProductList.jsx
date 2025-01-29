@@ -28,7 +28,7 @@ const ProductList = () => {
   const fetchProducts = async (page, count, abortSignal) => {
     try
     {
-      const response = await axios.get(`https://localhost:5202/api/Product/ProductsPagination?page=${page}&count=${count}`, {
+      const response = await axios.get(`https://localhost:5402/api/Product/ProductsPagination?page=${page}&count=${count}`, {
         signal: abortSignal
       });
 

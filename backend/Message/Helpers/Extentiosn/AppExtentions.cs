@@ -1,4 +1,5 @@
-﻿using Message.Helpers.Settings;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using Message.Helpers.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Redis.OM.Searching.Query;
@@ -14,7 +15,10 @@ namespace Message.Helpers.Extentiosn
         {
             services.AddSingleton<IConnectionMultiplexer>(options =>
                 {
-                    var redisOptions = ConfigurationOptions.Parse(configurations.GetConnectionString("RedisConnection"));
+                    var redisOptions = ConfigurationOptions.Parse(
+                        configurations.GetConnectionString("RedisConnection") ??
+                        throw new AppConfigurationException("Redis Connection"));
+
                     redisOptions.AbortOnConnectFail = false;
 
                     return ConnectionMultiplexer.Connect(redisOptions);
@@ -24,14 +28,16 @@ namespace Message.Helpers.Extentiosn
 
         public static void AddCorsExt(this IServiceCollection service, IConfiguration configuration)
         {
-            var frontendApi = configuration.GetValue<string>("ApiList:Frontend");
-            
+            var frontendApi = configuration
+                .GetValue<string>("ApiList:Frontend") ??
+                throw new AppConfigurationException("ApiList Frontend");
+
             service.AddCors(options =>
             {
                 options.AddPolicy("Frontend", 
                     options =>
                     {
-                        options.WithOrigins(frontendApi!)
+                        options.WithOrigins(frontendApi)
                         .AllowCredentials()
                         .AllowAnyHeader()
                         .AllowAnyMethod();
@@ -42,7 +48,7 @@ namespace Message.Helpers.Extentiosn
         public static void AddJwtService(this IServiceCollection services, IConfiguration configuration)
         {
             var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtConf>()
-                ?? throw new NullReferenceException("Setting jwt token is null");
+                ?? throw new AppConfigurationException("JwtSetting");
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

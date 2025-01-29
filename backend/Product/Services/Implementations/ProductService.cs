@@ -1,10 +1,8 @@
 ﻿using Application.Contracts.Response;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Product;
 using Product.Domain.Contracts.Repositories;
-using Product.Domain.Models;
 using Product.Services.Interfaces;
 using ProductEntity = Product.Domain.Models.Product;
 
@@ -17,25 +15,40 @@ namespace Product.Services.Implementations
         private readonly IBlobService blobService;
         private readonly ITelemetryService telemetryService;
         private readonly IFeedBackRepository feedBackRepository;
+        private readonly ICachService cachService;
 
         public ProductService(
             IProductRepository productRepository,
             IBlobService blobService,
             IAccountRepository accountRepository,
             ITelemetryService telemetryService,
-            IFeedBackRepository feedBackRepository)
+            IFeedBackRepository feedBackRepository,
+            ICachService cachService)
         {
             this.blobService = blobService;
             this.productRepository = productRepository;
             this.accountRepository = accountRepository;
             this.telemetryService = telemetryService;
             this.feedBackRepository = feedBackRepository;
+            this.cachService = cachService;
         }
 
         public async Task<DataResponse<ProductResponse>> GetProduct(long productId)
         {
             try
             {
+                var cachProduct = await cachService.GetData<ProductResponse>($"product-{productId}");
+
+                if (cachProduct.IsSuccess)
+                {
+                    return new DataResponse<ProductResponse>
+                    {
+                        Description = "Success get product",
+                        StatusCode = StatusCode.Ok,
+                        Data = cachProduct.Value
+                    };
+                }
+
                 var product = await productRepository.GetProduct(productId);
 
 
@@ -51,19 +64,23 @@ namespace Product.Services.Implementations
 
                 var productImages = await blobService.DownLoadBlobFolder(product.Value.ImageFolder);
 
+                var productResponse = new ProductResponse
+                {
+                    Id = product.Value.Id,
+                    Description = product.Value.Description,
+                    Name = product.Value.Name,
+                    Price = product.Value.Price,
+                    Images = productImages,
+                    Count = product.Value.Count
+                };
+
+                await cachService.SetData($"product-{productId}", productResponse, 600);
+
                 return new DataResponse<ProductResponse>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Success get product",
-                    Data = new ProductResponse
-                    {
-                        Id = product.Value.Id,
-                        Description = product.Value.Description, 
-                        Name = product.Value.Name,
-                        Price = product.Value.Price,
-                        Images = productImages,
-                        Count = product.Value.Count
-                    }
+                    Data = productResponse
                 };
             }
             catch
@@ -148,6 +165,18 @@ namespace Product.Services.Implementations
         {
             try
             {
+                var cachProducts = await cachService.GetData<ProductPaginationResponse>($"products-{page}-{count}");
+
+                if(cachProducts.IsSuccess)
+                {
+                    return new DataResponse<ProductPaginationResponse>
+                    {
+                        StatusCode = StatusCode.Ok,
+                        Description = "Success Get products",
+                        Data = cachProducts.Value
+                    };
+                }
+
                 var products = productRepository.GetProducts();
 
                 var productsPagination = await products
@@ -166,17 +195,21 @@ namespace Product.Services.Implementations
                         Count = x.Count
                     }));
 
+                var productsResponse = new ProductPaginationResponse
+                {
+                    Count = count,
+                    Page = page,
+                    Products = productsWithImages.ToList(),
+                    MaxCount = await products.CountAsync()
+                };
+
+                await cachService.SetData($"products-{page}-{count}", productsResponse, 360);
+
                 return new DataResponse<ProductPaginationResponse>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Success Get products",
-                    Data = new ProductPaginationResponse
-                    {
-                        Count = count,
-                        Page = page,
-                        Products = productsWithImages.ToList(),
-                        MaxCount = await products.CountAsync()
-                    }
+                    Data = productsResponse
                 };
             }
             catch
@@ -195,6 +228,18 @@ namespace Product.Services.Implementations
         {
             try
             {
+                var cachProducts = await cachService.GetData<List<ProductResponse>>("products");
+
+                if(cachProducts.IsSuccess)
+                {
+                    return new DataResponse<List<ProductResponse>>
+                    {
+                        StatusCode = StatusCode.Ok,
+                        Description = "Success Get products",
+                        Data = cachProducts.Value
+                    };
+                }
+
                 var products = productRepository.GetProducts();
 
                 var productsPagination = await products.ToListAsync();
@@ -215,6 +260,8 @@ namespace Product.Services.Implementations
                         Count = product.Count
                     });
                 }
+
+                await cachService.SetData("products", productsResponse, 360);
 
                 return new DataResponse<List<ProductResponse>>
                 {

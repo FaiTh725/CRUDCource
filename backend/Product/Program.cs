@@ -24,6 +24,7 @@ builder.Services.AddJwtService(builder.Configuration);
 builder.Services.AddMessageBroker(builder.Configuration);
 builder.Services.AddBlobStorage(builder.Configuration);
 builder.Services.AddCorses(builder.Configuration);
+builder.Services.AddCaching(builder.Configuration);
 builder.Services.AddValidators();
 builder.Services.AddCustomHttpClient();
 builder.Services.AddHttpContextAccessor();
@@ -38,6 +39,7 @@ builder.Services.AddScoped<IDatabaseTransaction, DatabaseTransaction>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IFeedBackService, FeedBackService>();
+builder.Services.AddScoped<ICachService, CachService>();
 builder.Services.AddSingleton<IBlobService, BlobService>();
 builder.Services.AddSingleton<ITelemetryService, TelemetryService>();
 

@@ -1,12 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
 using Product.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Formats.Tar;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProductEntity = Product.Domain.Models.Product;
 
 namespace Product.Domain.Entities

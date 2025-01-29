@@ -203,3 +203,6 @@ C:\VSProjects\CourceCRUD\backend\Product\bin\Debug\net8.0\OpenTelemetry.Instrume
 C:\VSProjects\CourceCRUD\backend\Product\bin\Debug\net8.0\OpenTelemetry.Instrumentation.Http.dll
 C:\VSProjects\CourceCRUD\backend\Product\bin\Debug\net8.0\OpenTelemetry.Exporter.Console.dll
 C:\VSProjects\CourceCRUD\backend\Product\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\VSProjects\CourceCRUD\backend\Product\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\VSProjects\CourceCRUD\backend\Product\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\VSProjects\CourceCRUD\backend\Product\bin\Debug\net8.0\StackExchange.Redis.dll

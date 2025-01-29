@@ -1,25 +1,4 @@
-# FROM node:18-alpine
-
-# WORKDIR /usr/app
-
-# COPY package*.json .
-# RUN npm install
-
-# COPY . .
-
-# RUN npm run build
-
-# EXPOSE 5173
-
-# ENTRYPOINT [ "npm", "run", "preview" ]
-
 FROM node:18-alpine as build
-
-ARG VITE_APP_SSL_CRT_FILE_PATH
-ARG VITE_APP_SSL_KEY_FILE_PATH
-
-ENV VITE_APP_SSL_CRT_FILE_PATH=${VITE_APP_SSL_CRT_FILE_PATH}
-ENV VITE_APP_SSL_KEY_FILE_PATH=${VITE_APP_SSL_KEY_FILE_PATH}
 
 WORKDIR /usr/app
 
@@ -40,6 +19,17 @@ COPY --from=build /usr/app/dist .
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
+# Add ssl sertificates
+RUN mkdir -p /etc/ssl/cert/
+RUN mkdir -p /etc/ssl/private/
+
+# ARG VITE_APP_SSL_CRT_FILE_PATH
+# ARG VITE_APP_SSL_KEY_FILE_PATH
+
+# COPY  ${VITE_APP_SSL_CRT_FILE_PATH} /etc/ssl/cert/crt.crt
+# COPY  ${VITE_APP_SSL_KEY_FILE_PATH} /etc/ssl/private/key.key
+
 EXPOSE 80
+EXPOSE 433
 
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]

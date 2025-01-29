@@ -1,6 +1,4 @@
 ﻿using Application.Contracts.Response;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Query;
 using Product.Dal.Interfaces;
 using Product.Domain.Contracts.Models.Account;
 using Product.Domain.Contracts.Models.Product;
@@ -27,6 +25,7 @@ namespace Product.Services.Implementations
         private readonly IConfiguration configuration;
         private readonly IDatabaseTransaction databaseTransaction;
         private readonly ITelemetryService telemetryService;
+        private readonly ICachService cachService;
 
         public AccountService(
             IAccountRepository accountRepository,
@@ -37,7 +36,8 @@ namespace Product.Services.Implementations
             IProductRepository productRepository,
             ICartItemRepository cartItemRepository,
             IDatabaseTransaction databaseTransaction,
-            ITelemetryService telemetryService)
+            ITelemetryService telemetryService,
+            ICachService cachService)
         {
             this.accountRepository = accountRepository;
             this.changeRoleRepository = changeRoleRepository;
@@ -48,6 +48,7 @@ namespace Product.Services.Implementations
             this.configuration = configuration;
             this.databaseTransaction = databaseTransaction;
             this.telemetryService = telemetryService;
+            this.cachService = cachService;
         }
 
         public async Task<BaseResponse> AddProductToCart(AccountWithProductCountRequest request)
@@ -118,6 +119,8 @@ namespace Product.Services.Implementations
                         StatusCode = StatusCode.InternalServerError
                     };
                 }
+
+                await cachService.RemoveKey($"account-{request.Email}:cartItems");
 
                 return new BaseResponse
                 {
@@ -237,7 +240,11 @@ namespace Product.Services.Implementations
                     telemetryService.RecordProductBought(cartItem.Product.Id, cartItem.Count);
                 }
 
+
                 await databaseTransaction.CommitTransaction();
+
+                await cachService.RemoveKey($"account-{request.Email}:cartItems");
+                
                 return new BaseResponse
                 {
                     StatusCode = StatusCode.Ok,
@@ -509,6 +516,8 @@ namespace Product.Services.Implementations
                     };
                 }
 
+                await cachService.RemoveKey($"account-{request.Email}:cartItems");
+
                 return new BaseResponse
                 {
                     StatusCode = StatusCode.Ok,
@@ -529,6 +538,19 @@ namespace Product.Services.Implementations
         {
             try
             {
+                var cachCartItems = await cachService
+                    .GetData<AccountResponseCartItems>($"account-{email}:cartItems");
+                
+                if(cachCartItems.IsSuccess)
+                {
+                    return new DataResponse<AccountResponseCartItems>
+                    {
+                        StatusCode = StatusCode.Ok,
+                        Description = "",
+                        Data = cachCartItems.Value
+                    };
+                }
+                
                 var account = await accountRepository.GetAccountWithCart(email);
 
                 if(account.IsFailure)
@@ -540,7 +562,7 @@ namespace Product.Services.Implementations
                     };
                 }
 
-                var cartItems = await Task.WhenAll(
+                var cartItems = (await Task.WhenAll(
                     account.Value.ShopingCart.Select(async x => new ProductCartResponse
                     {
                         Id = x.Product.Id,
@@ -551,18 +573,22 @@ namespace Product.Services.Implementations
                         Price = x.Product.Price,
                         
                         Images = await blobService.DownLoadBlobFolder(x.Product.ImageFolder)
-                    }));
+                    }))).ToList();
+
+                var accountCartItems = new AccountResponseCartItems
+                {
+                    Email = account.Value.Email,
+                    Name = account.Value.Name,
+                    CartProducts = cartItems
+                };
+
+                await cachService.SetData($"account-{email}:cartItems", accountCartItems, 120);
 
                 return new DataResponse<AccountResponseCartItems>
                 {
                     StatusCode = StatusCode.Ok,
                     Description = "Get account cart items",
-                    Data = new AccountResponseCartItems
-                    {
-                        Email = account.Value.Email,
-                        Name = account.Value.Name,
-                        CartProducts = cartItems.ToList()
-                    }
+                    Data = accountCartItems
                 };
             }
             catch
@@ -618,6 +644,19 @@ namespace Product.Services.Implementations
         {
             try
             {
+                var cachAccountOrderHistory = await cachService
+                    .GetData<AccountResponseOrderHisory>($"account-{email}:orders");
+
+                if (cachAccountOrderHistory.IsSuccess)
+                {
+                    return new DataResponse<AccountResponseOrderHisory>
+                    {
+                        Description = "",
+                        StatusCode = StatusCode.Ok,
+                        Data = cachAccountOrderHistory.Value
+                    };
+                }
+
                 var account = await accountRepository.GetAccountWithOrderHistory(email);   
                 
                 if(account.IsFailure)
@@ -630,7 +669,7 @@ namespace Product.Services.Implementations
                     };
                 }
 
-                var orderHistory = await Task.WhenAll(
+                var orderHistory = (await Task.WhenAll(
                     account.Value.ShopingHistory.Select(async x => new ProductResponse
                     {
                         Id = x.Product.Id,
@@ -640,18 +679,22 @@ namespace Product.Services.Implementations
                         Count = x.Count,    
                         Images = await blobService.DownLoadBlobFolder(x.Product.ImageFolder)
                     })
-                );
+                )).ToList();
+
+                var accountOrderHistory = new AccountResponseOrderHisory()
+                {
+                    Name = account.Value.Name,
+                    Email = account.Value.Email,
+                    OrderHistory = orderHistory
+                };
+
+                await cachService.SetData($"account-{email}:orders", accountOrderHistory, 360);
 
                 return new DataResponse<AccountResponseOrderHisory>
                 {
                     Description = "Success get account order details",
                     StatusCode = StatusCode.Ok,
-                    Data = new AccountResponseOrderHisory()
-                    {
-                        Name = account.Value.Name,
-                        Email = account.Value.Email,
-                        OrderHistory = orderHistory.ToList()
-                    }
+                    Data = accountOrderHistory
                 };
             }
             catch
