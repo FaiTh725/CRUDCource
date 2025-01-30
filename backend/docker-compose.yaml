@@ -101,7 +101,8 @@ services:
       - "5401:5401"
       - "5402:5402"
     environment:
-      - "ApiList__Frontend=https://localhost:5173"
+      - "ApiList__FrontendHttp=http://frontend:80"
+      - "ApiList__FrontendHttps=http://frontend:5173"
       - ASPNETCORE_URLS=https://+:5402;http://+:5401
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
@@ -113,6 +114,20 @@ services:
       - message_api
       - authorize_api
       - product_api
+
+  frontend:
+    image: frontend_crud
+    container_name: frondend_application
+    environment:
+      - DEFAULT_CONF=C:\VSProjects\CourceCRUD\frontend\CRUD\nginx.conf
+      - SERVER_CONF=C:\VSProjects\CourceCRUD\frontend\CRUD\default.conf
+    ports:
+      - "8081:5173"
+      - "8080:80"
+    networks:
+      - rabbitmq_network
+    depends_on:
+      - main_proxy_api
 
   azurite:
     image: mcr.microsoft.com/azure-storage/azurite:latest

@@ -23,8 +23,8 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-
-app.UseCors("Frondend");
+app.UseCors("FrondendHttp");
+app.UseCors("FrondendHttps");
 
 app.UseRouting();
 app.UseHttpsRedirection();

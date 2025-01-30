@@ -22,15 +22,33 @@ namespace Main.Helpers.Extentions
         public static void AddCorsExt(this IServiceCollection serivce, IConfiguration configuration)
         {
             var frontendApi = configuration
-                .GetValue<string>("ApiList:Frontend") ?? 
+                .GetValue<string>("ApiList:FrontendHttp") ?? 
                 throw new AppConfigurationException("ApiList Frontend");
 
+            var frontendApiHttps = configuration
+                .GetValue<string>("ApiList:FrontendHttps") ??
+                throw new AppConfigurationException("ApiList Frontend");
+
+            Console.WriteLine("123R" + frontendApi);
+            Console.WriteLine("123R" + frontendApiHttps);
+
             serivce.AddCors(options => options.AddPolicy("" +
-                "Frondend", 
+                "FrondendHttp", 
                 options =>
                 {
                     options
                     .WithOrigins(frontendApi)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+                }));
+
+            serivce.AddCors(options => options.AddPolicy("" +
+                "FrondendHttps",
+                options =>
+                {
+                    options
+                    .WithOrigins(frontendApiHttps)
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();

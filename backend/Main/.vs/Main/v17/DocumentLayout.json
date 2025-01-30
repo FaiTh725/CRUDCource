@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\features\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:features\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\main.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:main.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:helpers\\extentions\\appextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\main.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|solutionrelative:main.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84775FE0-78FD-47A0-A0C5-FC93A890BCCE}|Main.csproj|c:\\vsprojects\\courcecrud\\backend\\main\\main.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -34,34 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GlobalExceptionHandler.cs",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "RelativeToolTip": "Features\\Exceptions\\GlobalExceptionHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T17:41:32.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Main",
-              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Main.csproj",
-              "RelativeDocumentMoniker": "Main.csproj",
-              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Main.csproj",
-              "RelativeToolTip": "Main.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-28T17:39:51.749Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -80,6 +54,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Features\\Exceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T17:41:32.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Main.csproj",
+              "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Main.csproj",
+              "RelativeDocumentMoniker": "Main.csproj",
+              "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Main.csproj",
+              "RelativeToolTip": "Main.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-28T17:39:51.749Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Main.http",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Main.http",
@@ -88,44 +87,43 @@
               "RelativeToolTip": "Main.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-01-27T22:12:49.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T22:12:49.56Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-27T21:57:42.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AppExtention.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Helpers\\Extentions\\AppExtention.cs",
               "RelativeDocumentMoniker": "Helpers\\Extentions\\AppExtention.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Helpers\\Extentions\\AppExtention.cs",
               "RelativeToolTip": "Helpers\\Extentions\\AppExtention.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-27T21:24:00.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\VSProjects\\CourceCRUD\\backend\\Main\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T23:41:55.827Z",
               "EditorCaption": ""
