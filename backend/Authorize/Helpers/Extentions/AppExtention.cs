@@ -113,5 +113,22 @@ namespace Authorize.Helpers.Extentions
                     (sender, cert, chain, sllPolicy) => { return true; }
                 });
         }
+
+        public static void AddCorses(this IServiceCollection service, IConfiguration configuration)
+        {
+            var frontendBaseUrl = configuration.GetValue<string>("APIList:Frontend")
+                ?? throw new AppConfigurationException("APIList:Frontend");
+
+            service.AddCors(options =>
+            {
+                options.AddPolicy("Frontend", policy =>
+                {
+                    policy.WithOrigins(frontendBaseUrl)
+                    .AllowCredentials()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+        }
     }
 }

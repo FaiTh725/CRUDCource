@@ -20,7 +20,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddRedis(builder.Configuration);
 builder.Services.AddJwtService(builder.Configuration);
-builder.Services.AddCorsExt(builder.Configuration);
 builder.Services.AddSignalR();
 builder.Services.AddCustomHttpClietns();
 
@@ -46,7 +45,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseAuthentication();
 
-app.UseCors("Frontend");
 app.MapHub<MessageHub>("/SupportChat");
 
 app.MapControllers();

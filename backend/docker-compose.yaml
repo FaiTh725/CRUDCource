@@ -29,6 +29,7 @@ services:
       - "ConnectionStrings__RedisConnection=redis-db:6379"
       - "ConnectionStrings__SQLServerConnection=Server=auth-database, 1433;Database=StoreAuthentication;User Id=sa;Password=goblinusik111W;MultipleActiveResultSets=true;TrustServerCertificate=True;"
       - "APIList__ProductAPI=https://product_api:5202/api"
+      - "ApiList__Frontend=https://main_proxy_api:5402"
       - ASPNETCORE_URLS=https://+:5102;http://+:5101
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
@@ -52,14 +53,13 @@ services:
       - "MassTransitSetting__Login=faith"
       - "MassTransitSetting__Host=rabbitmq:5672"
       - "ConnectionStrings__SQLServerConnection=Server=auth-database, 1433;Database=CRUDProducts;User Id=sa;Password=goblinusik111W;MultipleActiveResultSets=true;TrustServerCertificate=True;"
-      - "ConnectionStrings__FileStorage=DefaultEndpointsProtocol=http;AccountName=faith725;AccountKey=supersecret=key.faith725;BlobEndpoint=azurite:10000/faith725;"
       - "ConnectionStrings__RedisConnection=redis-db:6379"
       - "BlobStorage__Port=10000"
       - "BlobStorage__Key=ZGV2c3RvcmVhY2NvdW50Mw=="
       - "BlobStorage__AccountName=faith725"
       - "BlobStorage__BaseUrl=http://azurite"
       - "APIList__AuthorizeAPI=https://authorize_api:5102/api"
-      - "APIList__Frontend=https://localhost:5173"
+      - "APIList__Frontend=https://main_proxy_api:5402"
       - "APIList__PromethesAPI=http://prometheus:9090"
       - ASPNETCORE_URLS=https://+:5202;http://+:5201
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
@@ -82,7 +82,7 @@ services:
       - 5302:5302
     environment:
       - "ApiList__ProductApi=https://product_api:5202/api"
-      - "ApiList__Frontend=https://localhost:5173"
+      - "ApiList__Frontend=https://main_proxy_api:5402"
       - "ConnectionStrings__RedisConnection=redis-db:6379"
       - ASPNETCORE_URLS=https://+:5302;http://+:5301
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
@@ -101,8 +101,8 @@ services:
       - "5401:5401"
       - "5402:5402"
     environment:
-      - "ApiList__FrontendHttp=http://frontend:80"
-      - "ApiList__FrontendHttps=http://frontend:5173"
+      - "ApiList__FrontendHttp=http://localhost:8080"
+      - "ApiList__FrontendHttps=https://localhost:8081"
       - ASPNETCORE_URLS=https://+:5402;http://+:5401
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx

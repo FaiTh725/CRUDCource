@@ -29,10 +29,7 @@ namespace Main.Helpers.Extentions
                 .GetValue<string>("ApiList:FrontendHttps") ??
                 throw new AppConfigurationException("ApiList Frontend");
 
-            Console.WriteLine("123R" + frontendApi);
-            Console.WriteLine("123R" + frontendApiHttps);
-
-            serivce.AddCors(options => options.AddPolicy("" +
+            serivce.AddCors(options => options.AddPolicy(
                 "FrondendHttp", 
                 options =>
                 {
@@ -43,7 +40,7 @@ namespace Main.Helpers.Extentions
                     .AllowCredentials();
                 }));
 
-            serivce.AddCors(options => options.AddPolicy("" +
+            serivce.AddCors(options => options.AddPolicy(
                 "FrondendHttps",
                 options =>
                 {

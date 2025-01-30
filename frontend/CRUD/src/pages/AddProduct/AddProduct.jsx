@@ -134,7 +134,7 @@ const AddProduct = () => {
 
     try
     {
-      const response = await axios.post("http://localhost:5201/api/Product/Upload", 
+      const response = await axios.post("https://localhost:5402/api/Product/Upload", 
         form,
         {
           headers: {

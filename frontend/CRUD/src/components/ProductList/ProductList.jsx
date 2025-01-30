@@ -28,6 +28,7 @@ const ProductList = () => {
   const fetchProducts = async (page, count, abortSignal) => {
     try
     {
+      console.log("send");
       const response = await axios.get(`https://localhost:5402/api/Product/ProductsPagination?page=${page}&count=${count}`, {
         signal: abortSignal
       });
@@ -38,6 +39,7 @@ const ProductList = () => {
         return;
       }
 
+      console.log(response);
       setPage(response.data.data.page);
       setCount(response.data.data.count);
       setMaxCount(response.data.data.maxCount);
@@ -45,6 +47,7 @@ const ProductList = () => {
     }
     catch (error)
     {
+      console.log(error);
       console.log(error.message);
     }
   } 

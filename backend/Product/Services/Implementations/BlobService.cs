@@ -1,6 +1,9 @@
-﻿using Azure.Storage.Blobs;
+﻿using Application.Contracts.SharedModels.Exceptions;
+using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Azure.Storage.Sas;
+using MassTransit.Internals;
+using Product.Helpers.Settings;
 using Product.Services.Interfaces;
 
 namespace Product.Services.Implementations
@@ -10,7 +13,8 @@ namespace Product.Services.Implementations
         private const string ImageContainer = "images";
         private readonly BlobServiceClient blobServiceClient;
 
-        public BlobService(BlobServiceClient blobServiceClient)
+        public BlobService(
+            BlobServiceClient blobServiceClient)
         {
             this.blobServiceClient = blobServiceClient;
         }
@@ -42,17 +46,8 @@ namespace Product.Services.Implementations
             
             var blobClient = blobContainerClient.GetBlobClient(name);
 
-            var sasBuilder = new BlobSasBuilder
-            {
-                BlobContainerName = blobContainerClient.Name,
-                BlobName = blobClient.Name,
-                Resource = "b",
-                ExpiresOn = DateTimeOffset.UtcNow.AddMonths(1)
-            };
-
-            var uriFile = blobClient.GenerateSasUri(sasBuilder);
-
-            return uriFile.ToString();
+            return $"http://localhost:10000/faith725/" +
+                    $"{ImageContainer}/{blobClient.Name}";
         }
 
         public async Task<List<string>> DownLoadBlobFolder(string folderName, CancellationToken cancellationToken = default)
@@ -69,16 +64,10 @@ namespace Product.Services.Implementations
             {
                 var blobClient = blobContainerClient.GetBlobClient(blobItem.Name);
 
-                var sasBuilder = new BlobSasBuilder
-                {
-                    BlobContainerName = blobContainerClient.Name,
-                    BlobName = blobItem.Name,
-                    Resource = "b",
-                    ExpiresOn = DateTimeOffset.UtcNow.AddMonths(1)
-                };
-                sasBuilder.SetPermissions(BlobSasPermissions.Read);
+                var blobUrl = $"http://localhost:10000/faith725/" +
+                    $"{ImageContainer}/{blobClient.Name}";
 
-                urls.Add(blobClient.GenerateSasUri(sasBuilder).ToString());
+                urls.Add(blobUrl);
             }
 
             return urls;

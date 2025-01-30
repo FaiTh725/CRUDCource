@@ -26,25 +26,6 @@ namespace Message.Helpers.Extentiosn
             );
         }
 
-        public static void AddCorsExt(this IServiceCollection service, IConfiguration configuration)
-        {
-            var frontendApi = configuration
-                .GetValue<string>("ApiList:Frontend") ??
-                throw new AppConfigurationException("ApiList Frontend");
-
-            service.AddCors(options =>
-            {
-                options.AddPolicy("Frontend", 
-                    options =>
-                    {
-                        options.WithOrigins(frontendApi)
-                        .AllowCredentials()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                    });
-            });
-        }
-
         public static void AddJwtService(this IServiceCollection services, IConfiguration configuration)
         {
             var jwtSetting = configuration.GetSection("JwtSetting").Get<JwtConf>()
