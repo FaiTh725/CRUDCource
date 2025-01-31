@@ -20,7 +20,6 @@ builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddJwtService(builder.Configuration);
 builder.Services.AddMessageBroker(builder.Configuration);
 builder.Services.AddCaching(builder.Configuration);
-builder.Services.AddCorses(builder.Configuration);
 builder.Services.AddValidators();
 builder.Services.AddCustomHttpClient();
 builder.Services.AddHttpContextAccessor();
@@ -48,8 +47,6 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-
-app.UseCors("Frontend");
 
 app.UseAuthentication();
 app.UseAuthorization();

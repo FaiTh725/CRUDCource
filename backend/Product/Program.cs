@@ -23,7 +23,6 @@ builder.Services.AddMetrics(builder.Configuration, builder);
 builder.Services.AddJwtService(builder.Configuration);
 builder.Services.AddMessageBroker(builder.Configuration);
 builder.Services.AddBlobStorage(builder.Configuration);
-builder.Services.AddCorses(builder.Configuration);
 builder.Services.AddCaching(builder.Configuration);
 builder.Services.AddValidators();
 builder.Services.AddCustomHttpClient();
@@ -58,7 +57,6 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
-app.UseCors("Frontend");
 
 app.UseAuthentication();
 app.UseAuthorization();

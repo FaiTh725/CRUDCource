@@ -103,23 +103,6 @@ namespace Product.Helpers.Extentions
             service.AddSingleton(_ => new BlobServiceClient(connectionString));
         }
 
-        public static void AddCorses(this IServiceCollection service, IConfiguration configuration)
-        {
-            var frontendBaseUrl = configuration.GetValue<string>("APIList:Frontend")
-                ?? throw new AppConfigurationException("APIList:Frontend");
-
-            service.AddCors(options =>
-            {
-                options.AddPolicy("Frontend", policy =>
-                {
-                    policy.WithOrigins(frontendBaseUrl)
-                    .AllowCredentials()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-                });
-            });
-        }
-
         public static void AddSwaggerWithAuth(this IServiceCollection service)
         {
             service.AddSwaggerGen(setup =>

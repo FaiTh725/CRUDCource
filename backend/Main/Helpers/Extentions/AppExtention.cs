@@ -30,22 +30,11 @@ namespace Main.Helpers.Extentions
                 throw new AppConfigurationException("ApiList Frontend");
 
             serivce.AddCors(options => options.AddPolicy(
-                "FrondendHttp", 
+                "Frondend", 
                 options =>
                 {
                     options
-                    .WithOrigins(frontendApi)
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();
-                }));
-
-            serivce.AddCors(options => options.AddPolicy(
-                "FrondendHttps",
-                options =>
-                {
-                    options
-                    .WithOrigins(frontendApiHttps)
+                    .WithOrigins(frontendApi, frontendApiHttps)
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();

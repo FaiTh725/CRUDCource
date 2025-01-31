@@ -29,7 +29,6 @@ services:
       - "ConnectionStrings__RedisConnection=redis-db:6379"
       - "ConnectionStrings__SQLServerConnection=Server=auth-database, 1433;Database=StoreAuthentication;User Id=sa;Password=goblinusik111W;MultipleActiveResultSets=true;TrustServerCertificate=True;"
       - "APIList__ProductAPI=https://product_api:5202/api"
-      - "ApiList__Frontend=https://main_proxy_api:5402"
       - ASPNETCORE_URLS=https://+:5102;http://+:5101
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
@@ -59,7 +58,6 @@ services:
       - "BlobStorage__AccountName=faith725"
       - "BlobStorage__BaseUrl=http://azurite"
       - "APIList__AuthorizeAPI=https://authorize_api:5102/api"
-      - "APIList__Frontend=https://main_proxy_api:5402"
       - "APIList__PromethesAPI=http://prometheus:9090"
       - ASPNETCORE_URLS=https://+:5202;http://+:5201
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
@@ -82,7 +80,6 @@ services:
       - 5302:5302
     environment:
       - "ApiList__ProductApi=https://product_api:5202/api"
-      - "ApiList__Frontend=https://main_proxy_api:5402"
       - "ConnectionStrings__RedisConnection=redis-db:6379"
       - ASPNETCORE_URLS=https://+:5302;http://+:5301
       - ASPNETCORE_Kestrel__Certificates__Default__Password=goblinusik111
